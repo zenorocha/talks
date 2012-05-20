@@ -11,7 +11,8 @@
   URL: http://code.google.com/p/html5slides/
 */
 
-var PERMANENT_URL_PREFIX = 'http://10.15.10.128/~zeno/jsconf/';
+var PERMANENT_URL_PREFIX = 'http://talks.zenorocha.com/jsconf/';
+// var PERMANENT_URL_PREFIX = 'http://10.15.10.128/~zeno/jsconf/';
 
 var SLIDE_CLASSES = ['far-past', 'past', 'current', 'next', 'far-next'];
 
