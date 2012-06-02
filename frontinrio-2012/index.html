@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+  
+  <title>CSS Sucks!</title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zeno Rocha" />
+  <meta name="description" content="" />
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="" />
+  <meta property="og:url" content=""/>
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content=""/>
+
+  <script src="slides.js"></script>
+  
+  </head>
+
+  <body style="display: none">
+
+  <section class="slides layout-regular template-io2011">
+
+    <article id="instrucoes">
+      <h2 id="praquem">Pra quem está no laptop...</h2>
+      <h3><a href="http://talks.zenorocha.com/frontinrio-2012" target="blank">talks.zenorocha.com/frontinrio-2012</a></h3>
+      <h2 id="usesetas">Use as setas para navegar</h2>
+    </article>
+
+    <article id="capa"></article>
+    
+    <article id="quemsoueu"></article>
+
+    <article id="github">
+      <h3><a href="http://github.com/zenorocha/talks/" target="blank">github.com/zenorocha/talks</a></h3>
+    </article>
+
+    <article id="beercamp">
+      <h3><a href="http://2012.beercamp.com/" target="blank">2012.beercamp.com</a></h3>
+    </article>
+  
+    <article id="css-designers"></article>
+    <article id="amo-css"></article>
+    <article id="css-merda"></article>
+    
+<!-- *** CSS *** -->
+
+    <article id="capa-css"></article>
+
+    <article class="css">
+      <h1>Desorganizado</h1>
+      <ul>
+        <li>Quem nunca se deparou com um desses?
+        <textarea spellcheck="false" class="snippet" rows="11">table.hl {
+margin: 2em 0; }
+
+    table.hl td.ln {
+    text-align: right;
+}
+
+li { font-family: serif;
+font-weight: bold;
+    font-size: 1.2em;
+}</textarea></li>
+      </ul>
+    </article>
+
+    <article class="css">
+      <h1>Repetitivo</h1>
+      <ul>
+        <li>De novo, de novo.
+        <textarea spellcheck="false" class="snippet" rows="11">#header {
+    color: #4D926F;
+}
+
+.fundo {
+    background: #4D926F;
+}
+
+h2 {
+    color: #4D926F;
+}</textarea></li>
+      </ul>
+    </article>
+
+    <article class="css">
+      <h1>Cheio de Prefixos</h1>
+      <ul>
+        <li>Morram!
+        <textarea spellcheck="false" class="snippet" rows="13">.container {
+    -webkit-transition: -webkit-box-shadow 2s;
+    -moz-transition: -moz-box-shadow 2s;
+    -o-transition: box-shadow 2s;
+    -ms-transition: box-shadow 2s;
+    transition: box-shadow 2s;
+
+    -webkit-animation: slide 1s alternate;
+    -moz-animation: slide 1s alternate;
+    -ms-animation: slide 1s alternate;
+    -o-animation: slide 1s alternate;
+    animation: slide 1s alternate;
+}</textarea></li>
+      </ul>
+    </article>
+
+    <article class="intuitivo">
+      <h1>Nada intuitivo</h1>
+        <textarea spellcheck="false" class="snippet" rows="21">background-color: hsl(34, 53%, 82%);
+background-image: -webkit-repeating-linear-gradient(45deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 120px, rgba(11, 36, 45, 0.5) 120px, rgba(11, 36, 45, 0.5) 140px ), -webkit-repeating-linear-gradient(135deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 140px, rgba(11, 36, 45, 0.5) 140px, rgba(11, 36, 45, 0.5) 160px );</textarea>
+    </article>
+
+    <article id="css-heroi"></article>
+    
+    <article id="pre">
+      <ul style="padding-top: 150px;">
+        <li>São nada mais do que linguagens que, uma vez <strong>compiladas</strong>, geram nosso bom e velho <strong>CSS</strong>.</li>
+        <li>Adicionando recursos interessantes que te auxiliam na codificação de folhas de estilo.</li>
+      </ul>
+    </article>
+
+<!-- *** STYLUS *** -->
+
+    <article id="capa-stylus"></article>
+
+    <article class="stylus">
+      <h1>Nenhuma novidade</h1>
+      <textarea spellcheck="false" class="snippet" rows="9">body {
+    font: 12px Helvetica, Arial, sans-serif;
+}
+
+a.button {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}</textarea>
+    </article>
+
+    <article class="stylus">
+      <h1>Chaves<br>pra quê?</h1>
+      <textarea spellcheck="false" class="snippet" rows="7">body
+    font: 12px Helvetica, Arial, sans-serif;
+  
+a.button
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;</textarea>
+    </article>
+
+    <article class="stylus">
+      <h1>Ponto-e-vírgula<br>pra quê?</h1>
+      <textarea spellcheck="false" class="snippet" rows="7">body
+    font: 12px Helvetica, Arial, sans-serif
+  
+a.button
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    border-radius: 5px</textarea>
+    </article>
+
+    <article class="stylus">
+      <h1>Dois-Pontos<br>pra quê?</h1>
+      <textarea spellcheck="false" class="snippet" rows="7">body
+    font 12px Helvetica, Arial, sans-serif
+  
+a.button
+    -webkit-border-radius 5px
+    -moz-border-radius 5px
+    border-radius 5px</textarea>
+    </article>
+
+    <article id="e-os-prefixos"></article>
+
+    <article id="prefix-free">
+      <h3><a href="http://leaverou.github.com/prefixfree/" target="blank">leaverou.github.com/prefixfree</a></h3>
+    </article>
+    
+    <article id="prefixr">
+      <h3><a href="http://prefixr.com/" target="blank">prefixr.com</a></h3>
+    </article>
+
+    <article class="stylus">
+      <h1>Mixins</h1>
+      <textarea spellcheck="false" class="snippet" rows="10">border-radius()
+    -webkit-border-radius arguments
+    -moz-border-radius arguments
+    border-radius arguments
+  
+body
+    font 12px Helvetica, Arial, sans-serif
+  
+a.button
+    border-radius(5px)</textarea>
+    </article>
+
+    <!-- https://github.com/davidsonfellipe/riojs-website/blob/master/src/documents/css/style.css.stylus -->
+
+    <article id="nib"></article>
+    
+    <article id="site-nib">
+        <h3><a href="http://visionmedia.github.com/nib/" target="blank">visionmedia.github.com/nib</a></h3>
+    </article>
+
+    <!-- <article class="stylus">
+      <h1>Pré-requisito</h1>
+      <img class="center" style="margin-top: 60px;" src="images/nodejs.png" alt="">
+    </article> -->
+
+    <article class="stylus">
+      <h1>Como instalar?</h1>
+      <ul>
+        <li>Utilize o <strong>NPM</strong>, gerenciador de pacotes do <strong>Node.JS</strong>.<textarea spellcheck="false" class="snippet" rows="1">npm install stylus</textarea>
+        </li>
+      </ul>
+    </article>
+
+    <article class="stylus">
+      <h1>Como usar?</h1>
+      <ul>
+        <li>No terminal, use o comando para compilar:
+            <textarea spellcheck="false" class="snippet" rows="1">stylus meuArquivo.styl</textarea>
+        </li>
+      </ul>
+    </article>
+    
+    <article id="site-stylus">
+      <h3><a href="http://learnboost.github.com/stylus" target="blank">learnboost.github.com/stylus</a></h3>
+    </article>
+
+<!-- *** SASS *** -->
+
+    <article id="capa-sass"></article>
+
+    <article class="sass">
+      <h1>Variáveis</h1>
+      <ul>
+        <li><strong>DRY</strong> - <strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself
+            <textarea spellcheck="false" class="snippet" rows="11">$ego: #F90
+$g1: #A80000
+
+.box-horoscopo
+  color: $ego
+
+.borda-noticia
+  border-color: $g1
+
+.barra-musica
+  background: $g1</textarea></li>
+        </li>
+      </ul>
+    </article>
+
+    <article class="sass">
+      <h1>Partials</h1>
+      <ul>
+        <li>Diferente do que acontece com o <strong>@import</strong> nativo do CSS, com <strong>SASS</strong> você pode <strong>importar</strong> outras folhas de estilo para um mesmo arquivo.
+            <textarea spellcheck="false" class="snippet" rows="3">@import "vars"
+@import "fonts"
+@import "structure"</textarea></li>
+        </li>
+        <li>Assim, na hora de compilar, você irá gerar apenas <strong>um CSS</strong>, diminuindo o número de <strong>requisições</strong>.</li>
+        <li>Isso sem falar que você ainda pode utilizar todas as <strong>variáveis</strong> e <strong>mixins</strong> dos arquivos importados.
+        </li>
+      </ul>
+    </article>
+
+    <article id="mimimi-1"></article>
+
+    <article class="sass">
+      <h1>SCSS</h1>
+      <ul>
+        <li>Então, toma suas <strong>chaves</strong> e <strong>ponto-e-vírgulas</strong> de volta.</li>
+      </ul>
+      <textarea spellcheck="false" class="snippet" rows="14">$ego: #F90;
+$g1: #A80000;
+
+.box-horoscopo {
+  color: $ego;
+}
+
+.borda-noticia {
+  border-color: $g1;
+}
+
+.barra-musica {
+  background: $g1;
+}</textarea></li>
+    </article>
+
+    <article id="site-compass">
+      <h3><a href="http://compass-style.org/" target="blank">compass-style.org</a></h3>
+    </article>
+
+    <!-- <article id="css-sass-compass"></article> -->
+
+    <!-- <article class="sass">
+      <h1>Pré-requisito</h1>
+      <img class="center" style="margin-top: 60px;" src="images/ruby.png" alt="">
+    </article> -->
+
+    <article class="sass">
+      <h1>Como instalar?</h1>
+      <ul>
+        <li>Através das <strong>RubyGems</strong>, gerenciador de pacotes do <strong>Ruby</strong>.<textarea spellcheck="false" class="snippet" rows="1">gem install compass</textarea>
+        </li>
+        <li>Esse comando também vai instalar a <strong>gem</strong> do <strong>Sass</strong>, uma dependência do <strong>Compass</strong>.</li>
+        <li>Por isso não se preocupe em instalar o <strong>Sass</strong> separadamente.</li>
+      </ul>
+    </article>
+
+    <article class="sass">
+      <h1>Como começar?</h1>
+      <ul>
+        <li>Para criar um projeto <strong>SCSS</strong>:
+          <textarea spellcheck="false" class="snippet" rows="1">compass create meuProjeto</textarea>
+        </li>
+        <li>Ou para criar um projeto <strong>Sass</strong>:
+          <textarea spellcheck="false" class="snippet" rows="1">compass create meuProjeto -x sass</textarea>
+        </li>
+      </ul>
+    </article>
+
+    <article class="sass">
+      <h1>Como usar?</h1>
+      <ul>
+        <li>Você pode compilar por demanda.
+          <textarea spellcheck="false" class="snippet" rows="1">compass compile meuProjeto</textarea>
+        </li>
+        <li>Ou monitorar mudanças no arquivo e automaticamente recompilar.
+          <textarea spellcheck="false" class="snippet" rows="1">compass watch meuProjeto</textarea>
+        </li>
+      </ul>
+    </article>
+
+    <article id="mimimi-2"></article>
+
+    <article class="sass">
+      <h1>Nem eu!</h1>
+      <ul class="build">
+        <li>É bom para projetos Ruby on Rails...</li>
+        <li>É bom para projetos Ruby...</li>
+        <li>É bom para <strong>qualquer</strong> projeto!</li>
+      </ul>
+    </article>
+
+    <article class="sass">
+      <h1>CSS Sprites</h1>
+      <ul>
+        <li>Técnica antiga que consiste em <strong>combinar</strong> várias imagens em <strong>uma só</strong> para <strong>diminuir</strong> o número de requisições ao servidor.</li>
+        <li>Mas não adianta, por mais que existam muitas ferramentas, montar Sprites continua sendo muito <strong>chato!</strong></li>
+      </ul>
+    </article>
+
+    <article id="site-spritepad">
+      <h3><a href="http://wearekiss.com/spritepad" target="blank">wearekiss.com/spritepad</a></h3>
+    </article>
+
+    <article id="site-spritecow">
+      <h3><a href="http://spritecow.com/" target="blank">spritecow.com</a></h3>
+    </article>
+
+    <article id="sprite-generator"></article>
+
+    <article id="site-sass">
+      <h3><a href="http://sass-lang.com/" target="blank">sass-lang.com</a></h3>
+    </article>
+
+<!-- *** LESS *** -->
+
+    <article id="capa-less"></article>
+
+    <!-- <article class="less">
+      <h1>Pré-requisito</h1>
+      <img class="center" style="margin-top: 60px;" src="images/nodejs.png" alt="">
+    </article> -->
+
+    <article class="less">
+      <h1>Comentários</h1>
+      <ul>
+        <li>O estilo tradicional é preservado no LESS.
+            <textarea spellcheck="false" class="snippet" rows="2">/* Olá, eu sou um comentário tradicional de CSS */
+.sucks { color: black }</textarea></li>
+        </li>
+        <li>Comentários de uma única linha são válidos no LESS, mas são 'silenciosos' e não aparecem no CSS compilado.
+            <textarea spellcheck="false" class="snippet" rows="2">// Olá, eu sou um comentário silencioso, não vou aparecer no CSS
+.rocks { color: white }</textarea>
+        </li>
+      </ul>
+    </article>
+
+    <article class="less">
+      <h1>Aninhamento</h1>
+      <ul>
+        <li>Ao invés de ficar repetindo o seletor...
+          <textarea spellcheck="false" class="snippet" rows="4">#header .nav {}
+#header .nav ul {}
+#header .nav ul li {}
+#header .nav ul li a {}</textarea></li>
+<li>Você tem a habilidade de usar aninhamento.
+    <textarea spellcheck="false" class="snippet" rows="7">#header .nav {
+    ul {
+      li {
+        a {}
+      }
+    }
+}</textarea></li>
+      </ul>
+    </article>
+
+    <article class="less">
+      <h1>Operações</h1>
+      <ul>
+        <li>É possível realizar <strong>operações matemáticas</strong> e também utilizar algumas funções para <strong>manipulação de cor</strong>.
+            <textarea spellcheck="false" class="snippet" rows="11">@borda_padrao: 6px;
+@cor_padrao: #111;
+
+div#conteudo {
+    color: @cor_padrao * 2;
+    border: (@borda_padrao / 3) solid #ccc;
+}
+
+div#menu { 
+    color: darken(@cor_padrao, 10%);
+}</textarea></li>
+        </li>
+      </ul>
+    </article>
+
+    <article class="less">
+      <h1>Como instalar?</h1>
+      <ul>
+        <li>Utilize o <strong>NPM</strong>, gerenciador de pacotes do <strong>Node.JS</strong>.<textarea spellcheck="false" class="snippet" rows="1">npm install less</textarea>
+        </li>
+      </ul>
+    </article>
+
+    <article class="less">
+      <h1>Como usar?</h1>
+      <ul>
+        <li>Compilando LESS no <strong>server-side</strong>
+            <textarea spellcheck="false" class="snippet" rows="1">lessc style.less > style.css</textarea>
+        </li>
+        <li>Compilando LESS no <strong>client-side</strong>
+            <textarea spellcheck="false" class="snippet" rows="2">&lt;link href="style.less" rel="stylesheet/less"&gt;
+&lt;script src="less.js"&gt;&lt;/script&gt;</textarea>
+        </li>
+      </ul>
+    </article>
+
+    <article id="less-client"></article>
+
+    <article id="ironman-errado"></article>
+
+    <article id="site-less-elem">
+      <h3><a href="http://lesselements.com/" target="blank">lesselements.com</a></h3>
+    </article>
+    
+    <article id="site-less">
+      <h3><a href="http://lesscss.org" target="blank">lesscss.org</a></h3>
+    </article>
+
+    <article id="site-less-br">
+      <h3><a href="http://lesscssbr.heroku.com/" target="blank">lesscssbr.heroku.com</a></h3>
+    </article>
+
+    <article id="mimimi-3"></article>
+
+    <article id="site-compass-app">
+        <h3><a href="http://compass.handlino.com/" target="blank">compass.handlino.com</a></h3>
+    </article>
+
+    <article id="site-scout">
+        <h3><a href="http://mhs.github.com/scout-app/" target="blank">mhs.github.com/scout-app</a></h3>
+    </article>
+
+    <article id="site-less-app">
+        <h3><a href="http://incident57.com/less/" target="blank">incident57.com/less</a></h3>
+    </article>
+
+    <article id="site-codekit">
+        <h3><a href="http://incident57.com/codekit/" target="blank">incident57.com/codekit</a></h3>
+    </article>
+
+    <article id="site-livereload">
+        <h3><a href="http://livereload.com/" target="blank">livereload.com</a></h3>
+    </article>
+
+    <article id="bootstrap">
+      <h3><a href="http://twitter.github.com/bootstrap/" target="blank">twitter.github.com/bootstrap</a></h3>
+    </article>
+
+    <article id="github-popular">
+      <h3><a href="https://github.com/popular/watched" target="blank">github.com/popular/watched</a></h3>
+    </article>
+
+    <article id="bootstrap-less">
+      <h3><a href="http://twitter.github.com/bootstrap/less.html" target="blank">twitter.github.com/bootstrap/less.html</a></h3>
+    </article>
+
+    <article id="pq-nao-sass"></article>
+
+    <article class="less">
+      <h1>Por que não Sass?</h1>
+      <ul>
+        <li>"Bootstrap compila ~6x mais rápido com Less"</li>
+        <li>"Less é implementado em JavaScript"</li>
+        <li>"Less é simples" <strong>(?)</strong></li>
+      </ul>
+      <h3><a href="http://wordsbyf.at/2012/03/08/why-less/" target="blank">wordsbyf.at/2012/03/08/why-less</a></h3>
+    </article>
+
+<!-- *** Fim *** -->
+
+    <article id="quem-melhor"></article>
+
+    <article class="branco">
+      <h1>Não importa!</h1>
+      <ul>
+        <li>Porque todos são similares.</li>
+        <li>Você só precisa encontrar aquele que te proporcione um workflow melhor e que te salve no fim do dia ;)</li>
+      </ul>
+    </article>
+
+    <article id="mib-n-sabe"></article>
+    <article id="mib-esqueca"></article>
+    <article id="uncleben"></article>
+
+    <article class="branco">
+      <h1>É contigo...</h1>
+      <img  class="center" style="margin-top: 50px;" src="images/wherethemagichappens.png" alt="">
+    </article>
+
+    <article id="fim"></article>
+
+  </body>
+</html>
