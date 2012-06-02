@@ -10,6 +10,7 @@ body {
 	background:#000 !important;
 	-webkit-font-smoothing: antialiased;
 }
+
 	
 p, li {
 	color: #fff !important;
@@ -62,6 +63,14 @@ h1 {
 img {
 	text-align: center !important;
 	margin: 20px 0 0 165px;
+}
+
+#praquem {
+	top: 50px;
+}
+
+#usesetas {
+	top: 470px;
 }
 
 .build, .build li {
