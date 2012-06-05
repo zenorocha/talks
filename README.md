@@ -2,6 +2,51 @@
 
 Just an organized list of all my presentations.
 
+## Comming next!
+
+### BrazilJS
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: 08/30/12
+* Where: Porto Alegre, RS - Brazil
+* Website: [braziljs.com.br](http://braziljs.com.br/)
+
+### Tableless Conference
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: 08/24/12
+* Where: São Paulo, SP - Brazil
+* Website: *Not available*
+
+### QCon
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: 08/04/12
+* Where: São Paulo, SP - Brazil
+* Website: [qconsp.com](http://qconsp.com/)
+
+### Front in BH
+<!--* Presentation title: CSS Sucks!
+* Presentation slides: *#* -->
+* When: 07/14/12
+* Where: Belo Horizonte, MG - Brazil
+* Website: [frontinbh.com.br](http://frontinbh.com.br/)
+
+### TDC - The Developers Conference
+<!--* Presentation title: Como fugir do feijão com arroz usando Canvas, SVG e WebGL
+* Presentation slides: *#* -->
+* When: 07/04/12
+* Where: São Paulo, SP - Brazil
+* Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/)
+
+
+### Front in Curitiba
+<!--* Presentation title: How to use HTML5 without a time machine
+* Presentation slides: *#* -->
+* When: 06/23/12
+* Where: Curitiba, PR - Brazil
+* Website: [frontincuritiba.com.br](http://www.frontincuritiba.com.br/)
+
 ## ~ 2012
 
 ### Front in Rio 2012
