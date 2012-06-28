@@ -39,6 +39,7 @@ Just an organized list of all my presentations.
 * Where: São Paulo, SP - Brazil
 * Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/)
 
+## ~ 2012
 
 ### Front in Curitiba
 <!--* Presentation title: How to use HTML5 without a time machine
@@ -46,8 +47,6 @@ Just an organized list of all my presentations.
 * When: 06/23/12
 * Where: Curitiba, PR - Brazil
 * Website: [frontincuritiba.com.br](http://www.frontincuritiba.com.br/)
-
-## ~ 2012
 
 ### Front in Rio 2012
 <!--* Presentation title: CSS Sucks!
