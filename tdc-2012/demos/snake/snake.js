@@ -105,7 +105,7 @@ PEjs.game = (function () {
 
   function drawBorder() {
 	contexto.save();
-	contexto.strokeStyle = '#fbca13';
+	contexto.strokeStyle = '#221816';
 	contexto.lineWidth = PEjs.blockSize;
 	contexto.lineCap = 'square';
 	var offset = contexto.lineWidth / 2;
@@ -173,7 +173,7 @@ PEjs.apple = function () {
 
   function draw(contexto) {
 	contexto.save();
-	contexto.fillStyle = '#75bd43'; //apple green
+	contexto.fillStyle = '#025599'; //apple green
 	contexto.beginPath();
 	var radius = PEjs.blockSize / 2;
 	var x = position[0] * PEjs.blockSize + radius;
@@ -253,7 +253,7 @@ PEjs.snake = function () {
 
   function draw(contexto) {
 	contexto.save();
-	contexto.fillStyle = '#1d9ed6';
+	contexto.fillStyle = '#bd1a35';
 	for(var i = 0; i < posArray.length; i++) {
 	  drawSection(contexto, posArray[i]);
 	}
