@@ -32,6 +32,8 @@ Just an organized list of all my presentations.
 * Where: Belo Horizonte, MG - Brazil
 * Website: [frontinbh.com.br](http://frontinbh.com.br/)
 
+## ~ 2012
+
 ### TDC - The Developers Conference
 <!--* Presentation title: Como fugir do feijão com arroz usando Canvas, SVG e WebGL
 * Presentation slides: *#* -->
@@ -39,15 +41,12 @@ Just an organized list of all my presentations.
 * Where: São Paulo, SP - Brazil
 * Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/)
 
-
 ### Front in Curitiba
 <!--* Presentation title: How to use HTML5 without a time machine
 * Presentation slides: *#* -->
 * When: 06/23/12
 * Where: Curitiba, PR - Brazil
 * Website: [frontincuritiba.com.br](http://www.frontincuritiba.com.br/)
-
-## ~ 2012
 
 ### Front in Rio 2012
 <!--* Presentation title: CSS Sucks!
