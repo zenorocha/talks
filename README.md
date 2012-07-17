@@ -25,6 +25,13 @@ Just an organized list of all my presentations.
 * Where: São Paulo, SP - Brazil
 * Website: [qconsp.com](http://qconsp.com/)
 
+### FISL
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: July, 25
+* Where: Porto Alegre, RS - Brazil
+* Website: [softwarelivre.org/fisl13](http://softwarelivre.org/fisl13/)
+
 ## ~ 2012
 
 ### Front in BH
