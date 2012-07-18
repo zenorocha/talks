@@ -21,7 +21,7 @@ Just an organized list of all my presentations.
 ### QCon
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
-* When: August, 08
+* When: August, 04
 * Where: São Paulo, SP - Brazil
 * Website: [qconsp.com](http://qconsp.com/)
 
