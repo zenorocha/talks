@@ -17,7 +17,6 @@ Just an organized list of all my presentations.
 * When: August, 24
 * Where: São Paulo, SP - Brazil
 * Website: [tableless.com.br/tablelessconf](http://tableless.com.br/tablelessconf/)
-* 
 
 ### Front in Porto Alegre
 <!--* Presentation title: *#*
