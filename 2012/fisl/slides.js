@@ -11,7 +11,7 @@
   URL: http://code.google.com/p/html5slides/
 */
 
-var PERMANENT_URL_PREFIX = 'http://talks.zenorocha.com/2012/fisl/';
+var PERMANENT_URL_PREFIX = 'http://localhost:8888/Talks/fisl';
 
 var SLIDE_CLASSES = ['far-past', 'past', 'current', 'next', 'far-next'];
 
