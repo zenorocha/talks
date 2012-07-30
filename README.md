@@ -23,7 +23,7 @@ Just an organized list of all my presentations.
 * Presentation slides: *#* -->
 * When: August, 18
 * Where: Porto Alegre, SP - Brazil
-* Website: **Not available yet**
+* Website: [abradirs.com.br/frontinpoa](http://abradirs.com.br/frontinpoa/)
 
 ### QCon
 <!--* Presentation title: *#*
