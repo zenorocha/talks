@@ -25,6 +25,8 @@ Just an organized list of all my presentations.
 * Where: Porto Alegre, SP - Brazil
 * Website: [abradirs.com.br/frontinpoa](http://abradirs.com.br/frontinpoa/)
 
+## ~ 2012
+
 ### QCon
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
@@ -32,15 +34,12 @@ Just an organized list of all my presentations.
 * Where: São Paulo, SP - Brazil
 * Website: [qconsp.com](http://qconsp.com/)
 
-## ~ 2012
-
 ### FISL
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
 * When: July, 25
 * Where: Porto Alegre, RS - Brazil
 * Website: [softwarelivre.org/fisl13](http://softwarelivre.org/fisl13/)
-
 
 ### Front in BH
 <!--* Presentation title: CSS Sucks!
