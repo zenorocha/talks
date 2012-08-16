@@ -4,12 +4,26 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
+### Conferência W3C
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: October, 18
+* Where: São Paulo, SP - Brazil
+* Website: [conferenciaweb.w3c.br](http://conferenciaweb.w3c.br/)
+
 ### BrazilJS
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
 * When: August, 30
 * Where: Porto Alegre, RS - Brazil
 * Website: [braziljs.com.br](http://braziljs.com.br/)
+
+### TDC - The Developers Conference
+<!--* Presentation title: Como fugir do feijão com arroz usando Canvas, SVG e WebGL
+* Presentation slides: *#* -->
+* When: August, 25
+* Where: Florianópolis, SC - Brazil
+* Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/)
 
 ### Tableless Conference
 <!--* Presentation title: *#*
