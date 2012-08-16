@@ -4,7 +4,7 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### Conferência W3C
+### W3C Conference - Web.br 2012
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
 * When: October, 18
