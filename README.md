@@ -4,10 +4,19 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
+http://rcuritiba.com.br/
+
+### RCuritiba
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: October, 12-15
+* Where: Curitiba, PR - Brazil
+* Website: [rcuritiba.com.br](http://rcuritiba.com.br/)
+
 ### W3C Conference - Web.br 2012
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
-* When: October, 18
+* When: October, 18-20
 * Where: São Paulo, SP - Brazil
 * Website: [conferenciaweb.w3c.br](http://conferenciaweb.w3c.br/)
 
