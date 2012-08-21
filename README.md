@@ -32,14 +32,14 @@ Just an organized list of all my presentations.
 * Where: São Paulo, SP - Brazil
 * Website: [tableless.com.br/tablelessconf](http://tableless.com.br/tablelessconf/)
 
+## ~ 2012
+
 ### Front in Porto Alegre
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
 * When: August, 18
 * Where: Porto Alegre, SP - Brazil
 * Website: [abradirs.com.br/frontinpoa](http://abradirs.com.br/frontinpoa/)
-
-## ~ 2012
 
 ### QCon
 <!--* Presentation title: *#*
