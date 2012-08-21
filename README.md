@@ -4,8 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-http://rcuritiba.com.br/
-
 ### RCuritiba
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
