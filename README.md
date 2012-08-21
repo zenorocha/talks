@@ -39,6 +39,11 @@ Just an organized list of all my presentations.
 * Where: Curitiba, PR - Brazil
 * Website: [rcuritiba.com.br](http://rcuritiba.com.br/)
 
+### Front in Sampa
+* When: November, 03
+* Where: São Paulo, SP - Brazil
+* Website: [frontinsampa.com.br](http://www.frontinsampa.com.br/)
+
 ## ~ 2012
 
 ### Front in Porto Alegre
