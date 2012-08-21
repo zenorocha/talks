@@ -4,26 +4,12 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### RCuritiba
+### Tableless Conference
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
-* When: October, 12-15
-* Where: Curitiba, PR - Brazil
-* Website: [rcuritiba.com.br](http://rcuritiba.com.br/)
-
-### W3C Conference - Web.br 2012
-<!--* Presentation title: *#*
-* Presentation slides: *#* -->
-* When: October, 18-20
+* When: August, 24
 * Where: São Paulo, SP - Brazil
-* Website: [conferenciaweb.w3c.br](http://conferenciaweb.w3c.br/)
-
-### BrazilJS
-<!--* Presentation title: *#*
-* Presentation slides: *#* -->
-* When: August, 30
-* Where: Porto Alegre, RS - Brazil
-* Website: [braziljs.com.br](http://braziljs.com.br/)
+* Website: [tableless.com.br/tablelessconf](http://tableless.com.br/tablelessconf/)
 
 ### TDC - The Developers Conference
 <!--* Presentation title: Como fugir do feijão com arroz usando Canvas, SVG e WebGL
@@ -32,12 +18,26 @@ Just an organized list of all my presentations.
 * Where: Florianópolis, SC - Brazil
 * Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/)
 
-### Tableless Conference
+### BrazilJS
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
-* When: August, 24
+* When: August, 30
+* Where: Porto Alegre, RS - Brazil
+* Website: [braziljs.com.br](http://braziljs.com.br/)
+
+### W3C Conference - Web.br 2012
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: October, 18-20
 * Where: São Paulo, SP - Brazil
-* Website: [tableless.com.br/tablelessconf](http://tableless.com.br/tablelessconf/)
+* Website: [conferenciaweb.w3c.br](http://conferenciaweb.w3c.br/)
+
+### RCuritiba
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: October, 12-15
+* Where: Curitiba, PR - Brazil
+* Website: [rcuritiba.com.br](http://rcuritiba.com.br/)
 
 ## ~ 2012
 
