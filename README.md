@@ -4,20 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### Tableless Conference
-<!--* Presentation title: *#*
-* Presentation slides: *#* -->
-* When: August, 24
-* Where: São Paulo, SP - Brazil
-* Website: [tableless.com.br/tablelessconf](http://tableless.com.br/tablelessconf/)
-
-### TDC - The Developers Conference
-<!--* Presentation title: Como fugir do feijão com arroz usando Canvas, SVG e WebGL
-* Presentation slides: *#* -->
-* When: August, 25
-* Where: Florianópolis, SC - Brazil
-* Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/)
-
 ### BrazilJS
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
@@ -45,6 +31,20 @@ Just an organized list of all my presentations.
 * Website: [frontinsampa.com.br](http://www.frontinsampa.com.br/)
 
 ## ~ 2012
+
+### Tableless Conference
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: August, 24
+* Where: São Paulo, SP - Brazil
+* Website: [tableless.com.br/tablelessconf](http://tableless.com.br/tablelessconf/)
+
+### TDC - The Developers Conference
+<!--* Presentation title: Como fugir do feijão com arroz usando Canvas, SVG e WebGL
+* Presentation slides: *#* -->
+* When: August, 25
+* Where: Florianópolis, SC - Brazil
+* Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/)
 
 ### Front in Porto Alegre
 <!--* Presentation title: *#*
