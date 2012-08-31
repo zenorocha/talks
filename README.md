@@ -4,13 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### BrazilJS
-<!--* Presentation title: *#*
-* Presentation slides: *#* -->
-* When: August, 30
-* Where: Porto Alegre, RS - Brazil
-* Website: [braziljs.com.br](http://braziljs.com.br/)
-
 ### W3C Conference - Web.br 2012
 <!--* Presentation title: *#*
 * Presentation slides: *#* -->
@@ -31,6 +24,13 @@ Just an organized list of all my presentations.
 * Website: [frontinsampa.com.br](http://www.frontinsampa.com.br/)
 
 ## ~ 2012
+
+### BrazilJS
+<!--* Presentation title: *#*
+* Presentation slides: *#* -->
+* When: August, 30
+* Where: Porto Alegre, RS - Brazil
+* Website: [braziljs.com.br](http://braziljs.com.br/)
 
 ### Tableless Conference
 <!--* Presentation title: *#*
