@@ -1,0 +1,13 @@
+{
+    "toFile" : [
+        {"from": "/(.+\\.js)",
+         "to": "/app/js/$1"},
+        {"from": "/(.+\\.css)",
+         "to": "/app/css$1"}
+    ],
+    "fromFile" : [
+        {"from": "(\\\\|/)app\\1(?:js|css)
+\\1(.+(\\.js|\\.css))(\\.[a-zA-Z]+)?$",
+         "to": "/$2?body=1"}
+    ]
+}

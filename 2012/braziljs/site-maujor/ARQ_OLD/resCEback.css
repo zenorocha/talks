@@ -1,0 +1,24 @@
+		body {  background-attachment: fixed; background-color: #009966; background-image: none;
+ background-repeat: no-repeat; background-position: center center; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; height: 0px; width: 0px; left: 0px; top: 0px; clip:    rect(0px 0px 0px 0px); border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+
+		p {  font-family: "Comic Sans MS", Verdana, Arial, Helvetica, sans-serif; font-size: 8pt;
+ font-style: normal; font-weight: normal; color: #FFFF00; text-decoration: none; text-align: center;
+ vertical-align: middle}
+
+		h4 {  font-family: "Comic Sans MS", Verdana, Arial, Helvetica, sans-serif; font-size: 12pt;
+ font-style: normal; font-weight: normal; color: #0000CC; text-decoration: none; text-align: center;
+ vertical-align: middle; margin-top: 0em; margin-bottom: 0em;}
+
+		h5 { font-family: "Comic Sans MS", Verdana, Arial, Helvetica, sans-serif; font-size: 10pt;
+ font-style: normal; font-weight: normal; color: #FF0000; text-decoration: none; text-align: center;
+ vertical-align: middle; line-height: normal; margin-top: 0em; margin-bottom: 0em;}
+
+		h6 { font-family: "Comic Sans MS", Verdana, Arial, Helvetica, sans-serif; font-size: 8pt;
+ font-style: normal; font-weight: normal; color: #FFFFFF; text-decoration: none; text-align: center;
+ vertical-align: middle; margin-top: 0em; margin-bottom: 0em; }
+
+		table {  background-color: #FFFFCC; border: 15px #FFCC33 outset; width: 70%}
+
+		td {  text-align: left; vertical-align: middle; background-color: #000000; border: 1px #FFFFFF solid}
+h1 { font-family: "Comic Sans MS", Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal; font-weight: normal; color: #FFFFFF; text-decoration: none; text-align: left; vertical-align: middle; margin-top: 0em; margin-bottom: 0em; ; white-space: normal}
+span {  color: #009966}

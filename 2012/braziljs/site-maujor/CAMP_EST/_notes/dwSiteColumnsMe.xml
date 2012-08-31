@@ -1,0 +1,8 @@
+<columnlist>
+<column name="Pasta%20local" align="left" show="TRUE" share="FALSE" builtin="TRUE" localwidth="180" remotewidth="180" />
+<column name="Notas" align="center" show="TRUE" share="FALSE" builtin="TRUE" localwidth="36" remotewidth="36" />
+<column name="Tamanho" align="right" show="TRUE" share="FALSE" builtin="TRUE" localwidth="-2" remotewidth="-2" />
+<column name="Tipo" align="left" show="TRUE" share="FALSE" builtin="TRUE" localwidth="60" remotewidth="60" />
+<column name="Modificado" align="left" show="TRUE" share="FALSE" builtin="TRUE" localwidth="102" remotewidth="102" />
+<column name="Retirado%20por" align="left" show="TRUE" share="FALSE" builtin="TRUE" localwidth="-1" remotewidth="-1" />
+</columnlist>

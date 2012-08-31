@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Como não virar um zumbi ~ BrazilJS 2012</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides>
+
+  <slide class="fill nobackground" style="background: url(img/capa-2.jpg);"></slide>
+
+  <!-- <slide class="fill nobackground" style="background: url(img/capa-2.jpg);"></slide> -->
+
+  <slide class="fill nobackground" style="background: #426CB6; position: relative;">
+    <div class="build">
+      <img src="img/apresentacao-1.png" alt="Twitter" style="position: absolute; top: 180px; left: 130px;">
+      <img src="img/apresentacao-2.png" alt="Petrobras" style="position: absolute; top: 500px; left: 110px;">
+      <img src="img/apresentacao-3.png" alt="globoesporte.com" style="position: absolute; top: 450px; left: 540px;">
+      <img src="img/apresentacao-4.png" alt="Liferay" style="position: absolute; top: 250px; left: 460px;">
+      <img src="img/apresentacao-5.png" alt="Tableless" style="position: absolute; top: 70px; left: 110px;">
+      <img src="img/apresentacao-6.png" alt="BrazilJS" style="position: absolute; top: 70px; left: 520px;">
+    </div>
+  </slide>
+
+  <!-- <slide class="fill nobackground" style="background: #426CB6 url(images/quemsoueu.png);"></slide> -->
+  <!-- <slide class="fill nobackground" style="background-image: url(images/rg.jpg)"></slide> -->
+
+  <!-- <slide class="fill nobackground" style="background-image: url(images/seta.jpg)">
+    <h3><a href="http://talks.zenorocha.com/2012/qconsp">talks.zenorocha.com/2012/braziljs</a></h3>
+  </slide> -->
+
+  <slide class="fill nobackground" style="background-image: url(images/github.jpg)">
+    <h3><a href="http://github.com/zenorocha/talks">github.com/zenorocha/talks</a></h3>
+  </slide>
+
+  <!-- Capítulo: I Want You -->
+  <slide class="fill nobackground" style="background: url(img/estamos-vivendo.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/wantu-jquery.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/nao-1.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/wantu-dojo.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/nao-2.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/wantu-mootools.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/nao-3.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/wantu-yui.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/nao-4.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/wantu-backbone.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/nao-5.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/wantu-ember.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/nao-6.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/wantu-knockout.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/nao-7.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/wantu-angular.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/nao-8.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/aaa.jpg);"></slide>
+
+  <!-- Capítulo: Diante desse cenário -->
+  <slide class="fill nobackground" style="background: url(img/diante-cenario.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/vira-designer.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/vira-zumbi.jpg);"></slide>
+  <slide class="fill nobackground" style="background: #000;">
+    <img src="img/evoluindo.png" alt="Evolução" style="display: block; margin: 50px auto;">
+    <img src="img/evolucao.gif" alt="Evolução" style="display: block; margin: 0 auto;">
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-vanillajs.jpg)">
+    <h3><a href="http://vanilla-js.com/">vanilla-js.com</a></h3>
+  </slide>
+
+  <!-- Capítulo: Kickstart -->
+  <slide class="fill nobackground" style="background: url(img/cap-ferramentas.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/cap-kickstart.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-h5bp.jpg)">
+    <h3><a href="http://html5boilerplate.com/">html5boilerplate.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-embp.jpg)">
+    <h3><a href="http://htmlemailboilerplate.com/">htmlemailboilerplate.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-mbbp.jpg)">
+    <h3><a href="http://html5boilerplate.com/mobile">html5boilerplate.com/mobile</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-bbbp.jpg)">
+    <h3><a href="http://backboneboilerplate.com/">backboneboilerplate.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/seu-proprio-boilerplate.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-formee.jpg)">
+    <h3><a href="http://formee.org/">formee.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-jqbp.jpg)">
+    <h3><a href="http://jqueryboilerplate.com/">jqueryboilerplate.com</a></h3>
+  </slide>
+  <!-- LIVE CODE: Fetch do JQBP no Sublime -->
+
+  <!-- Capítulo: Fonte -->
+  <slide class="fill nobackground" style="background: url(img/cap-fontes.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-fontaws.jpg)">
+    <h3><a href="http://fortawesome.github.com/Font-Awesome/">fortawesome.github.com/Font-Awesome</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-typekit.jpg)">
+    <h3><a href="https://typekit.com/">typekit.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-fontsquirrel.jpg)">
+    <h3><a href="http://www.fontsquirrel.com/">fontsquirrel.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-gwf.jpg)">
+    <h3><a href="http://www.google.com/webfonts/">google.com/webfonts</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/cap-fontes-ja-sabe.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-ftpm.jpg)">
+    <h3><a href="http://heldr.github.com/ftpm/">heldr.github.com/ftpm</a></h3>
+  </slide>
+  <!-- <slide class="fill nobackground" style="padding: 0;">
+    <iframe src="http://player.vimeo.com/video/47778105" width="900" height="700" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </slide> -->
+  <!-- LIVE CODE: Mostrar FTMP
+
+        $ ftpm css Ubuntu
+        $ ftpm css Ubuntu -s
+        $ ftpm install Ubuntu
+
+  -->
+
+  <!-- Capítulo: Pré-processadores -->
+  <slide class="fill nobackground" style="background: url(img/cap-pre.jpg);"></slide>
+
+  <!-- Subcapítulo: Pré-processadores de HTML -->
+  <slide class="fill nobackground" style="background: url(img/cap-pre-html.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-haml.jpg)">
+    <h3><a href="http://haml.info">haml.info</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-jade.jpg)">
+    <h3><a href="http://jade-lang.com/">jade-lang.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-markdown.jpg)">
+    <h3><a href="http://daringfireball.net/projects/markdown/">daringfireball.net/projects/markdown</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #4a525a">
+    <h1>Markdown</h1>
+    <textarea spellcheck="false" class="snippet" rows="8"># Exemplo
+
+BláBláBláBláBlá
+
+## BrazilJS
+* Quando: 30/08
+* Onde: Porto Alegre, RS - Brasil
+* Website: [braziljs.com.br](http://braziljs.com.br/)</textarea>
+  </slide>
+
+  <!-- Subcapítulo: Pré-processadores de CSS -->
+  <slide class="fill nobackground" style="background: url(img/cap-pre-css.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/site-less.jpg)">
+    <h3><a href="http://lesscss.org">lesscss.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/site-stylus.jpg)">
+    <h3><a href="http://learnboost.github.com/stylus/">learnboost.github.com/stylus</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/site-sass.jpg)">
+    <h3><a href="http://sass-lang.com">sass-lang.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #b968d5">
+    <h1>Variáveis<br>no SASS</h1>
+    <textarea spellcheck="false" class="snippet" rows="7">$text-color: #fff;
+$text-bg: #000;
+
+body {
+  color: $text-color;
+  background: $text-bg;
+}</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/cap-preprocessador-ja-sabe.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/css4-variables.jpg)">
+    <h3><a href="http://dev.w3.org/csswg/css-variables/">dev.w3.org/csswg/css-variables</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #4384b5">
+    <h1>Variáveis<br>no CSS 4</h1>
+    <textarea spellcheck="false" class="snippet" rows="6">body {
+    -webkit-var-text-color: #fff;
+    -webkit-var-text-bg: #000;
+    color: -webkit-var(text-color);
+    background: -webkit-var(text-bg);
+}</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/cap-pre-css-variaveis.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-lesselements.jpg)">
+    <h3><a href="http://lesselements.com/">lesselements.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-nib.jpg)">
+    <h3><a href="http://visionmedia.github.com/nib/">visionmedia.github.com/nib</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-compass.jpg)">
+    <h3><a href="http://compass-style.org/">compass-style.org</a></h3>
+  </slide>
+  <!-- <slide class="fill nobackground" style="padding:0">
+    <iframe width="900" height="700" src="http://www.youtube.com/embed/dnekMEGwuaA" frameborder="0" allowfullscreen></iframe>
+  </slide> -->
+  <slide class="fill nobackground" style="background-image: url(img/cap-pre-css-sprites.jpg)"></slide>
+
+  <!-- Subcapítulo: Pré-processadores de JS -->
+  <slide class="fill nobackground" style="background: url(img/cap-pre-js.jpg);"></slide>
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <!-- <source src="videos/wat.mp4"  type="video/mp4"  /> -->
+      <source src="videos/wat.theora.ogv"  type="video/ogv"  />
+      <source src="videos/wat.webm" type="video/webm" />
+    </video>
+  </slide>
+  <!-- <slide class="fill nobackground" style="background-image: url(img/site-coffee.jpg)">
+    <h3><a href="http://coffeescript.org/">aquela linguagem que dá pra usar hoje o EC6</a></h3>
+  </slide> -->
+  <slide class="fill nobackground" style="background-image: url(img/site-coffee.jpg)">
+    <h3><a href="http://coffeescript.org/">coffeescript.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-dart.jpg)">
+    <h3><a href="http://www.dartlang.org/">dartlang.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #149C87">
+    <h1>Dart<br>Code embedding</h1>
+    <textarea spellcheck="false" class="snippet" rows="9">// Nota: Isso só vai funcionar no build do Chromium com Dart VM
+&lt;script type="application/dart" src="program.dart"&gt;&lt;/script&gt;
+
+// E ainda, você precisa disso para iniciar o motor do Dart.
+&lt;script type="text/javascript"&gt;
+  if (navigator.webkitStartDart) {
+    navigator.webkitStartDart();
+  }
+&lt;/script&gt;</textarea>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(img/cap-pre-js-client.jpg)"></slide>
+
+  <!-- Capítulo: DevTools -->
+  <slide class="fill nobackground" style="background: url(img/cap-devtools.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/site-firebug.jpg);">
+    <h3><a href="https://addons.mozilla.org/pt-BR/firefox/addon/firebug/">addons.mozilla.org/pt-BR/firefox/addon/firebug</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/cap-devtools-debug.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/cap-devtools-alert.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/cap-devtools-console.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/cap-devtools-breakpoint.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/site-chrometools.jpg);">
+    <h3><a href="https://developers.google.com/chrome-developer-tools/">developers.google.com/chrome-developer-tools</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/site-dragonfly.jpg);">
+    <h3><a href="http://www.opera.com/dragonfly/">opera.com/dragonfly</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/cap-devtools-fluxo.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/site-livereload.jpg);">
+    <h3><a href="http://livereload.com/">livereload.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/site-tincr.jpg);">
+    <h3><a href="http://tin.cr/">tin.cr</a></h3>
+  </slide>
+
+  <!-- Capítulo: Mobile -->
+  <slide class="fill nobackground" style="background: url(img/cap-mobile.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/site-adobeshadow.jpg);">
+    <h3><a href="http://labs.adobe.com/technologies/shadow/">labs.adobe.com/technologies/shadow</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/phonegap.jpg);">
+    <h3><a href="http://phonegap.com/">phonegap.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/titanium.jpg);">
+    <h3><a href="http://www.appcelerator.com/">appcelerator.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/cap-mobile-ja-sabe.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-html5test.jpg);">
+    <h3><a href="http://html5test.com/results/mobile.html">html5test.com/results/mobile.html</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/b2g.jpg);">
+    <h3><a href="http://www.mozilla.org/en-US/b2g/">mozilla.org/en-US/b2g</a></h3>
+  </slide>
+  <!-- LIVE CODE: Rodar o B2G e depois abrir o Gaia no Sublime -->
+
+  <!-- Capítulo: Testes -->
+  <slide class="fill nobackground" style="background: url(img/cap-testes.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/jasmine.jpg);">
+    <h3><a href="http://pivotal.github.com/jasmine/">pivotal.github.com/jasmine</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/qunit.jpg);">
+    <h3><a href="http://qunitjs.com/">qunitjs.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-dojojs.jpg);">
+    <h3><a href="http://dojojs.com/">dojojs.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/cap-testes-ja-sabe.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/zombie.jpg);">
+    <h3><a href="http://zombie.labnotes.org/">zombie.labnotes.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/phantom.jpg);">
+    <h3><a href="http://phantomjs.org/">phantomjs.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #57bcc7;">
+    <h1>PhantomJS</h1>
+    <p>Como obter o título de uma página web, <strong>sem abri-lá</strong>?</p>
+    <textarea class="snippet" spellcheck="false" rows="12">var page = require('webpage').create(),
+      url = "http://localhost:8000/";
+
+page.open(url, function (status) {
+
+    var title = page.evaluate(function () {
+        return document.title;
+    });
+
+    console.log('O título da página é: ' + title);
+
+});</textarea>
+  </slide>
+  <!-- <slide class="fill nobackground">
+    você sabe da importância de fazer tests, então por que não fazer?
+  </slide> -->
+
+  <!-- Capítulo: Documentação -->
+  <!-- <slide class="fill nobackground" style="background: url(img/cap-documentacao.jpg);"></slide>
+  <slide class="fill nobackground">
+    saiba onde procurar
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/w3.jpg)">
+    <h3><a href="http://w3schools.com">w3schools.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/no-w3.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/w3fools.jpg)">
+    <h3><a href="http://w3fools.com/">w3fools.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/mdn.jpg)">
+    <h3><a href="https://developer.mozilla.org/">developer.mozilla.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-jstherightway.jpg)">
+    <h3><a href="http://www.jstherightway.com/">jstherightway.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-diveintohtml5.jpg)">
+    <h3><a href="http://diveintohtml5.com.br/">diveintohtml5.com.br</a></h3>
+  </slide>
+  <slide class="fill nobackground">
+    mas isso você já sabe...
+  </slide>
+  <slide class="fill nobackground">
+    vamo contribuir po!
+  </slide>
+  <slide class="fill nobackground">
+    minha edição no wikipedia da html5
+  </slide>
+  <slide class="fill nobackground">
+    saiba onde procurar
+  </slide> -->
+
+  <!-- Capítulo: Build -->
+  <slide class="fill nobackground" style="background-image: url(img/cap-build.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-yuicompressor.jpg)">
+    <h3><a href="http://developer.yahoo.com/yui/compressor/">developer.yahoo.com/yui/compressor</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-pimpmyjs.jpg)">
+    <h3><a href="http://pimpmyjs.com/">pimpmyjs.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-ant.jpg)">
+    <h3><a href="http://ant.apache.org/">ant.apache.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-grunt.jpg)">
+    <h3><a href="https://github.com/cowboy/grunt">github.com/cowboy/grunt</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/cap-build-ja-sabe.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-yeoman.jpg)">
+    <h3><a href="http://yeoman.io/">yeoman.io</a></h3>
+  </slide>
+
+  <!-- Capítulo: Passado -->
+  <slide class="fill nobackground" style="background: url(img/cap-editor.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/site-notepad.jpg);">
+    <h3><a href="http://notepad-plus-plus.org/">notepad-plus-plus.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/site-textmate.jpg);">
+    <h3><a href="http://macromates.com/">macromates.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/site-dreamweaver.jpg);">
+    <h3><a href="http://www.adobe.com/br/products/dreamweaver.html">adobe.com/br/products/dreamweaver.html</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/site-vim.jpg);">
+    <h3><a href="http://www.vim.org/">vim.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img/site-sublime.jpg);">
+    <h3><a href="http://www.sublimetext.com/">sublimetext.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="padding:0">
+    <iframe width="900" height="700" src="http://www.youtube.com/embed/Ms3Vsz7Jc3A" frameborder="0" allowfullscreen></iframe>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/aprenda-1.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/aprenda-2.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/aprenda-3.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/comecei.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img/xp.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-google404.jpg)">
+    <h3><a href="view-source:http://www.google.com/404">view-source:google.com/404</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/content-editable.jpg)">
+    <h3><a href="http://talks.zenorocha.com/code/content-editable.html">talks.zenorocha.com/code/content-editable.html</a></h3>
+  </slide>
+  <!-- <slide class="fill nobackground">
+    versionamento com .zip
+  </slide>
+  <slide class="fill nobackground">
+    git-scm.com
+  </slide> -->
+  <slide class="fill nobackground" style="background: url(img/dinossauros.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/site-maujor.jpg)">
+    <h3><a href="http://talks.zenorocha.com/2012/braziljs/site-maujor/">talks.zenorocha.com/2012/braziljs/site-maujor</a></h3>
+  </slide>
+  <slide class="fill nobackground">
+    <q>Geeks love to fight</q>
+    <div class="author"> Rasmus Lerdorf</div>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img/sucesso-1.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img/sucesso-2.jpg);"></slide>
+
+  <!-- FIM -->
+  <slide class="fill nobackground" style="background: #fff">
+    <h1 style="color: black">É contigo...</h1>
+    <img  class="center" style="margin-top: 50px;" src="images/wherethemagichappens.png" alt="" />
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(img/fim.jpg);"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4114546-32']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
