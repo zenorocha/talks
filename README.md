@@ -18,10 +18,20 @@ Just an organized list of all my presentations.
 * Where: Curitiba, PR - Brazil
 * Website: [rcuritiba.com.br](http://rcuritiba.com.br/)
 
+### Front in Alagoas
+* When: October, 27
+* Where: Maceió, AL - Brazil
+* Website: **Not available yet**
+
 ### Front in Sampa
 * When: November, 03
 * Where: São Paulo, SP - Brazil
 * Website: [frontinsampa.com.br](http://www.frontinsampa.com.br/)
+
+### Front in Londrina
+* When: December, 01
+* Where: Londrina, PR - Brazil
+* Website: **Not available yet**
 
 ## ~ 2012
 
