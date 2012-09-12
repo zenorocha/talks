@@ -1,0 +1,3225 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2011 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Chrome DevRel Team (chrome-devrel@googlegroups.com)
+                 Alex Russell (slightlyoff@chromium.org)
+                 Brad Neuberg
+-->
+<html manifest="cache.appcache">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <title>HTML5</title>
+    <link id="prettify-link" href="src/prettify/prettify.css" rel="stylesheet" disabled />
+    <link href="css/default.css" class="theme" rel="stylesheet" media="screen" />
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    
+  </head>
+  <body>
+    <div class="presentation">
+      <div id="presentation-counter">Carregando...</div>
+      <div class="slides">
+        <div class="slide" id="intro">
+          <style>
+		    
+		     .footer {
+		    	width: 860px;
+		    	height: 55px;
+		    	padding: 10px;
+		    	position: absolute;
+		        bottom: 10px;
+		        left: 10px;
+		        background: #0092bf;
+		        text-transform: uppercase;
+		        color: #fff;
+		        font-size: 44px;
+		        /*text-align: center;*/
+		    }
+		    
+		     .footer a {
+		    	text-decoration: none;
+		    	border: 0;	
+		    }
+		    
+            #intro p {
+              font-size: 35px;
+            }
+            
+            p#disclaimer-message {
+              font-size: 20px;
+            }
+            
+            .alignright {
+            	text-align: right;
+            	position: absolute;
+            	bottom: 10px;
+		        right: 10px;
+            }
+            
+            .alignleft {
+            	text-align: left;
+            	position: absolute;
+            	bottom: 10px;
+		        left: 10px;
+            }
+            
+          </style>
+          
+          <div class="footer">
+          	<div class="alignleft"><a target="_blank" href="http://zenorocha.com/">por zeno rocha</a></div>
+          	<div class="alignright"><a target="_blank" href="http://twitter.com/zenorocha/">@zenorocha</a></div>
+          </div>
+          
+        </div>
+        
+        <div class="slide" id="instrucoes">
+          
+          <span id="left-init-key" class="key">&larr;</span>
+          
+          <div class="footer">
+            <div class="alignright"><a target="_blank" href="http://labs.zenorocha.com/html5/slides/">labs.zenorocha.com/html5/slides</a></div>
+          </div>
+        </div>
+        
+        <div class="slide" id="github">
+          
+          <a target="_blank" href="https://github.com/zenorocha/HTML5-Slides">
+            <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub">
+          </a>
+          
+          <div class="footer">
+            <div class="alignright"><a target="_blank" href="http://github.com/zenorocha/HTML5-Slides/">github.com/zenorocha/HTML5-Slides</a></div>
+          </div>
+          
+        </div>
+        
+        <div class="slide" id="o-que-e">
+          <section class="middle formula" data-build>
+            <span class="html"><img src="img/html.png" alt="" /></span>
+            <span class="css"><img src="img/css.png" alt="" /></span>
+            <span class="js"><img src="img/js.png" alt="" /></span>
+          </section>
+        </div>
+        
+        <div class="slide categoria" id="semantics-markup-title">
+          
+          <header>
+            <h2>Semântica</h2>
+          </header>
+          
+          <section class="middle">
+            <img src="img/cat/semantica.png" alt="" />
+          </section>
+          
+        </div>
+        
+        <div class="slide semantics" id="doctype-xhtml">
+          
+          <style>
+            #doctype-xhtml pre { font-size: 64px; }
+            #doctype-xhtml section { height: 100%; }
+          </style>
+          
+          <header>
+            <h1>doctype XHTML</h1>
+          </header>
+
+          <section>
+            <pre>
+&lt;!DOCTYPE html PUBLIC 
+"-//W3C//DTD XHTML 1.0 
+Transitional//EN" 
+"http://www.w3.org/TR/
+xhtml1/DTD/xhtml1-
+transitional.dtd"&gt;
+            </pre>
+          </section>
+        </div>
+        
+        <!-- <div class="slide" id="soufoda"></div> -->
+        
+        <div class="slide semantics" id="doctype-html5">
+          
+          <style>
+            #doctype-html5 pre { font-size: 64px; text-align: center; }
+          </style>
+          
+          <header>
+            <h1>doctype HTML5</h1>
+          </header>
+
+          <section>
+            <pre>
+&lt;!DOCTYPE html"&gt;
+            </pre>
+          </section>
+        </div>
+
+        <div class="slide semantics" id="semantic-tags-1">
+          <header><h1>Tags muito mais semânticas</h1></header>
+          <section>
+            <style>
+              #semantic-tags-1 {
+                font-size: 95%;
+              }
+            </style>
+            <pre class="two-column">&lt;body&gt;
+  &lt;<b>header</b>&gt;
+    &lt;<b>hgroup</b>&gt;
+      &lt;h1&gt;Título&lt;/h1&gt;
+      &lt;h2&gt;Subtítulo&lt;/h2&gt;
+    &lt;/hgroup&gt;
+  &lt;/header&gt;
+
+  &lt;<b>nav</b>&gt;
+   &lt;ul&gt;
+     &lt;li&gt;BláBláBlá - 1&lt;/li&gt;
+     &lt;li&gt;BláBláBlá - 2&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/nav&gt;
+  
+  &lt;<b>section</b>&gt;
+   &lt;<b>article</b>&gt;
+     &lt;<b>header</b>&gt;
+       &lt;h1&gt;Título da notícia - 1&lt;/h1&gt;
+     &lt;/header&gt;
+     &lt;section&gt;
+       Conteúdo...
+     &lt;/section&gt;
+   &lt;/article&gt;
+   &lt;article&gt;
+     &lt;header&gt;
+       &lt;h1&gt;Título da notícia - 2&lt;/h1&gt;
+     &lt;/header&gt;
+     &lt;section&gt;
+       Conteúdo...
+     &lt;/section&gt;
+   &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;<b>aside</b>&gt;
+   Links...
+  &lt;/aside&gt;
+
+  &lt;<b>figure</b>&gt;
+    &lt;img src="..."/&gt;
+    &lt;<b>figcaption</b>&gt;Figura 1.1&lt;/figcaption&gt;
+  &lt;/figure&gt;
+
+  &lt;<b>footer</b>&gt;
+   Copyright &copy;<br>   &lt;<b>time</b> <b>datetime</b>="2011-06-04"&gt;2011&lt;/time&gt;.
+  &lt;/footer&gt;
+&lt;/body&gt;
+</pre>
+          </section>
+        </div>
+        
+        <div class="slide" id="semantica-estrutura-ontem"></div>
+        
+        <div class="slide" id="semantica-estrutura-hoje"></div>
+
+        <!-- <div class="slide semantics" id="link-relations">
+          
+          <header>
+            <h1>Links relacionais</h1>
+          </header>
+          
+          <style>
+            .underlined { text-decoration: underline; }
+          </style>
+          
+          <section>
+            <pre>&lt;link <b>rel="alternate"</b> type="application/rss+xml" href="http://myblog.com/feed"/&gt;
+&lt;link <b>rel="icon"</b> href="/favicon.ico"/&gt;
+&lt;link <b>rel="pingback"</b> href="http://myblog.com/xmlrpc.php"/&gt;
+&lt;link <b>rel="prefetch"</b> href="http://myblog.com/main.php"/&gt;
+...
+
+&lt;a <b>rel="archives"</b> href="http://myblog.com/archives"&gt;<span class="underlined">old posts</span>&lt;/a&gt;
+&lt;a <b>rel="external"</b> href="http://notmysite.com"&gt;<span class="underlined">tutorial</span>&lt;/a&gt;
+&lt;a <b>rel="license"</b> href="http://www.apache.org/licenses/LICENSE-2.0"&gt;<span class="underlined">license</span>&lt;/a&gt;
+&lt;a <b>rel="nofollow"</b> href="http://notmysite.com/sample"&gt;<span class="underlined">wannabe</span>&lt;/a&gt;
+&lt;a <b>rel="tag"</b> href="http://myblog.com/category/games"&gt;<span class="underlined">games posts</span>&lt;/a&gt;
+...
+</pre>
+
+          </section>
+        </div> -->
+        
+        <div class="slide semantics" id="new-form-types">
+          <header>
+            <h1>Novas tags para os formulários</h1>
+          </header>
+          
+          <section>
+            <style>
+            .form-inputs {
+              font-size: 80%;
+            }
+            .form-inputs input {
+              float: right;
+              border: 1px solid #CCC;
+              -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+              -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+              -o-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+              box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+              padding: 3px 5px;
+            }
+            input[required] {
+              border-color: #88a;
+              -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+              -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+              -o-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+              box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+            }
+            input:invalid {
+              border-color: #e88;
+              -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+              -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+              -o-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+              box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+            }
+            </style>
+            <pre>
+&lt;style&gt;
+  [required] {
+    border-color: #88a;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 255, .5);
+  }
+  :invalid {
+    border-color: #e88;
+    -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+  }
+&lt;/style&gt;
+</pre>
+<pre class="form-inputs">
+<input type="text" required />&lt;input type="text" <b>required</b> /&gt;
+
+<input type="email" value="some@email.com" />&lt;input type="<b>email</b>" value="some@email.com" /&gt;
+
+<input type="date" value="2011-06-04" />&lt;input type="<b>date</b>" value="2011-06-04"/&gt;
+
+<input type="range" min="0" max="50" value="10" />&lt;input type="<b>range</b>" <b>min</b>="0" <b>max</b>="50" value="10" /&gt;
+
+<input results="10" type="search" placeholder="Pesquisar" />&lt;input type="<b>search</b>" <b>results</b>="10" <b>placeholder</b>="Pesquisar" /&gt;
+
+<input type="tel" placeholder="(555) 555-5555" pattern="^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$" />&lt;input type="<b>tel</b>"  placeholder="(555) 555-5555"
+         <b>pattern</b>="^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$" /&gt;
+
+<input type="number" step="1" min="-5" max="10" value="0" />&lt;input type="<b>number</b>" <b>step</b>="1" <b>min</b>="-5" <b>max</b>="10" value="0" /&gt;
+</pre>
+          </section>
+        </div>
+
+        <div class="slide semantics" id="form-types-mobile">
+          <header><h1>Tipos de campos de formulário para mobile</h1></header>
+          <section>
+            <style type="text/css" media="screen">
+              #form-types-mobile div {
+                float: left;
+                width: 24%;
+                padding-right: 1%;
+                text-align: center;
+              }
+              #form-types-mobile img {
+                width: 90%;
+                -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 6px;
+              }
+            </style>
+            <div>
+<pre>type="<em>text</em>"</pre>
+              <figure>
+                <img src="src/android-form-text.png" alt="android keyboard on input type text" />
+                <figcaption>Android Device</figcaption>
+              </figure>
+            </div>
+            <div>
+<pre>type="<em>number</em>"</pre>
+              <figure>
+                <img src="src/android-form-number.png" alt="android keyboard on input type number" />
+                <figcaption>Android Device</figcaption>
+              </figure>
+            </div>
+            <div>
+<pre>type="<em>email</em>"</pre>
+              <figure>
+                <img src="src/iphone-form-email.png" alt="iphone keyboard on input type email" />
+                <figcaption>iPhone Device</figcaption>
+              </figure>
+            </div>
+            <div>
+<pre>type="<em>tel</em>"</pre>
+              <figure>
+                <img src="src/iphone-form-tel.png" alt="iphone keyboard on input type tel" />
+                <figcaption>iPhone Device</figcaption>
+              </figure>
+            </div>
+          </section>
+        </div>
+        
+        
+        
+        
+
+        <div class="slide categoria" id="offline-storage-title">
+          <header>
+            <h2>Armazenamento</h2>
+          </header>
+          
+          <section class="middle">
+            <img src="img/cat/offline-storage.png" alt="" />
+          </section>
+        </div>
+
+        <div class="slide offline-storage" id="web-storage">
+          <style>
+          
+            #ta {
+              width: 400px;
+              height: 150px;
+              display: block;
+              margin: 0 auto;
+            }
+            #web-storage h2 {
+              padding-bottom: 20px;
+            }
+            
+            #save-ta {
+              margin: 10px 0 0 235px;
+            }
+            
+            #ta-log {
+              text-align: center;
+            }
+          </style>
+          
+          <header>
+            <h1>Web Storage</h1>
+          </header>
+          
+          <section>
+<pre>
+// use localStorage for persistent storage
+// use sessionStorage for per tab storage
+saveButton.addEventListener('click', function () {
+  window.<b>localStorage</b>.<b>setItem</b>('value', area.value);
+  window.<b>localStorage</b>.<b>setItem</b>('timestamp', (new Date()).getTime());
+}, false);
+textarea.value = window.<b>localStorage</b>.<b>getItem</b>('value');
+</pre>
+            <h2>Grava todo conteúdo de texto no client-side</h2>
+            <textarea id="ta" placeholder="Entre com o texto aqui..."></textarea>
+            <button id="save-ta">Salvar</button>
+            <p id="ta-log"></p>
+            <script defer>
+              (function(){
+
+                try {
+                  (window.localStorage.getItem) // will throw in Firefox under some settings
+                } catch(e){
+                  return; // quit because dom.storage.enabled is false
+                }
+
+                var area = document.querySelector('#ta');
+                // place content from previous edit
+                if (!area.value) {
+                  area.value = window.localStorage.getItem('value');
+                }
+                updateLog(false);
+  
+                // your content will be saved locally
+                document.querySelector('#save-ta').addEventListener('click', function () {
+                  window.localStorage.setItem('value', area.value);
+                  window.localStorage.setItem('timestamp', (new Date()).getTime());
+                  updateLog(true);
+                }, false);
+
+                function updateLog(new_save) {
+                  var log = document.querySelector("#ta-log");
+                  var delta = 0;
+                  if (window.localStorage.getItem('value')) {
+                    delta = ((new Date()).getTime() - (new Date()).setTime(window.localStorage.getItem('timestamp'))) / 1000;
+                    if (new_save) {
+                      log.textContent = 'Salvo. Esse conteúdo vai estar disponível mesmo depois de atualizar a página ou abrir/fechar o navegador.';
+                      setTimeout(function() {
+                        log.textContent = '';
+                      }, 3000);
+                    } else {
+                      log.textContent = 'último salvamento há: ' + delta + ' segundos atrás';
+                    }
+                  }
+                }
+
+              })();  
+            </script>
+            
+          </section>
+        </div>
+
+        <div class="slide offline-storage" id="web-sql-db">
+          <style>
+            #websqldb-example .record-list li:nth-child(odd) { background-color: #eee; }
+            #websqldb-example .record-list li:nth-child(even) { background-color: #ddd; }
+            #websqldb-example .record-list li {
+              padding-left: 5px;
+            }
+            #db-results {
+              max-height: 150px;
+              overflow: auto;
+              text-align: left;
+            }
+            #websqldb-example .error {
+              color: red;
+            }
+            
+            #w3-websql {
+               position: absolute;
+               bottom: 10px;
+               left: 45px; 
+            }
+            
+          </style>
+          <header>  <h1>Web SQL Database</h1></header>
+          <section>
+<pre>var db = window.<b>openDatabase</b>("DBName", "1.0", "description", 5*1024*1024); //5MB
+db.<b>transaction</b>(function(tx) {
+  tx.<b>executeSql</b>(<em>"SELECT * FROM test"</em>, [], successCallback, errorCallback);
+});
+</pre>
+
+          <div class="center" id="websqldb-example">
+            <input type="text" id="todoitem" />
+            <button onclick="webSqlSample.newRecord()">novo item</button>
+            <button onclick="webSqlSample.createTable()">create table</button>
+            <button onclick="webSqlSample.dropTable()">drop table</button>
+            <ul class="record-list" id="db-results"></ul>
+            <div id="db-log"></div>
+          </div>
+          <script defer>
+            var webSqlSample = (function() {
+              var db;
+              var log = document.getElementById('db-log');
+              if (window.openDatabase) {
+                db = openDatabase("DBTest", "1.0", "HTML5 Database API example", 200000);
+                showRecords();  
+              }
+              document.getElementById('db-results').addEventListener('click', function(e) { e.preventDefault(); }, false);
+
+              function onError(tx, error) {
+                log.innerHTML = '<p class="error">Error: ' + error.message + '</p>';
+              }
+
+              // select all records and display them
+              function showRecords() {
+                document.getElementById('db-results').innerHTML = '';
+                db.transaction(function(tx) {
+                  tx.executeSql("SELECT * FROM Table1Test", [], function(tx, result) {
+                    for (var i = 0, item = null; i < result.rows.length; i++) {
+                      item = result.rows.item(i);
+                      document.getElementById('db-results').innerHTML += 
+                          '<li><span contenteditable="true" onkeyup="webSqlSample.updateRecord('+item['id']+', this)">'+
+                          item['text'] + '</span> <a href="#" onclick="webSqlSample.deleteRecord('+item['id']+')">[Delete]</a></li>';
+                    }
+                  });
+                });
+              }
+
+              function createTable() {
+                db.transaction(function(tx) {
+                  tx.executeSql("CREATE TABLE Table1Test (id REAL UNIQUE, text TEXT)", [],
+                      function(tx) {  log.innerHTML = '<p>"Table1Test" criada!</p>' },
+                      onError);
+                });
+              }
+
+              // add record with random values
+              function newRecord() {
+                var num = Math.round(Math.random() * 10000); // random data
+                db.transaction(function(tx) {
+                  tx.executeSql("INSERT INTO Table1Test (id, text) VALUES (?, ?)", [num, document.querySelector('#todoitem').value],
+                      function(tx, result) {
+                        log.innerHTML = '';
+                        showRecords();
+                      }, 
+                      onError);
+                });
+              }
+
+              function updateRecord(id, textEl) {
+                db.transaction(function(tx) {
+                  tx.executeSql("UPDATE Table1Test SET text = ? WHERE id = ?", [textEl.innerHTML, id], null, onError);
+                });
+              }
+
+              function deleteRecord(id) {
+                db.transaction(function(tx) {
+                  tx.executeSql("DELETE FROM Table1Test WHERE id=?", [id],
+                      function(tx, result) { showRecords() }, 
+                      onError);
+                });
+              }
+
+              // delete table from db
+              function dropTable() {
+                db.transaction(function(tx) {
+                  tx.executeSql("DROP TABLE Table1Test", [],
+                      function(tx) { showRecords() }, 
+                      onError);
+                });
+              }
+              
+              return {
+                newRecord: newRecord,
+                createTable: createTable,
+                updateRecord: updateRecord,
+                deleteRecord: deleteRecord,
+                dropTable: dropTable
+              }
+            })();
+          </script>
+          
+          <div class="center" id="w3-websql">
+            <img src="img/ilustras/web-sql.jpg" alt="" />
+          </div>
+          
+        </section>
+      </div>
+
+        <!-- <div class="slide offline-storage" id="app-cache">
+          <style>
+            #appcache-message {
+              text-align: center;
+            }
+            #appcache-message img {
+              vertical-align: middle;
+              cursor: pointer;
+            }
+            .appcache-examples pre {
+              font-size: 80%;
+            }
+          </style>
+          <header>  <h1>Application Cache</h1></header>
+          <section class="appcache-examples">
+<pre>&lt;html <b>manifest="cache.appcache"</b>&gt;</pre>
+
+<pre>
+window.<b>applicationCache</b>.addEventListener('updateready', function(e) {
+  if (window.<b>applicationCache</b>.<b>status</b> == window.<b>applicationCache</b>.<b>UPDATEREADY</b>) {
+    window.<b>applicationCache</b>.<b>swapCache()</b>;
+    if (confirm('A new version of this site is available. Load it?')) {
+      window.location.reload();
+    }
+  }
+}, false);
+</pre>
+cache.appcache:
+<pre>CACHE MANIFEST
+# version 1.0.0
+
+CACHE:
+/html5/src/logic.js
+/html5/src/style.css
+/html5/src/background.png
+
+NETWORK:
+*
+</pre>
+
+           <p id="appcache-message">Turn off your internet connection and refresh this page!
+           <img src="src/refresh.png" onclick="window.location.reload();"/></p>
+          </section>
+        </div> -->
+
+        <div class="slide categoria" id="realtime-title">
+          <header>
+            <h2>Comunicação</h2>
+          </header>
+          
+          <section class="middle">
+            <img src="img/cat/conectividade.png" alt="" />
+          </section>
+        </div>
+
+
+        <div class="slide realtime-communication" id="web-sockets">
+          <style>
+            #websockets-message {
+              text-align: left;
+              padding: 5px 10px;
+              font-size: 26px;
+            }
+            #ws-left {
+              float: left;
+              width: 490px;
+              padding-right: 10px
+            }
+            #ws-left h4 {
+              margin: 10px 0 0 0;
+            }
+            #ws-right {
+              float: left;
+              width: 300px;
+              border-left: solid 1px #9a9ab3;
+              padding-left: 20px;
+            }
+            #wsConsoleLog {
+              background-color: white;
+              border: solid 1px #999;
+              border-top-color: #ccc;
+              border-left-color: #ccc;
+              padding: 5px;
+              width: 290px;
+              height: 175px;
+              overflow-y: auto;
+            }
+            #wsConsoleLog p:first-of-type {
+              margin: 0 0;
+            }
+            #wsConsoleLog p {
+              margin: 0.5em 0;
+              font-size: 12px;
+            }
+            #ws-left input[type='text'] {
+              width: 370px;
+            }
+            #wsSecureCb {
+              position: relative;
+              top: 2px;
+            }
+            #wsSecureCbLabel {
+              position: relative;
+              left: -10px;
+            }
+            #ws-left button,
+            #ws-right button {
+              margin-top: 5px;
+              font-size: 14px;
+            }
+            #ws-config-config, #ws-config-message {
+              margin-top: 15px;
+            }
+            #ws-right button {
+              font-size: 14px;
+              margin-top: 3px;
+            }
+            #ws-powered {
+              text-align: center;
+              padding-top: 15px;
+              clear: both;
+            }
+            #ws-powered a {
+              border: 0
+            }
+            #wsKaazingLogo {
+              position: relative;
+              top: 4px;
+              left: 2px;
+              border: 0;
+            }
+          </style>
+          
+          <header>
+            <h1>WebSocket</h1>
+          </header>
+          
+          <section>
+<pre>var socket = new <b>WebSocket</b>('ws://html5rocks.websocket.org/echo');
+socket.<b>onopen</b> = function(event) {
+  socket.<b>send</b>('Hello, WebSocket');
+};
+socket.<b>onmessage</b> = function(event) { alert(event.data); }
+socket.<b>onclose</b> = function(event) { alert('closed'); }
+</pre>
+
+            <p id="websockets-message">
+              
+              
+              É uma tecnologia que permite a comunicação bidirecional por canais full-duplex sobre um único soquete.
+              
+              Tanto o servidor quanto o cliente podem enviar dados a qualquer momento.
+              Somente o dado é transmitido, ou seja, não há overhead no HTTP headers, o que reduz bastante a largura da banda.</p>
+
+            <div id="ws-left">
+              Use o echo abaixo para testar uma conexão WebSocket a partir do seu navegador.
+              Tanto a mensagem que você enviar tanto a resposta recebida pelo servidor estarão transitando por mesma conexão WebSocket.
+
+              <div id="ws-config-location">
+                <h4>Localização:</h4>
+                <input type="text" id="wsUri" disabled />
+                <br>
+                <input type="checkbox" id="wsSecureCb" onclick="wsToggleTls();" disabled />
+                <label id="wsSecureCbLabel" for="wsSecureCb">Use secure WebSocket (TLS/SSL)</label>
+                <br>
+                <button id="wsConnectBut" disabled>Conecte</button>
+                <button id="wsDisconnectBut" disabled>Desconecte</button>
+              </div>
+              <div id="ws-config-message">
+                <h4>Mensagem:</h4>
+                <input  type="text" id="wsMessage" value="Hello, WebSocket" disabled />
+                <button id="wsSendBut" disabled>Enviar</button>
+              </div>
+            </div>
+            <div id="ws-right">
+              <div id="ws-log">
+                <strong>Output:</strong>
+                <div id="wsConsoleLog"></div>
+                <button id="wsClearLogBut">Limpar</button>
+              </div>
+            </div>
+
+          </section>
+          <script src="src/websocket/websocket.js" defer></script>
+        </div>
+
+
+        <div class="slide realtime-communication" id="notifications-api">
+          <style>
+            #notifications-message {
+              text-align: center;
+            }
+          </style>
+          <header>  <h1>Notificações</h1></header>
+          <section>
+<pre>if (window.<b>webkitNotifications</b>.<b>checkPermission</b>() == 0) {
+  // você pode passar qualquer url como parâmetro
+  window.<b>webkitNotifications</b>.<b>createNotification</b>(tweet.picture, tweet.title, 
+      tweet.text).<b>show</b>();
+} else {
+  window.<b>webkitNotifications</b>.<b>requestPermission</b>();
+}
+</pre>
+        <div id="notifications-message">
+          <p>
+            <button id="request-permission" href="#">Definir permissão de notificação para esse site</button>
+          </p>
+
+          <br>
+          <p>Digite o username do twitter para ver o último tweet como uma notificação.</p>
+          <input type="text" id="username" placeholder="username" />
+          <button id="show-tweets">Exibir último tweet</button>
+        </div>
+
+          <script defer>
+          document.getElementById('request-permission').addEventListener('click', function() {
+            window.webkitNotifications.requestPermission();
+          }, false);
+
+          document.getElementById('show-tweets').addEventListener('click', function() {
+            readTweets();
+          }, false);
+
+          function readTweets() {
+            var username = document.getElementById('username').value;
+            if (username == 'username') {
+              alert('Enter a username first');
+              return;
+            }
+            var script = document.createElement("script");
+            script.src = 'http://twitter.com/statuses/user_timeline/'+ username+'.json?count=1&callback=fetchTweets';
+            document.body.appendChild(script);
+          }
+
+          function fetchTweets(data) {
+            var tweet;
+            var i = data.length;
+            while (i--) {
+              tweet = data[i];
+              if (window.webkitNotifications.checkPermission() == 0) {
+                // note the show()
+                window.webkitNotifications.createNotification(tweet.user.profile_image_url, tweet.user.name, tweet.text).show();
+              } else {
+                // Note that we can't call requestPermission from here as we are in the callback function and not triggered just on user action
+                alert('You have to click on "Set notification permissions for this page" first to be able to receive notifications.');
+                return;
+              }
+            }
+          }
+          </script>
+
+          </section>
+        </div>
+
+
+        
+
+        <div class="slide categoria" id="hardware-access-title">
+          <header>
+            <h2>Arquivo / Acesso ao hardware</h2>
+          </header>
+          
+          <section class="middle">
+            <img src="img/cat/device-access.png" alt="" />
+          </section>
+        </div>
+
+
+        <div class="slide device-access" id="drag-and-drop">
+          <style>
+            #drag-zone {
+              list-style: none;
+              float: left;
+            }
+            #drag-zone li * {
+              border: 4px solid #888;
+              display: block;
+            }
+            #drag-zone, #drop-zone, #drop-data { width: 20%; }
+            #drop-zone, #drop-data {
+              padding: 40px;
+              border: 5px solid #888;
+              float: right;
+              height: 240px;
+              overflow: auto;
+            }
+            #drop-zone.hovering {
+              border: 5px solid #aaa;
+              background-color: rgba(255, 0, 0, 0.199219);
+            }
+            #drop-data { 
+              background-color: #eee;
+              font-family: Monospace;
+              -ms-word-wrap: break-word;
+              word-wrap: break-word;
+            }
+            .datatypes {
+              font-weight: bold;
+            }
+            .draggable-text {
+              padding: 5px;
+            }
+          </style>
+          
+          <header>
+            <h1>Drag &amp; Drop</h1>
+          </header>
+          
+          <section id="dnd-section">
+
+<pre>document.addEventListener(<em>'dragstart'</em>, function(event) {
+  event.<b>dataTransfer.setData</b>('text', 'Customized text');
+  event.<b>dataTransfer.effectAllowed</b> = 'copy';
+}, false);
+</pre>
+            <ol id="drag-zone">
+              <li><img src="src/linux_caxias.jpg" draggable class="copy" /></li>
+              <li><span class="draggable-text" draggable>Selecione o texto e arraste (texto original será descartado)</span></li>
+              <li><span class="draggable-text" draggable class="overwrite">Selecione o texto e arraste (texto arrastado irá alterar o original)</span></li>
+            </ol>
+            <div id="drop-data">Fonte</div>
+            <div id="drop-zone">Drop</div>
+            <script defer>
+            (function() {
+              var dragZone = document.querySelector('#drag-zone');
+              var dropZone = document.querySelector('#drop-zone');
+              dragZone.addEventListener('dragstart', function(event) {
+                if (event.target.className) { // img case
+                  event.dataTransfer.effectAllowed = event.target.className;
+                  event.target.style.border = "4px solid #cc3300";
+                }
+                else { // text case
+                  if (event.target.parentNode.className == 'overwrite') {
+                    event.dataTransfer.setData("text", "<strong>Overwritten Content</strong>");
+                  }
+                  event.target.parentNode.style.border = "4px solid #cc3300";
+                }
+                return true;
+              }, true);
+              dragZone.addEventListener('dragend', function(event) {
+                if (event.target.className) { // img case
+                  event.target.style.border = "4px solid #888";
+                }
+                else { // text case
+                  event.target.parentNode.style.border = "4px solid #888";
+                }
+                return true;
+              }, true);
+              dropZone.addEventListener('dragenter', function(event) {
+                if (event.preventDefault) event.preventDefault();
+                event.dataTransfer.dropEffect = 'copy';
+                this.className = 'hovering';
+                return false;
+              }, false);
+              dropZone.addEventListener('dragover', function(event) {
+                if (event.preventDefault) event.preventDefault(); // allows us to drop
+                event.dataTransfer.dropEffect = 'copy';
+                return false;
+              }, false);
+              dropZone.addEventListener('dragleave', function(event) {
+                if (event.preventDefault) event.preventDefault(); // allows us to drop
+                this.className = '';
+                return false;
+              }, false);
+              dropZone.addEventListener('drop', function(event) {
+                if (event.preventDefault) event.preventDefault();
+                var imgPassed = null;
+                var dropdata = document.querySelector('#drop-data');
+                var types = event.dataTransfer.types;
+                document.querySelector('#drop-data').textContent = '';
+                this.innerHTML = '';
+                for (var i = 0; i < types.length; i++) {
+                  if (types[i] == 'Files') {
+                    var files = event.dataTransfer.files;
+                    for (var j = 0; j < files.length; j++) {
+                      dropdata.textContent += 'File Name: '+files[j].fileName;
+                      dropdata.textContent += 'File Size: '+files[j].fileSize;
+                    }
+                  }
+                  else {
+                    if (typeof event.dataTransfer.getData(types[i]) !== 'undefined') {
+                      dropdata.innerHTML += '<p><em class="datatypes">'+types[i]+'</em>: <br />'+event.dataTransfer.getData(types[i]).replace(/</g, '&lt;') + '</p>';
+                    }
+                  }
+
+                  if (types[i] == 'text/uri-list') {
+                    imgPassed = event.dataTransfer.getData('text/uri-list');
+                  }
+                }
+                if (imgPassed) {
+                  var cEl = document.createElement('canvas');
+                  cEl.width = 200;
+                  cEl.height = 100;
+                  var ctx = cEl.getContext('2d');
+                  var img_buffer = document.createElement('img');
+                  img_buffer.src = imgPassed;
+                  img_buffer.style.display = 'none';
+                  document.body.appendChild(img_buffer); // this line only needed in safari
+                  img_buffer.onload = function() { ctx.drawImage(img_buffer,0,0,100,100); }
+                  this.appendChild(cEl);
+                } else {
+                  if (event.dataTransfer.getData('text')) {
+                    this.innerHTML = event.dataTransfer.getData('text');
+                  }
+                  else if (event.dataTransfer.getData('text/plain')) {
+                    this.innerHTML = event.dataTransfer.getData('text/plain');
+                  }
+                }
+                return false;
+              }, false);
+            })();
+            </script>
+          </section>
+        </div>
+
+
+        <div class="slide device-access" id="drag-in">
+          <style>
+            #dropzone {
+              height: 150px;
+              width: 870px;
+              -webkit-border-radius: 10px;
+              -khtml-border-radius: 10px;
+              -moz-border-radius: 10px;
+              border-radius: 10px;
+              border: 2px dashed #0687FF;
+              margin: 0 5px;
+              font-size: 32px;
+            }
+            #dropzone.rounded {
+              -webkit-box-shadow: inset 0px 0px 50px #777;
+              -moz-box-shadow: inset 0px 0px 50px #777;
+              -o-box-shadow: inset 0px 0px 50px #777;
+              box-shadow: inset 0px 0px 50px #777;
+            }
+            #dnd-thumbnails {
+              height: 125px;
+              margin-top: 10px;
+            }
+            #dnd-thumbnails img {
+              width: 75px;
+              height: 75px;
+              border: 1px solid black;
+              margin-right: 10px;
+              -webkit-transition: -webkit-transform 0.2s ease-in, margin-left 0.7s ease-in-out, margin-right 0.7s ease-in-out;
+              -moz-transition: -moz-transform 1s ease-in-out, margin-left 0.7s ease-in-out, margin-right 0.7s ease-in-out;
+              -o-transition: -o-transform 1s ease-in-out, margin-left 1s ease-in-out, margin-left 0.7s ease-in-out, margin-right 0.7s ease-in-out;
+            }
+            #dnd-thumbnails img:hover {
+              -webkit-transform: scale(3.0) rotate(10deg);
+              -webkit-transform-origin: 50% 75px;
+              -moz-transform: scale(3.0) rotate(10deg);
+              -moz-transform-origin: 50% 75px;
+              margin: 0 100px;
+            }
+          </style>
+          
+          <header>
+            <h1>Desktop Drag-In</h1>
+          </header>
+          
+          <section>
+
+            <!-- <h3>Arraste arquivos do seu desktop para o navegador:</h3> -->
+
+<pre>
+document.querySelector('#dropzone').addEventListener('drop', function(e) {
+  var reader = new <b>FileReader</b>();
+  reader.onload = function(evt) {
+    document.querySelector('img').src = evt.target.<b>result</b>;
+  };
+
+  reader.<b>readAsDataURL</b>(evt.<b>dataTransfer.files[0]</b>);
+}, false);
+</pre>
+            <div>
+              <div id="dropzone" class="vbox boxcenter center">Arraste aqui uma imagem do seu desktop.</div>
+            </div>
+            
+            <div id="dnd-thumbnails" class="center"></div>
+
+            <script src="src/dnd/dnd-lib.js" defer></script>
+            <script defer>
+              window.addEventListener('load', function(e) {
+                var dndc = new DNDFileController('dropzone', 'dnd-thumbnails');
+              }, false);
+            </script>
+          </section>
+        </div>
+
+
+        <div class="slide device-access" id="drag-out">
+          <style>
+            .dragout {
+              background: #0687FF;
+              color: #fff;
+              padding: 20px;
+              margin: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              -o-border-radius: 10px;
+              border-radius: 10px;
+              font-size: 32px;
+            }
+          </style>
+          <header>  <h1>Desktop Drag-Out</h1></header>
+          <section id="dnd-section">
+
+            <!-- <h3>Drag files out onto the desktop:</h3> -->
+
+            <pre>
+&lt;a href="src/hino-do-coritiba.mp3" draggable="true"
+   data-downloadurl="<b>MIMETYPE:FILENAME:CAMINHO_ABSOLUTO</b>"&gt;download&lt;/a&gt;
+</pre>
+
+            <pre>
+var files = document.querySelectorAll('.dragout');
+for (var i = 0, file; file = files[i]; ++i) {
+  file.addEventListener('dragstart', function(e) {
+    e.dataTransfer.setData('DownloadURL', this.dataset.downloadurl);
+  }, false);
+}
+</pre>
+
+            <div class="example">
+              <span class="tit">Arraste algum desses arquivos para o seu desktop:</span>
+              <a href="src/programacao-fsldc.pdf" class="dragout" data-downloadurl="application/pdf:programacao-fsldc.pdf:http://labs.zenorocha.com/html5/slides/src/programacao-fsldc.pdf">.pdf</a>
+              <a href="src/hino-do-coritiba.mp3" class="dragout" data-downloadurl="audio/mpeg:hino-do-coritiba.mp3:http://labs.zenorocha.com/html5/slides/src/hino-do-coritiba.mp3">.mp3</a>
+            </div>
+            <p class="center" style="font-size:90%">( disponível apenas para Google Chrome por enquanto )</p>
+            <script defer>
+              (function() {
+                var files = document.querySelectorAll('.dragout');
+                for (var i = 0, file; file = files[i]; ++i) {
+                  file.setAttribute('draggable', 'true'); // Don't really need, but good practice.
+                  file.addEventListener('dragstart', function(evt) {
+                    evt.dataTransfer.setData('DownloadURL', this.getAttribute('data-downloadurl'));
+                  }, false);
+                }
+              })();
+            </script>
+          </section>
+        </div>
+
+        <div class="slide device-access" id="geolocation">
+          <style>
+            #see-position {
+              margin-bottom: 10px;
+            }
+            #geo-map {
+              height: 280px;
+              width: 640px;
+            }
+            #geo-log {
+              background-color: red;
+              color: white;
+              padding: 5px;
+              border-radius: 5px;
+              visibility: hidden;
+            }
+          </style>
+          
+          <header>
+            <h1>Geolocalização</h1>
+          </header>
+          
+          <section>
+<pre>if (<b>navigator</b>.<b>geolocation</b>) {
+  <b>navigator</b>.<b>geolocation</b>.<b>getCurrentPosition</b>(function(position) {
+    var latLng = new google.maps.LatLng(
+        position.<b>coords</b>.<b>latitude</b>, position.<b>coords</b>.<b>longitude</b>);
+    var marker = new google.maps.Marker({position: latLng, map: map});
+    map.setCenter(latLng);
+  }, errorHandler);
+}
+</pre>
+          <button id="see-position">Mostrar posição</button> <span id="geo-log"></span>
+          <div id="geo-map" class="gmap example">
+            <img src="http://maps.google.com/maps/api/staticmap?center=37.4419,-94.1419&zoom=3&size=680x278&sensor=true"/>
+          </div>
+
+          <script defer>
+          (function() {
+            var map = null;
+            var geolog = document.querySelector('#geo-log');
+            var geoMap = document.querySelector('#geo-map');
+
+            function showPosition(position) {
+              geolog.textContent = "Nós estamos há " + position.coords.accuracy +
+                  " metros de (" + position.coords.latitude + ", " +
+                  position.coords.longitude + ")";
+              var latLng = new google.maps.LatLng(
+                  position.coords.latitude, position.coords.longitude);
+              var marker = new google.maps.Marker({
+                position: latLng,
+                map: map
+              });
+              map.setCenter(latLng);
+              map.setZoom(15);
+            }
+
+            function handlePositionError(evt) {
+              geolog.textContent = evt.message;
+            }
+
+            function successPositionHandler(evt) {
+              // Load map if it doesn't already exist and when user clicks the button.
+              if (!map) {
+                map = new google.maps.Map(geoMap, {
+                  zoom: 3,
+                  center: new google.maps.LatLng(37.4419, -94.1419), // United States
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+                map.getDiv().style.border =  '1px solid #ccc';
+              }
+
+              if (navigator.geolocation) {
+                geolog.style.visibility = 'visible';
+                geolog.textContent = 'Procurando localização...';
+                navigator.geolocation.getCurrentPosition(showPosition, handlePositionError);
+                // Also monitor position as it changes.
+                //navigator.geolocation.watchPosition(showPosition, handlePositionError);
+              } else {
+                geolog.textContent = 'Ops! Esse browser não tem suporte a geolocalização.';
+              }
+            }
+
+            document.querySelector('#see-position').addEventListener('click', successPositionHandler, false);
+            geoMap.addEventListener('click', successPositionHandler, false);
+          })();
+          </script>
+          </section>
+        </div>
+
+
+        <!-- <div class="slide device-access" id="slide-orientation" onload="os.onload();" onunload="os.onunload();">
+          <style>
+            #slide-orientation section {
+              height: 100%;
+            }
+            #orientationWrap {
+              width: 300px;
+              height: 300px;
+              position: relative;
+            }
+            #slide-orientation p {
+              display: none;
+              text-align: center;
+            }
+            #orientationWrap .layer {
+              position: absolute;
+              left: 50%;
+              top: 0;
+              -webkit-transition-property: x, y;
+              -webkit-transition-duration: 0.1s;
+              -webkit-transition-timing-function: linear;
+              -moz-transition-property: x, y;
+              -moz-transition-duration: 0.1s;
+              -moz-transition-timing-function: linear;
+            }
+          </style>
+          <header>  <h1>Device Orientation</h1></header>
+          <section>
+            <pre>
+window.addEventListener('<em>deviceorientation</em>', function(event) {
+  var a = event.<b>alpha</b>;
+  var b = event.<b>beta</b>;
+  var g = event.<b>gamma</b>;
+}, false);
+</pre>
+          <p>This sample requires FF3.6+ or Google Chrome
+          on a device with a built in accelerometer or iOS 4.2.</p>
+          <div class="flex hbox boxcenter">
+            <div id="orientationWrap" class="noflex vbox boxcenter">
+              <div class="layer"><img src="src/orientation/chrome-layer-01.png"/></div>
+              <div class="layer"><img src="src/orientation/chrome-layer-02.png"/></div>
+              <div class="layer"><img src="src/orientation/chrome-layer-03.png"/></div>
+              <div class="layer"><img src="src/orientation/chrome-layer-04.png"/></div>
+              <div class="layer"><img src="src/orientation/chrome-layer-05.png"/></div>
+            </div>
+          </div>
+          <script defer>
+            function OrientationSlide(slide) {
+              this._slide = document.querySelector(slide);
+              this._lastBeta = 0;
+              this._lastGamma = 0;
+            }
+            OrientationSlide.prototype.orientationListener = function(evt) {
+              // For FF3.6+
+              if (!evt.gamma && !evt.beta) {
+                evt.gamma = -(evt.x * (180 / Math.PI));
+                evt.beta = -(evt.y * (180 / Math.PI));
+              }
+
+              var overThreshold = Math.abs(evt.gamma) > 4 || Math.abs(evt.beta) > 4;
+              var gamma = overThreshold ? evt.gamma : 0;
+              var beta = overThreshold ? evt.beta : 0;
+
+              if (this._lastGamma != gamma || this._lastBeta != beta) {
+                var zindex = 0;
+                var layers = document.querySelectorAll('.layer');
+                for (var i = 0, elem; elem = layers[i]; ++i) {
+                  zindex++;
+                  var x = Math.round(1.5 * gamma * zindex);
+                  var y = Math.round(1.5 * beta * zindex);
+                  var style = elem.style;
+                  style.left = x.toString() + 'px';
+                  style.top = y.toString() + 'px';
+                  style.webkitTransform = 'rotateY(' + (-2.0 * gamma) + 'deg) rotateX(' + (-2.0 * beta) + 'deg)';
+                  style.MozTransform = 'rotateY(' + (-2.0 * gamma) + 'deg) rotateX(' + (-2.0 * beta) + 'deg)';
+                }
+                this._lastGamma = gamma;
+                this._lastBeta = beta;
+              }
+            };
+            OrientationSlide.prototype.onunload = function(evt) {
+              window.removeEventListener('deviceorientation', this.orientationListener, false);
+              window.removeEventListener('MozOrientation', this.orientationListener, false);
+            };
+            OrientationSlide.prototype.onload = function(evt) {
+              window.addEventListener('deviceorientation', this.orientationListener, false);
+              window.addEventListener('MozOrientation', this.orientationListener, false);
+            };
+            var os = new OrientationSlide('#slide-orientation');
+
+            if (!('ondeviceorientation' in window) &&
+                !(window.onmozorientation)) {
+              document.querySelector('#slide-orientation p').style.display = 'block';
+            }
+          </script>
+          </section>
+        </div> -->
+
+        <div class="slide device-access" id="speech-input">
+          <style>
+            #speech-input-field {
+              width: 400px;
+              height: 50px;
+              padding: 10px 15px;
+              font-size: 155%;
+              border-radius: 10px;
+              border: 1px solid #ccc;
+              outline: 0;
+            }
+          </style>
+          <header> <h1>Input de Áudio</h1></header>
+          <section>
+
+            <pre>&lt;input type="text" <b>x-webkit-speech</b> /&gt;</pre>
+
+            <div class="flex hbox boxcenter">
+              <div class="noflex vbox boxcenter" style="height:300px;text-align:center">
+               <input id="speech-input-field" type="text" x-webkit-speech />
+               <p style="display:none">Speech input is not enabled in your browser.<br>
+               Try running Google Chrome with the <code>--enable-speech-input</code> flag.</p>
+              </div>
+            </div>
+            <script>
+              if (!('webkitSpeech' in document.createElement('input'))) {
+                document.querySelector('#speech-input p').style.display = 'block';
+              }
+            </script>
+          </section>
+        </div>
+
+        <div class="slide categoria" id="multimedia-title">
+          <header>
+            <h2>Multimídia</h2>
+          </header>
+          
+          <section class="middle">
+            <img src="img/cat/multimedia.png" alt="" />
+          </section>
+        </div>
+
+        <div class="slide multimedia" id="audio">
+          <style>
+            #reflection-button {
+              margin: 20px 0;
+            }
+            #audio-column {
+              /*float: left;*/
+              width: 45%;
+              margin-top: 120px;
+              margin: 0 auto;
+            }
+            .media-buttons {
+              margin: 40px 0;
+            }
+          </style>
+          <header>
+            <h1>Áudio</h1>
+          </header>
+          <section>
+            <pre>&lt;<b>audio</b> id="audio" src="sound.mp3" <b>controls</b>&gt;&lt;/audio&gt;
+document.getElementById("audio").<b>muted</b> = false;
+</pre>
+            
+            <div id="audio-column" class="center">
+              <audio id="audio-clip" width="670" controls>
+                <source src="src/rushus-modal_blues.mp3" type="audio/mpeg" />
+                <source src="src/rushus-modal_blues.ogg" type="audio/ogg" />
+                Your browser does not support the audio tag
+              </audio>
+              <div class="media-buttons">
+                <input type=button id="audio-play-button" onclick="PlayAudio()" value="Play" />
+                <input type=button id="audio-pause-button" onclick="PauseAudio()" value="Pause" disabled />
+                <input type=button id="audio-mute" onclick="MuteUnMuteAudio()" value="Mute" />
+              </div>
+            </div>
+          </section>
+
+          <script defer>
+            var audioClip = document.getElementById('audio-clip');
+            var audioPlayButton = document.getElementById('audio-play-button');
+            var audioPauseButton = document.getElementById('audio-pause-button');
+            audioClip.addEventListener('ended', OnAudioFinished, false);
+
+            function PlayAudio() {
+              audioClip.play();
+              audioPlayButton.disabled = true;
+              audioPauseButton.disabled = false;
+            }
+
+            function PauseAudio() {
+              audioClip.pause();
+              audioPlayButton.disabled = false;
+              audioPauseButton.disabled = true;
+            }
+
+            function MuteUnMuteAudio() {
+              document.getElementById('audio-mute').value = audioClip.muted ? 'Mute' : 'Unmute';
+              audioClip.muted = audioClip.muted ? false : true;
+            }
+
+            function OnAudioFinished() {
+              audioPlayButton.disabled = false;
+              audioPauseButton.disabled = true;
+            }
+          </script>
+        </div>
+        
+        <div class="slide multimedia" id="video">
+          <style>
+            #video-column {
+              margin: 0 auto;
+              width: 50%;
+              margin-top: 20px;
+            }
+          </style>
+          <header>
+            <h1>Vídeo</h1>
+          </header>
+          <section>
+<pre>
+&lt;<b>video</b> id="video" src="movie.webm" <b>autoplay</b> <b>controls</b>&gt;&lt;/video&gt;
+document.getElementById("video").<b>play</b>();
+</pre>
+            <div id="video-column" class="center">
+              <input type="button" id="reflection-button" onclick="addReflection()" value="Adicione reflexo por CSS no vídeo" />
+              <video width="390" id="clip" controls>
+                <source src="src/chrome_japan.webm" type='video/webm; codecs="vp8, vorbis"' />
+                <source src="src/chrome_japan.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                <source src="src/chrome_japan.ogv" type='video/ogg; codecs="theora, vorbis"' />
+                Your browser does not support the video tag
+              </video>
+              <div class="media-buttons">
+                <input type="button" id="play-button" onclick="PlayVideo()"; value="Play" />
+                <input type="button" id="pause-button" onclick="PauseVideo()"; value="Pause" disabled />
+                <input type="button" id="mute" onclick="MuteUnMute()" value="Mute" />
+              </div>
+            </div>
+            
+            
+          </section>
+          <script defer>
+            var videoClip = document.getElementById('clip');
+            var playButton = document.getElementById('play-button');
+            var pauseButton = document.getElementById('pause-button');
+
+            function PlayVideo() {
+              videoClip.play();
+              playButton.disabled = true;
+              pauseButton.disabled = false;
+            }
+
+            function PauseVideo() {
+              videoClip.pause();
+              playButton.disabled = false;
+              pauseButton.disabled = true;
+            }
+
+            function MuteUnMute() {
+              document.getElementById('mute').value = videoClip.muted ? 'Mute' : 'Unmute';
+              videoClip.muted = videoClip.muted ? false : true;
+            }
+
+            function OnFinished() {
+              playButton.disabled = false;
+              pauseButton.disabled = true;
+            }
+
+            function addReflection() {
+              videoClip.style.webkitBoxReflect = videoClip.style.webkitBoxReflect !== '' ? '' : "below 0px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.55, transparent), to(white))";
+            }
+          </script>
+        </div>
+        
+        <div class="slide categoria" id="graphics-title">
+          <header>
+            <h2>Gráficos</h2>
+          </header>
+          
+          <section class="middle">
+            <img src="img/cat/3d.png" alt="" />
+          </section>
+        </div>
+
+        <div class="slide effects" id="canvas-2d">
+          <header>   <h1>Canvas 2D</h1></header>
+          <section>
+            <style>
+              #canvas-area {
+                background: white;
+                -webkit-border-radius: 8px;
+                -khtml-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                border: 1px solid #bbb;
+              }
+            </style>
+            <pre>&lt;canvas id="canvas" width="838" height="220"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+  var canvasContext = document.getElementById("canvas").<b>getContext</b>("2d");
+  canvasContext.<b>fillRect</b>(250, 25, 150, 100);
+  
+  canvasContext.<b>beginPath</b>();
+  canvasContext.<b>arc</b>(450, 110, 100, Math.PI * 1/2, Math.PI * 3/2);
+  canvasContext.<b>lineWidth</b> = 15;
+  canvasContext.<b>lineCap</b> = 'round';
+  canvasContext.<b>strokeStyle</b> = 'rgba(255, 127, 0, 0.5)';
+  canvasContext.<b>stroke</b>();
+&lt;/script&gt;
+            </pre>
+            <canvas id="canvas-area" width="838" height="225"></canvas>
+            <script defer>
+              var canvasContext = document.getElementById("canvas-area").getContext("2d");
+              canvasContext.fillRect(250, 25, 150, 100);
+              canvasContext.beginPath();
+              canvasContext.arc(450, 110, 100, Math.PI * 1/2, Math.PI * 3/2, false);
+              canvasContext.lineWidth = 15;
+              canvasContext.lineCap = 'round';
+              canvasContext.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+              canvasContext.stroke();
+            </script>
+          </section>
+        </div>
+
+
+        <div class="slide effects" id="canvas-2d-example">
+          <style>
+            #canvas-example {
+              margin-left: 150px;
+              margin-top: 40px;
+              padding: 0;
+              width: 530px;
+              height: 505px;
+              padding: 5px;
+              text-align:center;
+            }
+            #canvas-example iframe {
+              width: 520px;
+              height: 500px;
+              border: none;
+              background: white;
+            }
+          </style>
+          <header>   <h1>Canvas exemplo</h1></header>
+          <section>
+            <div id="canvas-example" class="example">
+              <iframe _src="src/canvasphoto/index.html" scrolling="no"></iframe>
+            </div>
+          </section>
+        </div>
+
+
+        <div class="slide effects" id="canvas-3d">
+          <style>
+            #webgl-iframe {
+              border: none;
+              width: 100%;
+              height: 352px;
+            }
+          </style>
+          <header>   <h1>Canvas 3D (WebGL)</h1></header>
+          <section>
+            <pre>&lt;canvas id="canvas" width="838" height="220"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+  var gl = document.getElementById("canvas").<b>getContext</b>("experimental-webgl");
+  gl.<b>viewport</b>(0, 0, canvas.width, canvas.height);
+  ...
+&lt;/script&gt;
+            </pre>
+            <iframe scrolling="no" _src="src/webgl/san_angeles.html" id="webgl-iframe"></iframe>
+          </section>
+        </div>
+        
+        
+        <div class="slide effects" id="inline-svg">
+          <header> <h1>SVG Inline</h1></header>
+          <section>
+            <style>
+              #svg {
+                -webkit-border-radius: 8px;
+                -khtml-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                border: 1px solid #bbb;
+              }
+            </style>
+
+            <pre>&lt;html&gt;
+  <b>&lt;svg&gt;
+    &lt;circle id="myCircle" class="important" cx="50%" cy="50%" r="100" 
+        fill="url(#myGradient)"
+        onmousedown="alert('hello');"/&gt;
+  &lt;/svg&gt;</b>
+&lt;/html&gt;</pre>
+
+            <div class="svg"></div>
+
+          <script defer>
+            // insert SVG using script until SVG in HTML5 is more widely supported
+            // (currently supported in IE 9 and Firefox nightlies only)
+            var container = document.getElementsByClassName('svg')[0];
+            var svgns = 'http://www.w3.org/2000/svg';
+            var svg = document.createElementNS(svgns, 'svg');
+            svg.setAttribute('width', '300px');
+            svg.setAttribute('height', '300px');
+            
+            // our linearGradient
+            var defs = document.createElementNS(svgns, 'defs');
+            var gradient = document.createElementNS(svgns, 'linearGradient');
+            gradient.setAttribute('id', 'myGradient');
+            gradient.setAttribute('x1', '0%');
+            gradient.setAttribute('y1', '100%');
+            gradient.setAttribute('x2', '100%');
+            gradient.setAttribute('y2', '0%');
+            var stop = document.createElementNS(svgns, 'stop');
+            stop.setAttribute('offset', '5%');
+            stop.setAttribute('stop-color', 'red');
+            gradient.appendChild(stop);
+            stop = document.createElementNS(svgns, 'stop');
+            stop.setAttribute('offset', '95%');
+            stop.setAttribute('stop-color', 'blue');
+            stop.setAttribute('stop-opacity', '0.5');
+            gradient.appendChild(stop);
+            defs.appendChild(gradient);
+            svg.appendChild(defs);
+            
+            // our example circle
+            var circle = document.createElementNS(svgns, 'circle');
+            circle.setAttribute('cx', '50%');
+            circle.setAttribute('cy', '50%');
+            circle.setAttribute('r', 100);
+            circle.setAttribute('fill', 'url(#myGradient)');
+            circle.setAttribute('stroke-color', 'red');
+            circle.addEventListener('mousedown', function() {
+              alert('hello');
+            }, false);
+            svg.appendChild(circle);
+            container.appendChild(svg);
+          </script>
+            
+          </section>
+        </div>
+        
+        <div class="slide effects" id="svg-example-slide">
+          <style>
+            #svg-example {
+              margin-left: 150px;
+              margin-top: 40px;
+              padding: 0;
+              width: 550px;
+              height: 540px;
+            }
+          </style>
+          <header> <h1>SVG exemplo</h1></header>
+          <section>
+            <div id="svg-example"></div>
+          </section>
+          <script defer>
+            document.querySelector('#svg-example').innerHTML = '<object type="image/svg+xml" style="border:none; width:550px; height:540px; background: white;" data="src/svg/famoustiger.svg"></object>';
+          </script>
+        </div>
+
+        <div class="slide categoria" id="css3-title">
+          <header>
+            <h2>CSS 3</h2>
+          </header>
+          
+          <section class="middle">
+            <img src="img/cat/css3.png" alt="" />
+          </section>
+        </div>
+
+        <div class="slide styling" id="css-selectors">
+          <style>
+            .row {
+              padding: 4px;
+              /*background: #bbb;*/
+            }
+            .row:nth-child(even) {
+              background: #bbb;
+              color: white;
+            }
+            
+            .row:nth-child(odd) {
+              background: #ddd;
+              color: black;
+            }
+            
+            #exemplo-par-impar {
+              margin-top: 35px;
+            }
+            
+          </style> 
+          <header>  <h1>Seletores</h1></header>
+          <section class="left">
+            <h2>Par ou ímpar</h2>
+<pre>.linha:<b>nth-child(even)</b> {
+  background: #bbb;
+}
+.linha:<b>nth-child(odd)</b> {
+  background: #ddd;
+}
+</pre>
+            <div id="exemplo-par-impar" class="example"> 
+              <div class="row">Linha 1</div> 
+              <div class="row">Linha 2</div> 
+              <div class="row">Linha 3</div> 
+              <div class="row">Linha 4</div> 
+            </div>  
+           
+          </section> 
+          
+          <section class="right"> 
+            
+            <h2>Negação</h2> 
+            <pre><b>:not</b>(.box) {
+  color: #00c; 
+}            
+<b>:not</b>(span) {
+  display: block; 
+}  
+</pre> 
+            
+            <h2>Atributos específicos</h2> 
+            <pre>input<b>[type="email"]</b> {
+  background: #eee;
+}</pre>          
+          </section>
+        </div>
+
+
+        <div class="slide styling" id="web-fonts">
+          <style>
+            #fontface-sample {
+              text-align: center;
+              font-size: 35px;
+              font-family: 'LeagueGothicRegular';
+            }
+          </style>
+          <header>  <h1>Webfonts</h1></header>
+          <section>
+
+            <pre>
+<b>@font-face</b> {
+    font-family: 'LeagueGothic';
+    src: url('../font/League_Gothic.eot');
+    src: url('../font/League_Gothic.eot?#iefix') format('embedded-opentype'),
+         url('../font/League_Gothic.woff') format('woff'),
+         url('../font/League_Gothic.ttf') format('truetype'),
+         url('../font/League_Gothic.svg#LeagueGothic') format('svg');
+}
+
+<b>h1</b> {
+  font-family: 'LeagueGothic';
+}
+          </pre>
+
+            <div id="fontface-sample" class="example">
+              <span>Nada de imagens, usabilidade pura.</span>
+            </div>
+            
+          </section>
+          
+          <div class="footer">
+            <div class="alignright"><a href="http://fontsquirrel.com">fontsquirrel.com</a></div>
+          </div>
+        </div>
+
+
+        <div class="slide styling" id="text-wrapping">
+          <style>
+            div#wrapping {width: 95%}
+            #overflow-hidden { font-size: 25px; height: 1.1em; overflow: hidden; }
+            #no-wrap { font-size: 25px; height: 1.1em; white-space: nowrap; overflow: hidden; }
+            #ellipsis { font-size: 25px; text-overflow: ellipsis; white-space: nowrap; height: 1.1em; overflow: hidden; }
+          </style>
+          <header>  <h1>Text wrapping</h1></header>
+          <section>
+            <pre>div {
+  <b>text-overflow: ellipsis;</b>
+}
+            </pre>
+
+            <div id="wrapping">
+              <div id="overflow-hidden" class="example">
+                A Comunidade de Software Livre do Rio de Janeiro, apresenta o III FSLDC - Fórum de Software Livre de Duque de Caxias. Este evento visa promover a utilização de Software Livre, incentivar a adoção no meio acadêmico, empresarial, prefeituras e demais instâncias de governo.
+              </div>
+              <div id="no-wrap" class="example">
+                A Comunidade de Software Livre do Rio de Janeiro, apresenta o III FSLDC - Fórum de Software Livre de Duque de Caxias. Este evento visa promover a utilização de Software Livre, incentivar a adoção no meio acadêmico, empresarial, prefeituras e demais instâncias de governo.
+              </div>
+              <div id="ellipsis" class="example">
+                A Comunidade de Software Livre do Rio de Janeiro, apresenta o III FSLDC - Fórum de Software Livre de Duque de Caxias. Este evento visa promover a utilização de Software Livre, incentivar a adoção no meio acadêmico, empresarial, prefeituras e demais instâncias de governo.
+              </div>
+            </div>
+            <input type="range" min="0" max="100" value="95" onchange="changeWrapping(event)">
+              <h2>Brinque com o slider nesse e nos próximos slides.</h2>
+          </section>
+
+          <script defer>
+            function changeWrapping(event) {
+              document.getElementById('wrapping').style.width = event.target.value + '%';
+            }
+          </script>
+        </div>
+
+
+
+        <div class="slide styling" id="css-columns">
+          <style>
+          #columns-no-example {
+            -webkit-column-count: 2;
+            -webkit-column-rule: 1px solid #bbb;
+            -webkit-column-gap: 2em;
+            -moz-column-count: 2;
+            -moz-column-rule: 1px solid #bbb;
+            -moz-column-gap: 2em;
+            column-count: 2;
+            column-rule: 1px solid #bbb;
+            column-gap: 2em;
+          }
+          #columns-no-example p {
+            font-size: 15px;
+          }
+          </style>
+          <header>  <h1>Colunas</h1></header>
+          <section>
+            <pre>-webkit-<b>column-count</b>: <span id="columns-no-value">2</span>; <input type="range" min="1" max="6" value="2" onchange="changeColumnNoSlider(event)">
+-webkit-<b>column-rule</b>: 1px solid #bbb;
+-webkit-<b>column-gap</b>: 2em;</pre>
+
+            <div id="columns-no-example" class="example">
+              <p>
+                In March 1936, an unusual confluence of forces occurred in 
+                Santa Clara County.
+              </p>
+              <p>
+                A long cold winter delayed the blossoming of the millions of 
+                cherry, apricot, peach, and prune plum trees covering hundreds 
+                of square miles of the Valley floor. Then, unlike many years, 
+                the rains that followed were light and too early to knock 
+                the blossoms from their branches.
+              </p>
+              <p>
+                Instead, by the billions, they all burst open at once. 
+                Seemingly overnight, the ocean of green that was the Valley 
+                turned into a low, soft, dizzyingly perfumed cloud of pink 
+                and white. Uncounted bees and yellow jackets, newly born, 
+                raced out of their hives and holes, overwhelmed by this 
+                impossible banquet.
+              </p>
+              <p>
+                Then came the wind.
+              </p>
+              <p>
+                It roared off the Pacific Ocean, through the nearly 
+                uninhabited passes of the Santa Cruz Mountains and then, 
+                flattening out, poured down into the great alluvial plains 
+                of the Valley. A tidal bore of warm air, it tore along the 
+                columns of trees, ripped the blossoms apart and carried them 
+                off in a fluttering flood of petals like foam rolling up a 
+                beach.
+              </p>
+              <p>
+                This perfumed blizzard hit Stevens Creek Boulevard, a two-lane
+                road with a streetcar line down its center, that was the main
+                road in the West Valley. It froze traffic, as drivers found
+                themselves lost in a soft, muted whiteout. Only the streetcar,
+                its path predetermined, passed on...
+              </p>
+            </div>
+          </section>
+
+          <script defer>
+            function changeColumnNoSlider(event) {
+              var val = event.target.value;
+              document.getElementById('columns-no-value').textContent = val;
+              var el = document.getElementById('columns-no-example');
+              el.style.webkitColumnCount = val;
+              el.style.MozColumnCount = val;
+            }
+          </script>
+        </div>
+
+
+        <div class="slide styling" id="css-stroke">
+          <style>
+            #text-stroke-example { 
+              font-size: 85px;
+              padding: 20px 0;
+              text-align: center;
+              -webkit-text-stroke-color: #f14a29;
+              -webkit-text-fill-color: black;
+            }
+          </style>
+          <header>  <h1>Text stroke</h1></header>
+          <section>
+        <pre>div {
+  -webkit-<b>text-fill-color</b>: black;
+  -webkit-<b>text-stroke-color</b>: #f14a29;
+  -webkit-<b>text-stroke-width</b>: <span id="text-stroke-value">0.00</span>px; <input id="text-stroke" type="range" min="0" max="50" value="0" onchange="changeTextStroke()">
+}</pre>
+
+            <div id="text-stroke-example" class="example">
+              III FSLDC
+            </div>
+
+            <script defer>
+              function changeTextStroke() {
+                var width = (document.getElementById('text-stroke').value * 0.25).toFixed(2);
+                document.getElementById('text-stroke-example').style.webkitTextStrokeWidth = width + 'px';
+                document.getElementById('text-stroke-value').textContent = width;
+              }
+            </script>
+          </section>
+        </div>
+
+
+        <div class="slide styling" id="css-opacity">
+          <header>  <h1>Opacidade</h1></header>
+          <section>
+            <style>
+              #opacity-body {
+                font-size: 84%;
+                max-width: 800px;
+                background: url(img/ilustras/html5-logo.jpg) 0px -65px no-repeat;
+                margin: 0 auto;
+                padding: 20px;
+                -webkit-border-radius: 8px;
+                -khtml-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+              }
+              #opacity-example {
+                margin: 100px auto;
+                font-size: 80px;
+                line-height: 240px;
+                text-align: center;
+                font-weight: bold;
+                letter-spacing: -4px;
+                -webkit-border-radius: 5px;
+                -khtml-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                text-shadow: none;
+                color: rgba(241, 74, 41, 0.746094);
+                background-image: initial;
+                background-attachment: initial;
+                background-origin: initial;
+                background-clip: initial;
+                background-color: rgba(0, 146, 191, 0.746094);
+                background-position: initial initial;
+                background-repeat: initial initial;
+              }
+            </style>
+
+<pre>  color: <b>rgba</b>(241, 74, 41, <span id="opacity-color-value">0.75</span>); <input id="opacity-color" type="range" min="0" max="100" value="75" onchange="changeOpacity()">
+  background: <b>rgba</b>(0, 146, 191, <span id="opacity-background-value">0.75</span>); <input id="opacity-background" type="range" min="0" max="100" value="75" onchange="changeOpacity()">
+</pre>
+
+            <div id="opacity-body">
+              
+              <div id="opacity-example">Opacidade Independente</div>
+              
+            </div>
+
+            <script defer>
+              function changeOpacity() {
+                var textOpacity = (document.getElementById('opacity-color').value / 100).toFixed(2);
+                var backgroundOpacity = (document.getElementById('opacity-background').value / 100).toFixed(2);
+
+                var el = document.getElementById('opacity-example');
+
+                el.style.color = 'rgba(241, 74, 41, ' + textOpacity + ')';
+                el.style.background = 'rgba(0, 146, 191, ' + backgroundOpacity + ')';
+
+                document.getElementById('opacity-color-value').textContent = textOpacity;
+                document.getElementById('opacity-background-value').textContent = backgroundOpacity;
+              }
+
+              changeOpacity();
+            </script>
+          </section>
+
+        </div>
+
+        <div class="slide styling" id="css-color">
+          <style>
+            #hsl-example {
+              font-size: 75px;
+              padding-top: 20px;
+              padding-right: 0px;
+              padding-bottom: 20px;
+              padding-left: 0px;
+              text-align: center;
+              color: rgb(21, 147, 38);
+            }
+            .hsl-value {
+              display: inline-block;
+              width: 50px;
+            }
+          </style>
+          
+          <header>
+            <h1>Matiz, Saturação e Luminescência</h1>
+          </header>
+          
+          <section>
+        <pre>color: <b>hsla</b>(
+  <span class="hsl-value" id="hsl-h-value">128</span> <input id="hsl-h" type="range" min="0" max="360" value="128" onchange="changeHSL()">
+  <span class="hsl-value" id="hsl-s-value">74%</span> <input id="hsl-s" type="range" min="0" max="100" value="75" onchange="changeHSL()">
+  <span class="hsl-value" id="hsl-l-value">33%</span> <input id="hsl-l" type="range" min="0" max="100" value="33" onchange="changeHSL()">
+  <span class="hsl-value" id="hsl-a-value">1.00</span> <input id="hsl-a" type="range" min="0" max="100" value="100" onchange="changeHSL()">
+        </pre>
+
+            <div id="hsl-example" class="example">
+              III FSLDC
+            </div>
+
+            <script defer>
+              function changeHSL() {
+                var h = document.getElementById('hsl-h').value * 1.0;
+                var s = document.getElementById('hsl-s').value * 1.0;
+                var l = document.getElementById('hsl-l').value * 1.0;
+                var a = (document.getElementById('hsl-a').value / 100).toFixed(2);
+                var el = document.getElementById('hsl-example');
+
+                el.style.color = 'hsla(' + h + ', ' + s + '%, ' + l + '%, ' + a + ')';
+
+                document.getElementById('hsl-h-value').textContent = h;
+                document.getElementById('hsl-s-value').textContent = s + '%,';
+                document.getElementById('hsl-l-value').textContent = l + '%,';
+                document.getElementById('hsl-a-value').textContent = a + ');';
+              }
+
+              changeHSL();
+            </script>
+          </section>
+        </div>
+
+
+        <!-- <div class="slide styling" id="rounded-corners">
+          <style>
+          #doraemon {
+            height: 320px;
+          }
+          #doraemon iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+          }
+          </style>
+          <header>  <h1>Rounded corners</h1></header>
+          <section>
+            <pre>
+              face: <b>border-radius</b>: <span id="face-rounded-border-value">0</span>px; <input id="face-rounded-border" type="range" min="0" max="146" value="0" onchange="handleCorner(event)">
+              left eye: <b>border-radius</b>: <span id="lefteye-rounded-border-value">0</span>px; <input id="lefteye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)">
+              right eye: <b>border-radius</b>: <span id="righteye-rounded-border-value">0</span>px; <input id="righteye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)">
+              base white: <b>border-radius</b>: <span id="base_white-rounded-border-value">0</span>px; <input id="base_white-rounded-border" type="range" min="0" max="150" value="0" onchange="handleCorner(event)">
+              mouth: <b>border-radius</b>: <span id="mouth-rounded-border-value">0</span>px; <input id="mouth-rounded-border" type="range" min="0" max="120" value="0" onchange="handleCorner(event)">
+              nose: <b>border-radius</b>: <span id="nose-rounded-border-value">0</span>px; <input id="nose-rounded-border" type="range" min="0" max="50" value="0" onchange="handleCorner(event)">
+              left black eye: <b>border-radius</b>: <span id="leftblackeye-rounded-border-value">0</span>px; <input id="leftblackeye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)">
+              right black eye: <b>border-radius</b>: <span id="rightblackeye-rounded-border-value">0</span>px; <input id="rightblackeye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)">
+            </pre>
+            <div id="doraemon" class="example">
+              <iframe src="src/rounded/write_doraemon.html"></iframe>
+            </div>
+            <script>
+              function handleCorner() {
+                var doraemon = document.querySelector('#doraemon iframe').contentWindow.document;
+                 var elements = ["face", "lefteye", "righteye", "base_white", "mouth", "nose", "leftblackeye", "rightblackeye"];
+                 for (var i = 0; i < elements.length; i++) {
+                   var element = elements[i] + '-rounded-border';
+                   var borderVal = document.getElementById(element).value;
+                   document.getElementById(element + '-value').textContent = borderVal;
+                   var faceEl = doraemon.getElementById(elements[i]);
+                   faceEl.style.borderRadius = borderVal + 'px';
+                   faceEl.style.mozBorderRadius = borderVal + 'px';
+                 }
+               }
+            </script>
+          </section> 
+        </div> -->
+
+
+        <div class="slide styling" id="css-gradients">
+          <style>
+            #gradients-linear-example {
+              border: 0;
+              height: 100px;
+              background: -moz-linear-gradient(90deg, #00abeb, #fff, #66cc00, #fff);
+              background: -webkit-gradient(linear, left top, left bottom, from(#00abeb), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00));
+            }
+            #gradients-radial-example {
+              border: 0;
+              height: 100px;
+              background: -moz-radial-gradient(430px 50px, circle cover, red 0, #000 200px);
+              background: -webkit-gradient(radial, 430 50, 0, 430 50, 200, from(red), to(#000));
+            }
+          </style>
+          
+          <header>
+            <h1>Degradê</h1>
+          </header>
+
+          <section>
+            <pre>background: -webkit-<b>gradient</b>(<b>linear</b>, left top, left bottom, 
+                             from(#<span style="text-shadow: #00abeb 0 0 1px; color: #00abeb">00abeb</span>), to(white), 
+                             color-stop(0.5, white), color-stop(0.5, <span style="text-shadow: #00abeb 0 0 1px; color: #66cc00">#66cc00</span>))
+</pre>
+            <div id="gradients-linear-example" class="example"></div>
+<br />
+<pre>background: -webkit-gradient(<b>radial</b>, 430 50, 0, 430 50, <span id="gradients-radial-value">200</span>, from(red), to(#000))
+                                                        <input id="gradients-radial" type="range" min="1" max="800" value="200" onchange="changeGradients(event)">
+</pre>
+            <div id="gradients-radial-example" class="example"></div>
+
+            <script defer>
+              function changeGradients() {
+                var size = document.getElementById('gradients-radial').value;
+
+                document.getElementById('gradients-radial-example').style.background = 
+                    '-webkit-gradient(radial, 430 50, 0, 430 50, ' + size + ', from(red), to(#000))';
+
+                document.getElementById('gradients-radial-value').textContent = size;
+              }
+            </script>
+          </section>
+        </div>
+
+        <div class="slide styling" id="css-shadow">
+          <style>
+            #shadow-example {
+              font-size: 75px;
+              margin: 10px 10px 30px 10px;
+              padding: 20px;
+              text-align: center;
+            }
+          </style>
+          <header>  <h1>Sombra</h1></header>
+          <section>
+<pre class="two-column"><b>text-shadow</b>: 
+  rgba(64, 64, 64, 0.5) 
+  <span id="shadows-text-x-value">0</span>px <input id="shadows-text-x" type="range" min="-9" max="9" value="0" onchange="changeShadow(event)">
+  <span id="shadows-text-y-value">0</span>px <input id="shadows-text-y" type="range" min="-9" max="9" value="0" onchange="changeShadow(event)">
+  <span id="shadows-text-size-value">0</span>px; <input id="shadows-text-size" type="range" min="0" max="9" value="0" onchange="changeShadow(event)">
+<br><b>box-shadow</b>: 
+  rgba(0, 0, 128, 0.25) 
+  <span id="shadows-box-x-value">0</span>px <input id="shadows-box-x" type="range" min="-9" max="9" value="0" onchange="changeShadow(event)">
+  <span id="shadows-box-y-value">0</span>px <input id="shadows-box-y" type="range" min="-9" max="9" value="0" onchange="changeShadow(event)">
+  <span id="shadows-box-size-value">0</span>px; <input id="shadows-box-size" type="range" min="0" max="9" value="0" onchange="changeShadow(event)">
+            </pre>
+
+            <div id="shadow-example" class="example">Exemplo de sombra</div>
+
+          </section>
+
+          <script defer>
+            function changeShadow() {
+              var el = document.getElementById('shadow-example');
+
+              var textXVal = document.getElementById('shadows-text-x').value;
+              var textYVal = document.getElementById('shadows-text-y').value;
+              var textSizeVal = document.getElementById('shadows-text-size').value;
+
+              document.getElementById('shadows-text-x-value').textContent = textXVal;
+              document.getElementById('shadows-text-y-value').textContent = textYVal;
+              document.getElementById('shadows-text-size-value').textContent = textSizeVal;
+
+              var boxXVal = document.getElementById('shadows-box-x').value;
+              var boxYVal = document.getElementById('shadows-box-y').value;
+              var boxSizeVal = document.getElementById('shadows-box-size').value;
+
+              document.getElementById('shadows-box-x-value').textContent = boxXVal;
+              document.getElementById('shadows-box-y-value').textContent = boxYVal;
+              document.getElementById('shadows-box-size-value').textContent = boxSizeVal;
+
+              el.style.textShadow = 'rgba(64, 64, 64, 0.5) ' + textXVal + 'px ' + textYVal + 'px ' + textSizeVal + 'px';
+              el.style.webkitBoxShadow = 'rgba(0, 0, 128, 0.25) ' + boxXVal + 'px ' + boxYVal + 'px ' + boxSizeVal + 'px';
+              el.style.MozBoxShadow = 'rgba(0, 0, 128, 0.25) ' + boxXVal + 'px ' + boxYVal + 'px ' + boxSizeVal + 'px';
+            }
+          </script>
+        </div>
+
+
+        <div class="slide styling" id="logo-demo">
+          <style>
+            #logo-container {
+              font-size: 66px;
+              color: #226;
+              padding: 20px 0 50px;
+              margin-bottom: 50px;
+              text-align: center;
+            }
+          </style>
+          <header>  <h1>Efeitos clássicos da Web 2.0</h1></header>
+          <section>
+            <pre><b>text-shadow</b>: rgba(0, 0, 0, 0.5) 0 <span id="web20-shadow-value-1">0</span>px <span id="web20-shadow-value-2">0</span>px; <input id="web20-shadow" type="range" min="0" max="9" value="0" onchange="changeWeb20(event)">
+
+background: 
+  -<b>webkit-gradient</b>(linear, left top, left bottom, <input id="web20-gradient" type="range" min="0" max="100" value="0" onchange="changeWeb20(event)">
+                   from(rgba(200, 200, 240, <span id="web20-gradient-value-1">0</span>)), to(rgba(255, 255, 255, <span id="web20-gradient-value-2">0</span>)));
+
+<b>border-radius</b>: <span id="web20-border-value">0</span>px; <input id="web20-border" type="range" min="0" max="50" value="0" onchange="changeWeb20(event)">
+
+-webkit-<b>box-reflect</b>: below 10px
+  -webkit-gradient(linear, left top, left bottom, <input id="web20-reflect" type="range" min="0" max="100" value="0" onchange="changeWeb20(event)">
+                   from(transparent), to(rgba(255, 255, 255, <span id="web20-reflect-value">0</span>)));
+</pre>
+
+            <div class="example">
+              <div id="logo-container">
+                <div id="web20-google">
+                  Web 2.0 Logo
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <script defer>
+            function changeWeb20() {
+              var el = document.getElementById('web20-google');
+
+              var textShadowVal = document.getElementById('web20-shadow').value;
+              document.getElementById('web20-shadow-value-1').textContent = textShadowVal;
+              document.getElementById('web20-shadow-value-2').textContent = textShadowVal;
+
+              var gradientVal = document.getElementById('web20-gradient').value / 100;
+              document.getElementById('web20-gradient-value-1').textContent = gradientVal;
+              document.getElementById('web20-gradient-value-2').textContent = gradientVal;
+
+              var borderVal = document.getElementById('web20-border').value;
+              document.getElementById('web20-border-value').textContent = borderVal;
+
+              var reflectVal = document.getElementById('web20-reflect').value / 100;
+              document.getElementById('web20-reflect-value').textContent = reflectVal;
+
+              el.style.textShadow = 'rgba(0, 0, 0, 0.5) 0 ' + textShadowVal + 'px ' + textShadowVal + 'px';
+              el.style.background = '-webkit-gradient(linear, left top, left bottom, from(rgba(200, 200, 240, ' + gradientVal + ')), to(rgba(255, 255, 255, ' + gradientVal + ')))';
+              el.style.borderRadius = borderVal + 'px';
+              el.style.webkitBoxReflect = 'below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, ' + reflectVal + ')))';
+            }
+          </script>
+        </div>
+
+
+        <div class="slide styling" id="css-background">
+          <style>
+            #background-textarea {
+              background: white url(http://www.google.com/intl/en_ALL/images/logo.gif) center center no-repeat;
+              background-size: auto;
+              width: 200px;
+              height: 100px;
+              outline: 0;
+            }
+            #background-example {
+              margin-left: 10px;
+              padding-left: 28px;
+              background: url(src/zippy-plus.png) 10px center no-repeat,
+                          url(src/gray_lines_bg.png) 0 center repeat-x;
+            }
+            #resize-message {
+              float: left;
+              padding-right: 10px;
+            }
+          </style>
+          
+          <header>  <h1>Background</h1></header>
+          <section>
+            <h2>Background-size</h2>
+            <pre>#logo {
+  background: url(logo.gif) center center no-repeat;
+  <b>background-size: 
+    <select onchange="changeBackgroundSize(event)">
+      <option>auto</option>
+      <option>contain</option>
+      <option>cover</option>
+      <option>100%</option>
+    </select>;</b>
+}
+</pre>
+            <textarea id="background-textarea"></textarea>
+            <p id="resize-message">Me aumente! »</p>
+          </section>
+        </div>
+
+        <div class="slide styling" id="flex-box-1">
+          <style>
+            #box-orient-example {
+              height: 260px;
+              display: -webkit-box; -webkit-box-orient: horizontal;
+              display: -moz-box; -moz-box-orient: horizontal;
+            }
+            #box-orient-example div:nth-child(1) {
+              background: white; padding: 10px; -webkit-box-flex: 1; 
+              -moz-box-flex: 1; text-align: center;
+            }
+            #box-orient-example div:nth-child(2) {
+              background: #ddd; padding: 10px; -webkit-box-flex: 1; 
+              -moz-box-flex: 1; text-align: center;
+            }
+            #box-orient-example div:nth-child(3) {
+              background: white; padding: 10px; -webkit-box-flex: 3; 
+              -moz-box-flex: 3; text-align: center;
+            }
+          </style>
+          <header>
+            <h1>Elementos flexíveis</h1>
+          </header>
+          
+          <section>
+<pre>.box {
+  display: -webkit-<b>box</b>;
+  -webkit-<b>box-orient</b>: <select onchange='changeBoxOrient(event)'> 
+      <option>horizontal</option> 
+      <option>vertical</option> 
+    </select>;
+}
+.box .one, .box .two {
+  -webkit-<b>box-flex</b>: 1;
+}
+.box .three {
+  -webkit-<b>box-flex</b>: 3;
+}
+</pre> 
+
+          <div id="box-orient-example" class="example">
+            <div>
+              Caixa um
+            </div> 
+            <div>
+              Caixa dois
+            </div> 
+            <div>
+              Caixa três
+            </div> 
+          </div>
+
+          <script defer> 
+            function changeBoxOrient(event) {
+              var el = document.getElementById('box-orient-example');
+              el.style.webkitBoxOrient = event.target.value;
+              el.style.MozBoxOrient = event.target.value; 
+            }
+          </script> 
+          </section> 
+        </div>
+
+
+        <div class="slide styling" id="flex-box-2">
+          <style>
+            #box-orient-example-2 {
+              height: 200px; 
+              display: -moz-box; 
+              -moz-box-pack: center;
+              -moz-box-align: center; 
+              -moz-box-orient: horizontal;
+              
+              display: -webkit-box; 
+              -webkit-box-pack: center;
+              -webkit-box-align: center; 
+              -webkit-box-orient: horizontal;
+            }
+            #box-orient-example-2 div, #box-orient-example-2 textarea {
+              background: #ddd; padding: 10px; width: 200px; font-size: 14px;
+            }
+          </style>
+          <header>  <h1>Elementos flexíveis</h1></header>
+          <section> 
+<pre>.box {
+    display: -webkit-<b>box</b>;
+    -webkit-<b>box-pack</b>: <select onchange='changeBoxPack(event)'> 
+        <option>center</option> 
+        <option>start</option> 
+        <option>end</option> 
+      </select>;
+    -webkit-<b>box-align</b>: <select onchange='changeBoxAlign(event)'> 
+        <option>center</option> 
+        <option>start</option> 
+        <option>end</option> 
+        <option>stretch</option> 
+      </select>;
+  }
+</pre> 
+
+            <div id="box-orient-example-2" class="example">
+              <textarea>altere os valores do select e faça resize nessa &lt;textarea></textarea> 
+            </div>
+
+            <script defer> 
+              function changeBoxPack(event) {
+                var el = document.getElementById('box-orient-example-2');
+                el.style.webkitBoxPack = event.target.value;
+                el.style.MozBoxPack = event.target.value; 
+              }
+              function changeBoxAlign(event) {
+                var el = document.getElementById('box-orient-example-2');
+                el.style.webkitBoxAlign = event.target.value;
+                el.style.MozBoxAlign = event.target.value; 
+              }
+            </script> 
+
+          </section> 
+        </div>
+
+
+        <div class="slide styling" id="css-transitions">
+          <style>
+            #transitions-box-2 {
+              -webkit-transition: margin-left 1s ease-in-out;
+              -moz-transition: margin-left 1s ease-in-out;
+              -o-transition: margin-left 1s ease-in-out;
+              transition: margin-left 1s ease-in-out;
+            }
+            .transitions .left {
+              margin-left: 0;
+            }
+            .transitions .right {
+              margin-left: 780px;
+            }
+            .transitions div {
+              width: 20px;
+              height: 20px;
+              background: red;
+              margin-top: 30px;
+            }
+          </style>
+          <header>  <h1>Transição</h1></header>
+          <section>
+
+          <div class="transitions example">
+            <div id="transitions-box-1"></div>
+          </div>
+
+<pre>#box.left {
+  margin-left: 0;
+}
+#box.right {
+  margin-left: 1000px;
+}
+
+document.getElementById('box').className = 'left'; <button onclick="transitionLeft(1)">Left</button>
+document.getElementById('box').className = 'right'; <button onclick="transitionRight(1)">Right</button>
+</pre>
+
+          <div class="transitions example">
+            <div id="transitions-box-2"></div>
+          </div>
+
+<pre>#box {
+  -webkit-<b>transition</b>: margin-left 1s ease-in-out;
+}
+
+document.getElementById('box').className = 'left'; <button onclick="transitionLeft(2)">Left</button>
+document.getElementById('box').className = 'right'; <button onclick="transitionRight(2)">Right</button>
+</pre>
+
+
+            <script defer>
+              function transitionLeft(no) {
+                document.getElementById('transitions-box-' + no).className = 'left';
+              }
+              function transitionRight(no) {
+                document.getElementById('transitions-box-' + no).className = 'right';
+              }
+            </script>
+          </section>
+        </div>
+
+
+        <div class="slide styling" id="css-transforms">
+          <style>
+            #threed-example {
+              margin: 50px 20px;
+              -webkit-transform: rotateZ(5deg);
+              -moz-transform: rotateZ(5deg);
+              -o-transform: rotateZ(5deg);
+              transform: rotateZ(5deg);
+              -webkit-transition: -webkit-transform 2s ease-in-out;
+              -moz-transition: -moz-transform 2s ease-in-out;
+              -o-transition: -o-transform 2s ease-in-out;
+              transition: transform 2s ease-in-out;
+            }
+            #threed-example:hover {
+              -webkit-transform: rotateZ(-5deg);
+              -moz-transform: rotateZ(-5deg);
+              -o-transform: rotateZ(-5deg);
+              transform: rotateZ(-5deg);
+            }
+          </style>
+          <header>  <h1>Transformações</h1></header>
+          <section>
+            <h2>
+              Passe o mouse aqui
+            </h2>
+            <pre id="threed-example">-webkit-<b>transform</b>: <b>rotateY</b>(45deg);
+-webkit-transform: <b>scaleX</b>(25deg);
+-webkit-transform: <b>translate3d</b>(0, 0, 90deg);
+-webkit-transform: <b>perspective</b>(500px)
+</pre>
+
+<pre>#threed-example {
+  -webkit-transform: rotateZ(5deg);
+
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+}
+#threed-example:hover {
+  -webkit-transform: rotateZ(-5deg);
+}
+</pre>
+
+            <h2>
+              Agora pressione a tecla "3"
+            </h2>
+          </section>
+        </div>
+
+
+        <div class="slide styling" id="css-animation">
+          <style>
+            #animation-example {
+              font-family: Arial;
+              text-align: center;
+              line-height: 100px;
+            }
+            #animation-note { 
+              font-size: 10px;
+            }
+            /* presently webkit-only */
+            @-webkit-keyframes pulse {
+             from {
+               opacity: 0.0;
+               font-size: 50px;
+             }
+             to {
+               opacity: 1.0;
+               font-size: 100px;
+             }
+            }
+
+            #animation-example {
+              -webkit-animation-name: pulse;
+              -webkit-animation-duration: 2s;
+              -webkit-animation-iteration-count: infinite;
+              -webkit-animation-timing-function: ease-in-out;
+              -webkit-animation-direction: alternate;
+            }
+          </style>
+          <header>
+            <h1>Animações</h1>
+          </header>
+          <section>
+
+<pre>@-webkit-<b>keyframes</b> <em>pulse</em> {
+ <b>from</b> {
+   opacity: 0.0;
+   font-size: 100%;
+ }
+ <b>to</b> {
+   opacity: 1.0;
+   font-size: 200%;
+ }
+}
+
+div {
+  -webkit-<b>animation-name</b>: <em>pulse</em>;
+  -webkit-<b>animation-duration</b>: 2s;
+  -webkit-<b>animation-iteration-count</b>: infinite;
+  -webkit-<b>animation-timing-function</b>: ease-in-out;
+  -webkit-<b>animation-direction</b>: alternate;
+}
+</pre>
+            <p id="animation-note">
+              *Por favor, não faça esse efeito tosco no seu site ;)
+            </p>
+
+            <div id="animation-example" class="example">
+              FSLDC
+            </div>
+          </section>
+        </div>
+
+        <div class="slide" id="flash"></div>
+        
+        <div class="slide" id="w3c"></div>
+        
+        <div class="slide" id="html5-hoje">
+          <section>
+          </section>
+          <div class="footer">
+            <div class="alignright"><a href="http://html5readiness.com">html5readiness.com</a></div>
+          </div>
+        </div>
+        
+        <div class="slide" id="caniuse">
+          <div class="footer">
+            <div class="alignright"><a href="http://caniuse.com">caniuse.com</a></div>
+          </div>
+        </div>
+        
+        <div class="slide" id="ie6"></div>
+        
+        <div class="slide" id="modernizr">
+          <section>
+          </section>
+          <div class="footer">
+            <div class="alignright"><a href="http://modernizr.com">modernizr.com</a></div>
+          </div>
+        </div>
+        
+        <div class="slide" id="chrome-frame">
+          <style>
+            span.space {
+              padding: 0 5px;
+            }
+            
+            #chrome-frame p {
+              font-size: 30px;
+              padding: 20px 30px;
+            }
+          </style>
+          <header><h1>Chrome Frame</h1></header>
+          <section>
+            <p>Aplica no Internet Explorer as tecnologias do Google Chrome e também um engine JavaScript mais rápida.
+            Essas melhorias não são de impacto visual. Nada na interface do Internet Explorer é modificado.</p>
+            <h2>No Client-side (dentro da tag&lt;head&gt;):</h2>
+            <pre>&lt;meta http-equiv="X-UA-Compatible" content="chrome=1"></pre>
+            <h2>No Server-side (dentro do .htaccess):</h2>
+            <pre>X-UA-Compatible: chrome=1</pre>
+          </section>
+        </div>
+        
+        <div class="slide" id="polyfill"></div>
+        
+        <div class="slide" id="yepnope-slide">
+          <div class="footer">
+            <div class="alignright">yepnopejs.com</div>
+          </div>
+        </div>
+        
+        <div class="slide" id="no-slide">
+          <section>
+          </section>
+          <div class="footer">
+            <div class="alignright">dowebsitesneedtolookexactlythesameineverybrowser.com</div>
+          </div>
+        </div>
+        
+        <div class="slide" id="pe-vs-gd"></div>
+        
+        <div class="slide" id="html5boilerplate">
+          <div class="footer">
+            <div class="alignright"><a target="_blank" href="http://html5boilerplate.com">html5boilerplate.com</a></div>
+          </div>
+        </div>
+        
+        <!-- <div class="slide" id="validator">
+          <div class="footer">
+            <div class="alignright"><a target="_blank" href="http://validator.w3.org/">validator.w3.org</a></div>
+          </div>
+        </div> -->
+        
+        <div class="slide categoria" id="cms">
+          <header>
+            <h2>CMS</h2>
+          </header>
+          
+          <section class="middle" id="cms-img">
+            <img src="img/ilustras/cms-2.jpg" alt="" />
+          </section>
+        </div>
+        
+        <div class="slide" id="roots">
+          <div class="footer">
+            <div class="alignright"><a target="_blank" href="http://rootstheme.com/">rootstheme.com</a></div>
+          </div>
+        </div>
+        
+        <div class="slide" id="zentropy">
+          <div class="footer">
+            <div class="alignright"><a target="_blank" href="http://drupal.org/project/zentropy">drupal.org/project/zentropy</a></div>
+          </div>
+        </div>
+        
+        <!-- <div class="slide" id="html5live">
+          <div class="footer">
+            <div class="alignright"><a target="_blank" href="http://www.html5live.at/">html5live.at</a></div>
+          </div>
+        </div> -->
+        
+        <div class="slide" id="fim"></div>
+
+      </div> <!-- slides -->
+
+    </div> <!-- presentation -->
+
+    <script defer>
+      (function() {
+        var doc = document;
+        var disableBuilds = false;
+        
+        var ctr = 0;
+        var spaces = /\s+/, a1 = [''];
+
+        var toArray = function(list) {
+          return Array.prototype.slice.call(list || [], 0);
+        };
+
+        var byId = function(id) {
+          if (typeof id == 'string') { return doc.getElementById(id); }
+          return id;
+        };
+        
+        var query = function(query, root) {
+          return queryAll(query, root)[0];
+        }
+        
+        var queryAll = function(query, root) {
+          if (!query) { return []; }
+          if (typeof query != 'string') { return toArray(query); }
+          if (typeof root == 'string') {
+            root = byId(root);
+            if(!root){ return []; }
+          }
+
+          root = root || document;
+          var rootIsDoc = (root.nodeType == 9);
+          var doc = rootIsDoc ? root : (root.ownerDocument || document);
+
+          // rewrite the query to be ID rooted
+          if (!rootIsDoc || ('>~+'.indexOf(query.charAt(0)) >= 0)) {
+            root.id = root.id || ('qUnique' + (ctr++));
+            query = '#' + root.id + ' ' + query;
+          }
+          // don't choke on something like ".yada.yada >"
+          if ('>~+'.indexOf(query.slice(-1)) >= 0) { query += ' *'; }
+          return toArray(doc.querySelectorAll(query));
+        };
+
+        var strToArray = function(s) {
+          if (typeof s == 'string' || s instanceof String) {
+            if (s.indexOf(' ') < 0) {
+              a1[0] = s;
+              return a1;
+            } else {
+              return s.split(spaces);
+            }
+          }
+          return s;
+        };
+
+        // Needed for browsers that don't support String.trim() (e.g. iPad)
+        var trim = function(str) {
+          return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+        };
+
+        var addClass = function(node, classStr) {
+          classStr = strToArray(classStr);
+          var cls = ' ' + node.className + ' ';
+          for (var i = 0, len = classStr.length, c; i < len; ++i) {
+            c = classStr[i];
+            if (c && cls.indexOf(' ' + c + ' ') < 0) {
+              cls += c + ' ';
+            }
+          }
+          node.className = trim(cls);
+        };
+
+        var removeClass = function(node, classStr) {
+          var cls;
+          if (classStr !== undefined) {
+            classStr = strToArray(classStr);
+            cls = ' ' + node.className + ' ';
+            for (var i = 0, len = classStr.length; i < len; ++i) {
+              cls = cls.replace(' ' + classStr[i] + ' ', ' ');
+            }
+            cls = trim(cls);
+          } else {
+            cls = '';
+          }
+          if (node.className != cls) {
+            node.className = cls;
+          }
+        };
+
+        var toggleClass = function(node, classStr) {
+          var cls = ' ' + node.className + ' ';
+          if (cls.indexOf(' ' + trim(classStr) + ' ') >= 0) {
+            removeClass(node, classStr);
+          } else {
+            addClass(node, classStr);
+          }
+        };
+
+        
+        // modernizr lite via https://gist.github.com/598008
+        var testStyle = function(style) {
+
+          var elem = document.createElement('div');
+          var prefixes = ['Webkit', 'Moz', 'O', 'ms', 'Khtml'];
+          var bool;
+          var bump = function(all, letter) {
+                return letter.toUpperCase();
+              };
+          var prop;
+
+          bool = style in elem.style;
+          prop = style.replace(/^(.)/, bump).replace(/-([a-z])/ig, bump);
+
+          for (var len = prefixes.length; len--; ){
+            if (bool) { 
+              break; 
+            }
+            bool = prefixes[len] + prop in elem.style;
+          }
+
+          document.documentElement.className += ' ' + (bool ? '' : 'no-') + style.replace(/-/g, '');
+          return bool;
+        };
+
+        var canTransition = testStyle('transition');
+
+        //
+        // Slide class
+        //
+        var Slide = function(node, idx) {
+          this._node = node;
+          if (idx >= 0) {
+            this._count = idx + 1;
+          }
+          if (this._node) {
+            addClass(this._node, 'slide distant-slide');
+          }
+          this._makeCounter();
+          this._makeBuildList();
+        };
+
+        Slide.prototype = {
+          _node: null,
+          _count: 0,
+          _buildList: [],
+          _visited: false,
+          _currentState: '',
+          _states: [ 'distant-slide', 'far-past',
+                     'past', 'current', 'future',
+                     'far-future', 'distant-slide' ],
+          setState: function(state) {
+            if (typeof state != 'string') {
+              state = this._states[state];
+            }
+            if (state == 'current' && !this._visited) {
+              this._visited = true;
+              this._makeBuildList();
+            }
+            removeClass(this._node, this._states);
+            addClass(this._node, state);
+            this._currentState = state;
+
+            // delay first auto run. Really wish this were in CSS.
+            /*
+            this._runAutos();
+            */
+            var _t = this;
+            setTimeout(function(){ _t._runAutos(); } , 400);
+
+            if (state == 'current') {
+              this._onLoad();
+            } else {
+              this._onUnload();
+            }
+          },
+          _onLoad: function() {
+            this._fireEvent('onload');
+            this._showFrames();
+          },
+          _onUnload: function() {
+            this._fireEvent('onunload');
+            this._hideFrames();
+          },
+          _fireEvent: function(name) {
+            var eventSrc = this._node.getAttribute(name);
+            if (eventSrc) {
+              eventSrc = '(function() { ' + eventSrc + ' })';
+              var fn = eval(eventSrc);
+              fn.call(this._node);
+            }
+          },
+          _showFrames: function() {
+            var frames = queryAll('iframe', this._node);
+            function show() {
+              frames.forEach(function(el) {
+                var _src = el.getAttribute('_src');
+                if (_src && _src.length) {
+                  el.src = _src;
+                }
+              });
+            }
+            setTimeout(show, 0);
+          },
+          _hideFrames: function() {
+            var frames = queryAll('iframe', this._node);
+            function hide() {
+              frames.forEach(function(el) {
+                var _src = el.getAttribute('_src');
+                if (_src && _src.length) {
+                  el.src = '';
+                }
+              });
+            }
+            setTimeout(hide, 250);
+          },
+          _makeCounter: function() {
+            if(!this._count || !this._node) { return; }
+            var c = doc.createElement('span');
+            c.textContent = this._count;
+            c.className = 'counter';
+            this._node.appendChild(c);
+          },
+          _makeBuildList: function() {
+            this._buildList = [];
+            if (disableBuilds) { return; }
+            if (this._node) {
+              this._buildList = queryAll('[data-build] > *', this._node);
+            }
+            this._buildList.forEach(function(el) {
+              addClass(el, 'to-build');
+            });
+          },
+          _runAutos: function() {
+            if (this._currentState != 'current') {
+              return;
+            }
+            // find the next auto, slice it out of the list, and run it
+            var idx = -1;
+            this._buildList.some(function(n, i) {
+              if (n.hasAttribute('data-auto')) {
+                idx = i;
+                return true;
+              }
+              return false;
+            });
+            if (idx >= 0) {
+              var elem = this._buildList.splice(idx, 1)[0];
+             
+              var _t = this;
+              if (canTransition) {
+                var l = function(evt) {
+                  elem.parentNode.removeEventListener('webkitTransitionEnd', l, false);
+                  elem.parentNode.removeEventListener('transitionend', l, false);  // moz
+                  elem.parentNode.removeEventListener('oTransitionEnd', l, false);
+                  _t._runAutos();
+                };
+                elem.parentNode.addEventListener('webkitTransitionEnd', l, false);
+                elem.parentNode.addEventListener('transitionend', l, false);
+                elem.parentNode.addEventListener('oTransitionEnd', l, false);
+                removeClass(elem, 'to-build');
+              } else {
+                setTimeout(function() {
+                  removeClass(elem, 'to-build');
+                  _t._runAutos();
+                }, 400);
+              }
+            }
+          },
+          buildNext: function() {
+            if (!this._buildList.length) {
+              return false;
+            }
+            removeClass(this._buildList.shift(), 'to-build');
+            return true;
+          },
+        };
+
+        //
+        // SlideShow class
+        //
+        var SlideShow = function(slides) {
+          this._slides = (slides || []).map(function(el, idx) {
+            return new Slide(el, idx);
+          });
+          var h = window.location.hash;
+          try {
+            this.current = h;
+          } catch (e) { /* squeltch */ }
+          this.current = (!this.current) ? "intro" : this.current.replace('#', '');
+          if (!query('#' + this.current)) {
+            // if this happens is very likely that someone is coming from
+            // a link with the old permalink format, i.e. #slide24
+            alert('The format of the permalinks have recently changed. If you are coming ' +
+                   'here from an old external link it\'s very likely you will land to the wrong slide');
+            this.current = "intro";
+          }
+          var _t = this;
+          doc.addEventListener('keydown', 
+              function(e) { _t.handleKeys(e); }, false);
+          doc.addEventListener('touchstart', 
+              function(e) { _t.handleTouchStart(e); }, false);
+          doc.addEventListener('touchend', 
+              function(e) { _t.handleTouchEnd(e); }, false);
+          window.addEventListener('popstate', 
+              function(e) { if (e.state) { _t.go(e.state); } }, false);
+          query('#left-init-key').addEventListener('click',
+              function() { _t.next(); }, false);
+          this._update();
+        };
+
+        SlideShow.prototype = {
+          _presentationCounter: query('#presentation-counter'),
+          _slides: [],
+          _getCurrentIndex: function() {
+            var me = this;
+            var slideCount = null;
+            queryAll('.slide').forEach(function(slide, i) {
+              if (slide.id == me.current) {
+                slideCount = i;
+              }
+            });
+            return slideCount + 1;  
+          },
+          _update: function(dontPush) {
+            // in order to delay the time where the counter shows the slide number we check if 
+            // the slides are already loaded (so we show the loading... instead)
+            // the technique to test visibility is taken from here
+            // http://stackoverflow.com/questions/704758/how-to-check-if-an-element-is-really-visible-with-javascript
+            var docElem = document.documentElement;
+            var elem = document.elementFromPoint( docElem.clientWidth / 2, docElem.clientHeight / 2);
+            var currentIndex = this._getCurrentIndex();
+            if (elem && elem.className != 'presentation') {
+                this._presentationCounter.textContent = currentIndex;
+            }
+            if (history.pushState) {
+              if (!dontPush) {
+                history.replaceState(this.current, 'Slide ' + this.current, '#' + this.current);
+              }
+            } else {
+              window.location.hash = this.current;
+            }
+            for (var x = currentIndex-1; x < currentIndex + 7; x++) {
+              if (this._slides[x-4]) {
+                this._slides[x-4].setState(Math.max(0, x-currentIndex));
+              }
+            }
+          },
+
+          current: 0,
+          next: function() {
+            if (!this._slides[this._getCurrentIndex() - 1].buildNext()) {
+              var next = query('#' + this.current + ' + .slide');
+              this.current = (next) ? next.id : this.current;
+              this._update();
+            }
+          },
+          prev: function() {
+            var prev = query('.slide:nth-child(' + (this._getCurrentIndex() - 1) + ')');
+            this.current = (prev) ? prev.id : this.current;
+            this._update();
+          },
+          go: function(slideId) {
+            this.current = slideId;
+            this._update(true);
+          },
+
+          _notesOn: false,
+          showNotes: function() {
+            var isOn = this._notesOn = !this._notesOn;
+            queryAll('.notes').forEach(function(el) {
+              el.style.display = (notesOn) ? 'block' : 'none';
+            });
+          },
+          switch3D: function() {
+            toggleClass(document.body, 'three-d');
+          },
+          toggleHightlight: function() {
+            var link = query('#prettify-link');
+            link.disabled = !(link.disabled);
+            sessionStorage['highlightOn'] = !link.disabled;
+          },
+          changeTheme: function() {
+            var linkEls = queryAll('link.theme');
+            var sheetIndex = 0;
+            linkEls.forEach(function(stylesheet, i) {
+              if (!stylesheet.disabled) {
+                sheetIndex = i;
+              }
+            });
+            linkEls[sheetIndex].disabled = true;
+            linkEls[(sheetIndex + 1) % linkEls.length].disabled = false;
+            sessionStorage['theme'] = linkEls[(sheetIndex + 1) % linkEls.length].href;
+          },
+          handleKeys: function(e) {
+            
+            if (/^(input|textarea)$/i.test(e.target.nodeName) || e.target.isContentEditable) {
+              return;
+            }
+            
+            switch (e.keyCode) {
+              case 37: // left arrow
+                this.prev(); break;
+              case 39: // right arrow
+              case 32: // space
+                this.next(); break;
+              case 50: // 2
+                this.showNotes(); break;
+              case 51: // 3
+                this.switch3D(); break;
+              case 72: // H
+                this.toggleHightlight(); break;
+              case 84: // T
+                this.changeTheme(); break;
+            }
+          },
+          _touchStartX: 0,
+          handleTouchStart: function(e) {
+            this._touchStartX = e.touches[0].pageX;
+          },
+          handleTouchEnd: function(e) {
+            var delta = this._touchStartX - e.changedTouches[0].pageX;
+            var SWIPE_SIZE = 150;
+            if (delta > SWIPE_SIZE) {
+              this.next();
+            } else if (delta< -SWIPE_SIZE) {
+              this.prev();
+            }
+          },
+        };
+        
+        // load highlight setting from session storage, if available.
+        // session storage can only store strings so we have to assume type coercion
+        // for the boolean logic here
+        query('#prettify-link').disabled = !(sessionStorage['highlightOn'] == 'true');
+
+        // disable style theme stylesheets
+        var linkEls = queryAll('link.theme');
+        var stylesheetPath = sessionStorage['theme'] || 'css/default.css';
+        linkEls.forEach(function(stylesheet) {
+          stylesheet.disabled = !(stylesheet.href.indexOf(stylesheetPath) != -1);
+        });
+        
+        // Initialize
+        var slideshow = new SlideShow(queryAll('.slide'));
+
+        document.addEventListener('DOMContentLoaded', function() {
+          query('.slides').style.display = 'block';
+        }, false);
+
+        queryAll('pre').forEach(function(el) {
+          addClass(el, 'prettyprint');
+        });
+
+      })();
+    </script>
+
+    <!--[if lt IE 9]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+    </script>
+    <script>CFInstall.check({ mode: "overlay" });</script>
+    <![endif]-->
+
+    <script src="src/prettify/prettify.js" onload="prettyPrint();" defer></script>
+    <style>#doctype-html5 .pln, #doctype-xhtml .pln { display: none; }</style>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script>
+      // Check if new appcache is available, load it, and reload page.
+      if (window.applicationCache) {
+        window.applicationCache.addEventListener('updateready', function(e) {
+          if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+            window.applicationCache.swapCache();
+            if (confirm('A new version of this site is available. Load it?')) {
+              window.location.reload();
+            }
+          }
+        }, false);
+      }
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-15028909-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
