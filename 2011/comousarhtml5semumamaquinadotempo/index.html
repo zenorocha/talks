@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    
+    <title>Como usar HTML5 sem uma máquina do tempo</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Zeno Rocha" />
+    <meta name="description" content="Entenda como utilizar o poderoso trio HTML5, CSS3 e JS para desenvolver hoje a nova geração de aplicações web." />
+
+    <script src="slides.js"></script>
+	
+  </head>
+
+  <body style="display: none">
+
+    <section class="slides layout-regular template-io2011">
+
+		<article class="nobackground" id="capa"></article>
+
+		<article class="nobackground" id="quemsoueu"></article>
+
+		<article class="nobackground" id="instrucoes">
+			<h2 id="praquem">Pra quem estiver no laptop...</h2>
+			<h3><a href="http://comousarhtml5semumamaquinadotempo.com" target="blank">http://comousarhtml5semumamaquinadotempo.com</a></h3>
+			<h2 id="usesetas">Use as setas para navegar</h2>
+		</article>
+
+		<article class="nobackground" id="github-comousar">
+      		<h3><a href="http://bit.ly/sG4Ea9" target="blank">http://bit.ly/sG4Ea9</a></h3>
+      	</article>
+	
+		<article class="nobackground" id="moda"></article>
+
+		<article class="demo">
+			<h1>Soul Reaper</h1>
+			<a href="http://www.soul-reaper.com/" target="blank" class="btn"><span>DEMO</span></a>			
+		</article>
+
+		<article class="nobackground" id="wow"></article>
+		<article class="nobackground" id="w3c-talvez"></article>
+		<article class="nobackground" id="eraumavez"></article>	
+		<article class="nobackground" id="lancamento-html5"></article>
+		<article class="nobackground" id="estudou"></article>
+		<article class="nobackground" id="aula"></article>
+		<article class="nobackground" id="w3c-suspende"></article>
+		<article class="nobackground" id="lamentando"></article>		
+		<article class="nobackground" id="vivefeliz"></article>
+
+		<article class="fill">
+			<h1 id="pronto">HTML5 já está pronto?</h1>
+			<iframe style="padding-top: 30px;" src="http://ishtml5readyyet.com/"></iframe>
+		</article>
+
+		<article class="nobackground" id="doismilevintedois"></article>
+		<article class="nobackground" id="viajarnotempo"></article>
+		<article class="nobackground" id="html5hoje"></article>
+		
+		<article class="nobackground" id="aceite"></article>	
+		<article class="nobackground" id="polyfill"></article>
+		
+		<article class="nobackground" id="o-que-e">
+			<div class="build">
+				<img class="ico-html" src="img/html.png" alt="HTML">
+				<img class="ico-css" src="img/css.png" alt="CSS">
+				<img class="ico-js" src="img/js.png" alt="JS">
+			</div>
+        </article>
+
+		<article class="semantica">
+			<h1>Semântica</h1>
+			<img src="img/categorias/semantica.png" alt="Semântica">
+		</article>
+		
+		<article class="semantica">
+			<p class="doctype-xhtml">&lt;!DOCTYPE html PUBLIC "-//W3C<br>//DTD XHTML 1.0 Transitional//EN" "http://www.w3<br>.org/TR/xhtml1/<br>DTD/xhtml1-transitional.dtd"&gt;</p>
+		</article>
+		
+		<article class="semantica">
+			<p class="doctype-html">&lt;!DOCTYPE html&gt;</p>
+		</article>
+
+		<article class="semantica">
+			<p class="doctype-xhtml"><br><br>&lt;meta http-equiv<br>="content-type" content="text/html; charset=utf-8"&gt;</p>
+		</article>
+
+		<article class="semantica">
+			<p class="doctype-html">&lt;meta charset="utf-8"&gt;</p>
+		</article>
+
+		<article class="nobackground" id="ontem"></article>		
+		<article class="nobackground" id="hoje"></article>		
+		
+		<article class="semantica">
+			<h1>Mas peraí...</h1>
+			<p>Para navegadores antigos uma tag <strong>&lt;header&gt;</strong> tem o mesmo valor semântico que uma tag <strong>&lt;zeno&gt;</strong>.</p>
+			<p>Portanto, precisamos dizer ao navegador que esses elementos devem ser renderizados como blocos.</p>
+			<p>No JS:</p>
+			<textarea class="snippet" spellcheck="false" rows="1">document.createElement("header");</textarea>
+			<p>No CSS:</p>
+			<textarea class="snippet" spellcheck="false" rows="1">header { display: block; }</textarea>
+		</article>
+		
+		<article class="nobackground" id="html5shiv">
+			<h3><a href="http://bit.ly/taQO1E" target="blank">http://bit.ly/taQO1E</a></h3>
+		</article>
+		
+		<article class="semantica">
+			<h1 id="algumasnovidades">Algumas novidades <br>para aplicações</h1>
+			<p><progress>carregando...</progress></p>			
+			<textarea class="snippet" spellcheck="false" rows="1">&lt;progress&gt; carregando... &lt;/progress&gt;</textarea>			
+			<p><progress value="75" max="100">3/4 carregado</progress></p>
+			<textarea class="snippet" spellcheck="false" rows="1">&lt;progress value="75" max="100"&gt; 3/4 carregado &lt;/progress&gt;</textarea>		
+			<p><meter value="91" min="0" max="100" low="40" high="90" optimum="100"></meter></p>							
+			<textarea class="snippet" spellcheck="false" rows="2">&lt;meter value="91" min="0" max="100" low="40" high="90" optimum="100"&lt;/meter&gt;</textarea>
+		</article>
+		
+		<article class="semantica">
+			<form>
+				<h1 id="algumasnovidades">Algumas novidades <br>para formulários</h1>
+				<p><input id="num-exemplo" type="number" step="1" min="-5" max="10" value="0" /></p>
+				<textarea class="snippet" spellcheck="false" rows="1">&lt;input type="number" step="1" min="-5" max="10" /&gt;</textarea>
+				<p><input id="date-exemplo" type="date" max="2011-11-20" value="2011-11-05"/></p>
+				<textarea class="snippet" spellcheck="false" rows="1">&lt;input type="date" max="2011-11-20" value="2011-11-05"/&gt;</textarea>
+				<p><input id="input-exemplo" type="text" required /><button type="submit">Submeter</button></p>
+				<textarea class="snippet" spellcheck="false" rows="1">&lt;input type="text" required /&gt;</textarea>
+			</form>
+		</article>
+
+		<article class="nobackground" id="input-android">
+			<h1>Dispositivos móveis</h1>
+			<textarea id="input-text" class="snippet" spellcheck="false" rows="1">&lt;input type="text" /&gt;</textarea>
+			<textarea id="input-number" class="snippet" spellcheck="false" rows="1">&lt;input type="number" /&gt;</textarea>
+		</article>
+
+		<article class="nobackground" id="input-iphone">
+			<h1>Dispositivos móveis</h1>
+			<textarea id="input-tel" class="snippet" spellcheck="false" rows="1">&lt;input type="tel" /&gt;</textarea>
+			<textarea id="input-email" class="snippet" spellcheck="false" rows="1">&lt;input type="email" /&gt;</textarea>
+		</article>
+
+		<article class="demo">
+			<h1>Google 404</h1>
+			<a href="view-source:http://www.google.com/404" target="blank" class="btn"><span>DEMO</span></a>			
+		</article>
+	
+		<article class="armazenamento">
+			<h1>Armazenamento</h1>
+			<img src="img/categorias/armazenamento.png" alt="Armazenamento">
+		</article>	
+
+		<article class="nobackground" id="cookies">
+			<h1>Cookies</h1>
+			<ul class="build">
+				<li><strong>&lt; 4kb</strong></li>
+				<li><strong>enviado ao servidor a cada requisição</strong></li>
+				<li><strong>performance #fail</strong></li>
+	        </ul>
+		</article>
+
+		<article class="armazenamento">
+			<h1>Web Storage</h1>
+			<ul class="build">
+				<li>&lt; <strong>5mb</strong></li>
+				<li><strong>não</strong> é enviado ao servidor</li>
+				<li>performance <strong>#win</strong></li>
+				<li>formato chave/valor (hashtable)</li>
+	        </ul>
+		</article>
+
+		<article class="armazenamento">
+			<h1>session storage</h1>
+			<ul class="build">
+				<li>Armazenamento de dados por sessão
+				<textarea class="snippet" spellcheck="false" rows="2">sessionStorage.setItem('algumaChave', 'algumValorQualquer');
+sessionStorage.getItem('algumaChave'); // 'algumValorQualquer'</textarea></li>
+	        </ul>
+		</article>
+
+		<article class="armazenamento">
+			<h1>local storage</h1>
+			<ul class="build">
+				<li>Armazenamento de dados sem limite de tempo
+				<textarea class="snippet" spellcheck="false" rows="2">localStorage.setItem('algumaChave', 'algumValorQualquer');
+localStorage.getItem('algumaChave'); // 'algumValorQualquer'</textarea></li>
+				<li>E mais:
+				<textarea class="snippet" spellcheck="false" rows="4">localStorage.length; // número de itens armazenados
+localStorage.key(0); // 'algumValorQualquer'
+localStorage.removeItem('algumValorQualquer');
+localStorage.clear();</textarea>
+	        </ul>
+		</article>
+
+		<article class="demo">
+			<h1>To-do List</h1>
+			<a href="http://labs.zenorocha.com/html5/local-storage/" target="blank" class="btn"><span>DEMO</span></a>			
+		</article>
+	
+		<article class="acesso">
+			<h1>Acesso à hardware</h1>
+			<img src="img/categorias/acesso.png" alt="Acesso à hardware">
+		</article>
+	
+		<article class="acesso">
+			<h1>Input de áudio</h1>
+			<input id="speech-input-field" type="text" x-webkit-speech="">
+			<textarea class="snippet" spellcheck="false" rows="1">&lt;input type="text" x-webkit-speech /&gt;</textarea>
+		</article>
+
+		<article class="acesso">
+			<h1>Geolocalização</h1>
+			<p style="text-align: center;"><button onclick="initialize()">Procurar localização</button></p>
+			<textarea class="snippet" spellcheck="false" rows="5">map = new GMap2(document.getElementById("mapcanvas"));
+map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+map.addControl(new GSmallMapControl());
+positionId = navigator.geolocation.watchPosition(moveMap, handleError);</textarea>
+		</article>
+
+		<script src="http://maps.google.com/maps?file=api&v=2&sensor=false&key=ABQIAAAA9cgEhxiPF4egT3QzYhBrqRR2iNn-JPsJeAo-HTZ2O4IUOPeNXRTutTowkgxSEcJJlldDEkrPsrpIxQ" type="text/javascript"></script>
+		<script type="text/javascript" src="js/geolocation.js"></script>
+
+		<article id="geo" class="acesso">
+			<div id="mapcanvas"></div>
+		</article>
+
+		<article class="acesso">
+			<h1>Device orientation</h1>
+			<div class="main">
+			    <table>
+			    	<tr>
+			    		<td>Event Supported</td>
+			    		<td id="doEvent"></td>
+			    	</tr>
+			    	<tr>
+			    		<td>Tilt Left/Right [tiltLR]</td>
+			    		<td id="doTiltLR"></td>
+			    	</tr>
+			    	<tr>
+			    		<td>Tilt Front/Back [tiltFB]</td>
+			    		<td id="doTiltFB"></td>
+			    	</tr>
+			    	<tr>
+			    		<td>Direction [direction]</td>
+			    		<td id="doDirection"></td>
+			    	</tr>
+			    	<tr>
+			    		<td>Motion Up/Down</td>
+			    		<td id="doMotionUD"></td>
+			    	</tr>
+			    </table>
+			</div>
+
+			<div class="container" style="-webkit-perspective: 300; perspective: 300;">
+				<img src="img/php-logo.png" id="imgLogo" class="logo">
+			</div>
+			<textarea class="snippet" spellcheck="false" rows="5">window.addEventListener('deviceorientation', function(eventData) {
+	var tiltLR = eventData.gamma;
+	var tiltFB = eventData.beta;
+	var dir = eventData.alpha;
+}, false);</textarea>
+
+			<script type="text/javascript" src="js/deviceorientation.js"></script>	
+			<script type="text/javascript">
+				init3();
+			</script>
+
+		</article>
+	
+		<!-- <article class="nobackground" id="conectividade">
+			<h1>Conectividade</h1>
+			<img src="img/categorias/conectividade.png" alt="Conectividade">
+		</article>	-->
+
+		<!-- <article class="fill">
+			<iframe src="http://labs.zenorocha.com/file"></iframe>
+		</article>
+		
+		<article class="demo">
+			<h1>Ubuntu</h1>
+			<a href="http://www.ubuntu.com/tour/" target="blank" class="btn"><span>DEMO</span></a>			
+		</article> -->
+		
+		<article class="demo">
+			<h1>Terminal</h1>
+			<a href="http://www.htmlfivewow.com/demos/terminal/terminal.html" target="blank" class="btn"><span>DEMO</span></a>			
+		</article>
+	
+		<article class="multimedia">
+			<h1>Multimídia</h1>
+			<img src="img/categorias/multimedia.png" alt="Multimedia">
+		</article>
+		
+		<article class="multimedia">
+			<h1 id="algumasnovidades">Áudio</h1>
+			<audio id="audio-clip" controls>
+               	<source src="media/zelda.mp3" type="audio/mpeg">
+                <source src="media/zelda.ogg" type="audio/ogg">
+                Seu navegador não suporta a tag &lt;audio&gt;
+            </audio>
+			<textarea class="snippet" spellcheck="false" rows="5">&lt;audio controls&gt;
+    &lt;source src="media/zelda.mp3" type="audio/mpeg"&gt;
+    &lt;source src="media/zelda.ogg" type="audio/ogg"&gt;
+    Seu navegador não suporta a tag áudio
+&lt;/audio&gt;</textarea>
+			<div id="audio-atributes" class="build">			
+				<p>E ainda mais atributos como:</p>
+				<ul id="audio-atts">
+					<li>autoplay</li>
+					<li>loop</li>
+					<li>preload</li>
+				</ul>
+			</div>
+		</article>
+		
+		<article class="nobackground" id="buzz">
+			<h3><a href="http://bit.ly/rIi4aJ" target="blank">http://bit.ly/rIi4aJ</a></h3>
+		</article>
+
+		<article class="nobackground" id="audiojs">
+			<h3><a href="http://bit.ly/twvJen" target="blank">http://bit.ly/twvJen</a></h3>
+		</article>
+		
+		<article class="multimedia">
+			<h1 id="algumasnovidades">Vídeo</h1>
+		
+			<video id="video-clip" controls>
+				<source src="media/html5-gang.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' /> 
+				<source src="media/html5-gang.ogv" type='video/ogg; codecs="theora, vorbis"' />
+               	Seu navegador não suporta a tag vídeo
+			</video>
+	
+			<textarea class="snippet" spellcheck="false" rows="5">&lt;video controls&gt;
+    &lt;source src="media/html5-gang.mp4" type="video/mp4;"&gt;
+    &lt;source src="media/html5-gang.ogv" type="video/ogg;"&gt;
+    Seu navegador não suporta a tag vídeo
+&lt;/video&gt;</textarea>
+
+			<div id="audio-atributes" class="build">			
+				<p>E ainda mais atributos como:</p>
+				<ul id="audio-atts">
+					<li>poster / muted</li>
+				</ul>
+			</div>
+		</article>
+		
+		<article class="nobackground" id="videojs">
+			<h3><a href="http://bit.ly/swSgir" target="blank">http://bit.ly/swSgir</a></h3>
+		</article>
+		
+		<article class="nobackground" id="popcornjs">
+			<h3><a href="http://bit.ly/rVwXHl" target="blank">http://bit.ly/rVwXHl</a></h3>
+		</article>		
+	
+		<article class="graficos">
+			<h1>Gráficos</h1>
+			<img src="img/categorias/graficos.png" alt="Gráficos">
+		</article>
+
+		<article class="graficos">
+			<h1>SVG</h1>
+			<ul class="build">
+				<li>Gráficos vetoriais escaláveis</li>
+				<li>É o oposto de um <strong>bitmap</strong>, pois não lida com <strong>pixels</strong> e sim com um conjunto de <strong>curvas</strong> e <strong>linhas</strong></li>
+				<li>Linguagem no estilo XML
+				<textarea class="snippet" spellcheck="false" rows="3">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+   &lt;circle cx="100" cy="50" r="40" fill="red" /&gt;
+&lt;/svg&gt;</textarea></li>
+	        </ul>
+		</article>
+		
+		<article class="demo">
+			<h1>Park</h1>
+			<a href="http://www.w3.org/2010/Talks/04-schepers-www2010/themepark.svg" target="blank" class="btn"><span>DEMO</span></a>	
+		</article>
+		
+		<article class="nobackground" id="raphaeljs">
+			<h3><a href="http://bit.ly/w0WHUg" target="blank">http://bit.ly/w0WHUg</a></h3>\
+		</article>
+
+		<article class="nobackground" id="maujorsvg">
+			<h3><a href="http://bit.ly/tSyZ4S" target="blank">http://bit.ly/tSyZ4S</a></h3>
+		</article>
+		
+		<!-- <article class="nobackground" id="graficos">
+			<h1>Canvas</h1>
+		</article> -->
+		
+		<article class="fill" id="canvas">
+			<h1>Canvas</h1>
+			<ul class="build">
+				<li>Renderização de gráficos via script
+				<textarea class="snippet" spellcheck="false" rows="1">&lt;canvas id="meuDesenho" width="500" height="500"&gt;</textarea>
+				<textarea class="snippet" spellcheck="false" rows="2">var canvas = document.getElementById("meuDesenho"); 
+canvas = canvas.getContext("2d");</textarea></li>
+	        </ul>
+			<iframe src="http://www.spielzeugz.de/html5/space-noodles/"></iframe>
+		</article>
+		
+		<article class="demo">
+			<h1>Wormz</h1>
+			<a href="http://html5-pro.com/" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+		
+		<article class="graficos">
+			<h1>WebGL</h1>
+			<ul class="build">
+				<li>3D + Browser = Wooow!</li>
+				<li>JavaScript + GPU = Wooow²!</li>
+				<li>Utiliza a tag <strong>&lt;canvas&gt;</strong> só que com um outro contexto
+				<textarea class="snippet" spellcheck="false" rows="1">&lt;canvas id="meuDesenho" width="500" height="500"&gt;</textarea>
+				<textarea class="snippet" spellcheck="false" rows="2">var canvas = document.getElementById("meuDesenho"); 
+canvas = canvas.getContext("experimental-webgl");</textarea></li>
+	        </ul>
+		</article>
+
+		<article class="demo">
+			<h1>Cube</h1>
+			<a href="http://labs.zenorocha.com/html5/canvas/" target="blank" class="btn"><span>DEMO</span></a>			
+		</article>
+	
+		<article class="demo">
+			<h1>Skin</h1>
+			<a href="http://alteredqualia.com/three/examples/webgl_materials_skin.html" target="blank" class="btn"><span>DEMO</span></a>			
+		</article>
+
+		<article class="nobackground" id="threejs">
+			<h1 id="three">Quer brincar de verdade?</h1>
+			<h3><a href="http://bit.ly/sY4hv6" target="blank">http://bit.ly/sY4hv6</a></h3>
+		</article>
+
+		<article class="nobackground" id="learningthreejs">
+			<h3><a href="http://bit.ly/s9LghM" target="blank">http://bit.ly/s9LghM</a></h3>
+		</article>
+	
+	  	<article class="css3">
+			<h1>CSS</h1>
+			<img src="img/categorias/css3.png" alt="CSS3">
+	  	</article>
+
+	  	<article class="css3">
+			<span class="demo-text-shadow css3-demo">text-shadow</span>
+		    <span class="demo-text-outline css3-demo">text-outline</span>
+		    <span class="demo-box-shadow css3-demo">box-shadow</span>
+		    <span class="demo-border-radius css3-demo">border-radius</span>
+		    <span class="demo-gradient css3-demo">gradient</span>
+		    <span class="demo-transform css3-demo">transform</span>
+		    <span class="demo-border-image css3-demo">border-image</span>
+		    <span class="demo-text-overflow css3-demo">text-overflow</span>
+	  	</article>
+
+	  	<article class="nobackground" id="layerstyles">
+			<h3><a href="http://bit.ly/sfslbq" target="blank">http://bit.ly/sfslbq</a></h3>
+		</article>
+
+		<article class="css3">
+			<h1>@font-face</h1>
+			<textarea class="snippet" spellcheck="false" rows="8">@font-face {
+	font-family: 'Gotham';
+	src: url('font/gotham.eot');
+	src: url('font/gotham.eot?#iefix') format('embedded-opentype'),
+	url('font/gotham.woff') format('woff'),
+	url('font/gotham.ttf') format('truetype'),
+	url('font/gotham.svg#Gotham') format('svg');
+}</textarea>
+
+		</article>		
+
+		<article class="demo">
+			<h1>Atlantis</h1>
+			<a href="http://lostworldsfairs.com/atlantis/" target="blank" class="btn"><span>DEMO</span></a>			
+		</article>
+
+	  	<article class="nobackground" id="fontsquirrel">
+			<h3><a href="http://bit.ly/ti7oQE" target="blank">http://bit.ly/ti7oQE</a></h3>
+		</article>
+
+		<article class="nobackground" id="googlefonts">
+			<h3><a href="http://bit.ly/ruuYub" target="blank">http://bit.ly/ruuYub</a></h3>
+		</article>
+
+	  	<article class="css3">	
+	  		<h1>CSS animation</h1>
+	  		<div id="anim-logo"></div>
+	  		<textarea class="snippet" spellcheck="false" rows="11">@-webkit-keyframes rotate {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
+
+#anim-logo {
+	-webkit-animation-name: rotate;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}</textarea>
+		</article>
+
+		<article class="demo">
+			<h1>Spiderman</h1>
+			<a href="http://www.optimum7.com/css3-man/animation.html" target="blank" class="btn"><span>DEMO</span></a>			
+		</article>
+		
+		<article class="demo">
+			<h1>Expressive Web</h1>
+			<a href="http://beta.theexpressiveweb.com/" target="blank" class="btn"><span>DEMO</span></a>			
+		</article>	
+		
+		<article class="nobackground" id="css3pie">	
+			<h3><a href="http://bit.ly/udDcqH" target="blank">http://bit.ly/udDcqH</a></h3>
+		</article>
+		
+		<article class="nobackground" id="selectvizr">	
+			<h3><a href="http://bit.ly/vQcz9p" target="blank">http://bit.ly/vQcz9p</a></h3>
+		</article>
+
+		<article class="nobackground" id="dowebsites">
+			<h3 id="dowebsites-url"><a href="http://dowebsitesneedtolookexactlythesameineverybrowser.com/" target="blank">dowebsitesneedtolookexactlythesameineverybrowser.com</a></h3>
+		</article>
+
+		<article>
+        	<q>Content precedes design. Design in the absence of content is not design, it's decoration.</q>
+        	<div class="author">Jeffrey Zeldman</div>
+      	</article>
+
+		<article class="css3">
+			<h1>A guerra ainda não acabou</h1>
+			<ul class="build">
+				<li>☑ Saddam Hussein</li>
+				<li>☑ Osama Bin Laden</li>
+				<li>☑ Khaddafi</li>
+				<li>☐ Internet Explorer</li>
+	        </ul>
+		</article>
+
+		<article class="nobackground" id="salveaweb">
+      		<h3><a href="http://bit.ly/sIbvFv" target="blank">http://bit.ly/sIbvFv </a></h3>
+      	</article>
+
+      	<article class="nobackground" id="polyfill-list">
+      		<h3><a href="http://bit.ly/svv9BU" target="blank">http://bit.ly/svv9BU</a></h3>
+      	</article>
+      
+		<article class="nobackground" id="modernizr">	
+			<h3><a href="http://bit.ly/tPaw1E" target="blank">http://bit.ly/tPaw1E</a></h3>
+		</article>
+
+		<article class="nobackground" id="modernizr-pt">	
+			<h3><a href="http://bit.ly/ttr1Aq" target="blank">http://bit.ly/ttr1Aq</a></h3>
+		</article>
+
+		<article class="nobackground" id="h5bp">
+      		<h3><a href="http://bit.ly/uCc2wQ" target="blank">http://bit.ly/uCc2wQ</a></h3>
+      	</article>		
+
+      	<article class="nobackground" id="roots">
+      		<h3><a href="http://bit.ly/sYdJPY" target="blank">http://bit.ly/sYdJPY</a></h3>
+      	</article>
+
+      	<article class="nobackground" id="drupal">
+      		<h3><a href="http://bit.ly/t9pcMY" target="blank">http://bit.ly/t9pcMY</a></h3>
+      	</article>
+
+      	<article class="nobackground" id="diveinto">	
+      		<h3><a href="http://bit.ly/rMxkO3" target="blank">http://bit.ly/rMxkO3</a></h3>
+      	</article>
+
+      	<article class="nobackground" id="github-diveinto">	
+      		<h3><a href="http://bit.ly/td3scm" target="blank">http://bit.ly/td3scm</a></h3>
+      	</article>
+
+      	<article class="nobackground" id="tv-1"></article>
+      	<article class="nobackground" id="tv-2"></article>
+      	<article class="nobackground" id="tv-3"></article>
+      	<article class="nobackground" id="tv-4"></article>
+      	<article class="nobackground" id="tv-5"></article>
+      	<article class="nobackground" id="tv-6"></article>
+
+      	<article class="demo">
+			<h1>Occupy Flash</h1>
+			<a href="http://www.occupyflash.org/" target="blank" class="btn"><span>DEMO</span></a>
+		</article>	
+
+		<article>
+        	<q>Geeks love to fight</q>
+        	<div class="author"> Rasmus Lerdorf</div>
+      	</article>
+
+      	<article class="nobackground" id="flash"></article>
+
+      	<article>
+        	<q>Give, give, give! - you'll be impressed by how fast things will come back</q>
+        	<div class="author"> Small Acts Manifesto</div>
+      	</article>
+
+      	<article class="nobackground" id="fim"></article>
+
+    </section>
+
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-4114546-28']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+  </body>
+</html>
