@@ -1,0 +1,225 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: block !important;
+	height: 100%;
+	min-height: 740px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: #fff;
+	background:#000 !important;
+	-webkit-font-smoothing: antialiased;
+}
+	
+p, li {
+	color: #fff !important;
+}
+
+@font-face {
+    font-family: 'GothamUltraRegular';
+    src: url('../font/gotham-ultra-webfont.eot');
+    src: url('../font/gotham-ultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/gotham-ultra-webfont.woff') format('woff'),
+         url('../font/gotham-ultra-webfont.ttf') format('truetype'),
+         url('../font/gotham-ultra-webfont.svg#GothamUltraRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.snippet {
+	background: rgba(0, 0, 0, .4);
+	padding: .3em .5em;
+	margin: 20px 0 0 0;
+	border: 2px solid rgba(255, 255, 255, .1);
+	-webkit-box-shadow: .1em .1em .5em black inset;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #fff;
+	border-radius: 10px;
+	font-size: 22px;
+}
+
+.slides > article {
+	border: 0 !important;
+}
+
+h1 {
+	font-family: 'GothamUltraRegular' !important;
+	color: #fff !important;
+	font-size: 70px !important;
+	line-height: 70px !important;
+	text-align: center !important;
+	text-transform: uppercase;
+	margin: 50px 0 0 0 !important;
+	padding: 0 !important;		
+}
+
+.main {
+	display: none;
+}
+
+img {
+	text-align: center !important;
+	margin: 20px 0 0 165px;
+}
+
+.build, .build li {
+	list-style: none;
+}
+
+.branco {
+	background-color: #fff !important;
+}
+
+.branco h1, .branco li {
+	color: #000 !important; 
+}
+
+article h3 {
+	background: rgba(0, 0, 0, .75) !important;
+	padding-top: .2em !important;
+	padding-bottom: .3em !important;
+	margin-top: -.2em !important;
+ 	margin-left: -60px !important;
+  	padding-left: 60px !important;
+  	margin-right: -60px !important;
+  	padding-right: 60px !important;
+  	position: absolute !important;
+	bottom: 30px !important;
+	width: 100% !important;
+}
+
+article h3 a {
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
+
+/* --------------------- */
+
+article {
+	-moz-box-shadow: inset 0px 0px 250px #000000 !important;
+	-webkit-box-shadow: inset 0px 0px 250px #000000 !important;
+	-o-box-shadow: inset 0px 0px 250px #000000 !important;
+	box-shadow: inset 0px 0px 250px #000000 !important;
+}
+
+.css { background: #3bb62e; }
+.sass {	background: #1b79e7; }
+.less {	background: #e71b1b; }
+.stylus { background: #e7db1b; }
+
+#procura {
+	position: absolute;
+	bottom: 40px;
+	right: 0;
+	width: 100%;
+}
+
+#praquem {
+	top: 50px;
+}
+
+#usesetas {
+	top: 470px;
+}
+
+/* --- Capas --- */
+#capa { background-image: url("../images/capa.jpg"); }
+#capa-sass { background-image: url("../images/capa-sass.jpg"); }
+#capa-less { background-image: url("../images/capa-less.jpg"); }
+#capa-stylus { background-image: url("../images/capa-stylus.jpg"); }
+#capa-css { background-image: url("../images/capa-css.jpg"); }
+#fim { background-image: url("../images/fim.jpg"); }
+
+#pre { background-image: url("../images/pre.jpg"); }
+
+/* --- Sites --- */
+#site-sass { background-image: url("../images/site-sass.jpg"); }
+#site-compass { background-image: url("../images/site-compass.jpg"); }
+#site-less { background-image: url("../images/site-less.jpg"); }
+#site-less-br { background-image: url("../images/site-less-br.jpg"); }
+#site-stylus { background-image: url("../images/site-stylus.jpg"); }
+
+/* --- Intro -- */
+#quemsoueu { background: #426cb6 url("../images/quemsoueu.png"); }
+#instrucoes { background: url("../images/instrucoes.jpg"); }
+#github { background: url("../images/github.jpg"); }
+#sobrinho { background: url("../images/sobrinho.jpg"); }
+
+#beercamp { background: url("../images/beercamp.jpg"); }
+#css3map { background: url("../images/css3map.jpg"); }
+#css-designers { background: url("../images/css-designers.jpg"); }
+#amo-css { background: url("../images/amo-css.jpg"); }
+#css-merda { background: url("../images/css-merda.jpg"); }
+#css-heroi { background: url("../images/css-heroi.jpg"); }
+#prefix-free { background: url("../images/prefix-free.jpg"); }
+#prefixr { background: url("../images/prefixr.jpg"); }
+
+/* --- Stylus --- */
+#e-os-prefixos { background: url("../images/e-os-prefixos.jpg"); }
+#nib { background: url("../images/nib.jpg"); }
+#site-nib { background: url("../images/site-nib.jpg"); }
+
+/* --- Sass --- */
+#css-sass-compass { background: url("../images/css-sass-compass.jpg"); }
+
+/* --- Less --- */
+#less-client { background: url("../images/less-client.jpg"); }
+#ironman-errado { background: url("../images/ironman-errado.jpg"); }
+#bootstrap { background: url("../images/bootstrap.jpg"); }
+#github-popular { background: url("../images/github-popular.jpg"); }
+#bootstrap-less { background: url("../images/bootstrap-less.jpg"); }
+#pq-nao-sass { background: url("../images/pq-nao-sass.jpg"); }
+#site-less-elem { background: url("../images/site-less-elem.jpg"); }
+
+/* --- Outros --- */
+#site-compass-app { background: url("../images/site-compass-app.jpg"); }
+#site-scout { background: url("../images/site-scout.jpg"); }
+#site-less-app { background: url("../images/site-less-app.jpg"); }
+#site-codekit { background: url("../images/site-codekit.jpg"); }
+#site-livereload { background: url("../images/site-livereload.jpg"); }
+#site-winless { background: url("../images/site-winless.jpg"); }
+#site-crunch { background: url("../images/site-crunch.jpg"); }
+
+#site-spritepad { background: url("../images/site-spritepad.jpg"); }
+#site-spritecow { background: url("../images/site-spritecow.jpg"); }
+
+#sprite-generator { background: url("../images/sprite-generator.jpg"); }
+
+#quem-melhor { background: url("../images/quem-melhor.jpg"); }
+#mib-n-sabe { background: url("../images/mib-n-sabe.jpg"); }
+#mib-esqueca { background: url("../images/mib-esqueca.jpg"); }
+#uncleben { background: url("../images/uncleben.jpg"); }
+
+/* --- Mimimi --- */
+#mimimi-1 { background: url("../images/mimimi-01.jpg"); }
+#mimimi-2 { background: url("../images/mimimi-02.jpg"); }
+#mimimi-3 { background: url("../images/mimimi-03.jpg"); }
+#mimimi-3 { background: url("../images/mimimi-03.jpg"); }
+#mimimi-4 { background: url("../images/mimimi-04.jpg"); }
+#mimimi-5 { background: url("../images/mimimi-05.jpg"); }
+#mimimi-final { background: url("../images/mimimi-final.jpg"); }
+
+#oldRadio { background: url("../images/oldRadio.jpg"); }
+
+#bar { background: url("../images/bar.jpg"); }
+
+.demo { background: url("../images/fundo.png"); }
+
+.intuitivo {
+	background-color: hsl(34, 53%, 82%);
+	background-image: -webkit-repeating-linear-gradient(45deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 120px, rgba(11, 36, 45, 0.5) 120px, rgba(11, 36, 45, 0.5) 140px ), -webkit-repeating-linear-gradient(135deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 140px, rgba(11, 36, 45, 0.5) 140px, rgba(11, 36, 45, 0.5) 160px );
+}
+
+.intuitivo h1 {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	margin-top: -20px !important;
+}
+
+.center {
+	margin: 0 auto;
+	display: block;
+}
