@@ -1,0 +1,8 @@
+@import "escudos/*.png";
+@include all-escudos-sprites;
+
+li {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+}

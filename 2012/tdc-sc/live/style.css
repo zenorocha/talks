@@ -1,0 +1,6 @@
+body {
+  -webkit-var-text-color: #0ff;
+  -webkit-var-bg-color: #000;
+  color: -webkit-var(text-color);
+  background: -webkit-var(bg-color);
+}
