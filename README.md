@@ -90,7 +90,7 @@ Just an organized list of all my presentations.
 * Where: Curitiba, PR - Brazil
 * Website: [frontincuritiba.com.br](http://www.frontincuritiba.com.br/)
 
-### Front in Rio 2012
+### Front in Rio
 * Presentation: [CSS Sucks!](http://talks.zenorocha.com/2012/frontinrio/)
 * When: June, 02
 * Where: Rio de Janeiro, RJ - Brazil
@@ -134,7 +134,7 @@ Just an organized list of all my presentations.
 * Where: Duque de Caxias, RJ - Brazil
 * Website: [simonsen.br/ets](http://www.simonsen.br/ets)
 
-### Front in Rio 2011
+### Front in Rio
 * Presentation: [Desvendando o HTML5 Boilerplate](http://www.slideshare.net/zenorocha/desbravando-o-html5-boilerplate)
 * When: June, 18
 * Where: Rio de Janeiro, RJ - Brazil
