@@ -52,7 +52,7 @@ Just an organized list of all my presentations.
 * Presentation: [Mitos do Front-end](http://talks.zenorocha.com/2012/tdc-sc/)
 * When: August, 25
 * Where: Florianópolis, SC - Brazil
-* Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/)
+* Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/#florianopolis)
 
 ### Front in Porto Alegre
 * Presentation: [CSS Sucks!](http://talks.zenorocha.com/2012/frontinpoa/)
@@ -82,7 +82,7 @@ Just an organized list of all my presentations.
 * Presentation: [Mitos do Front-end](http://talks.zenorocha.com/2012/tdc-sp/)
 * When: July, 04
 * Where: São Paulo, SP - Brazil
-* Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/)
+* Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/#saopaulo)
 
 ### Front in Curitiba
 * Presentation: [Como usar HTML5 sem uma máquina do tempo](http://talks.zenorocha.com/2012/frontincuritiba/)
