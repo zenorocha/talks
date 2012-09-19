@@ -5,22 +5,16 @@ Just an organized list of all my presentations.
 ## Comming next!
 
 ### II SouWebPel
-<!--* Presentation title: *#*
-* Presentation slides: *#* -->
 * When: September, 29
 * Where: Pelotas, RS - Brazil
 * Website: **Not available yet**
 
 ### RCuritiba
-<!--* Presentation title: *#*
-* Presentation slides: *#* -->
 * When: October, 12-15
 * Where: Curitiba, PR - Brazil
 * Website: [rcuritiba.com.br](http://rcuritiba.com.br/)
 
 ### W3C Conference - Web.br 2012
-<!--* Presentation title: *#*
-* Presentation slides: *#* -->
 * When: October, 18-20
 * Where: São Paulo, SP - Brazil
 * Website: [conferenciaweb.w3c.br](http://conferenciaweb.w3c.br/)
@@ -43,15 +37,12 @@ Just an organized list of all my presentations.
 ## ~ 2012
 
 ### BrazilJS
-<!--* Presentation title: *#*
-* Presentation slides: *#* -->
+* Presentation: [Como não virar um Zumbi: Kit de sobrevivência](http://talks.zenorocha.com/2012/braziljs/)
 * When: August, 30
 * Where: Porto Alegre, RS - Brazil
 * Website: [braziljs.com.br](http://braziljs.com.br/)
 
 ### Tableless Conference
-<!--* Presentation title: *#*
-* Presentation slides: *#* -->
 * When: August, 24
 * Where: São Paulo, SP - Brazil
 * Website: [tableless.com.br/tablelessconf](http://tableless.com.br/tablelessconf/)
