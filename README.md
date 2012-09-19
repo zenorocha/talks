@@ -61,7 +61,7 @@ Just an organized list of all my presentations.
 * Website: [abradirs.com.br/frontinpoa](http://abradirs.com.br/frontinpoa/)
 
 ### QCon
-* Presentation: [CSS Sucks!](http://talks.zenorocha.com/2012/qcon/)
+* Presentation: [CSS Sucks!](http://talks.zenorocha.com/2012/qconsp/)
 * When: August, 04
 * Where: São Paulo, SP - Brazil
 * Website: [qconsp.com](http://qconsp.com/)
