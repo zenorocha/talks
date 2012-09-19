@@ -61,7 +61,7 @@ Just an organized list of all my presentations.
 * Website: [abradirs.com.br/frontinpoa](http://abradirs.com.br/frontinpoa/)
 
 ### QCon
-* Presentation: [CSS Sucks!](http://talks.zenorocha.com/2012/qconsp/)
+* Presentation: [Mitos do Front-end](http://talks.zenorocha.com/2012/qconsp/)
 * When: August, 04
 * Where: São Paulo, SP - Brazil
 * Website: [qconsp.com](http://qconsp.com/)
@@ -79,7 +79,7 @@ Just an organized list of all my presentations.
 * Website: [frontinbh.com.br](http://frontinbh.com.br/)
 
 ### TDC - The Developers Conference
-* Presentation: [Mitos do Front-end](http://talks.zenorocha.com/2012/tdc-sp/)
+* Presentation: [Como usar HTML5 sem uma máquina do tempo](http://talks.zenorocha.com/2012/tdc-sp/)
 * When: July, 04
 * Where: São Paulo, SP - Brazil
 * Website: [thedevelopersconference.com.br](http://www.thedevelopersconference.com.br/#saopaulo)
