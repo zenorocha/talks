@@ -18,10 +18,10 @@ Just an organized list of all my presentations.
 * Where: São Paulo, SP - Brazil
 * Website: [conferenciaweb.w3c.br](http://conferenciaweb.w3c.br/)
 
-### Front in Alagoas
+### Front in Maceió
 * When: October, 27
 * Where: Maceió, AL - Brazil
-* Website: **Not available yet**
+* Website: [frontinmaceio.com.br](http://frontinmaceio.com.br/)
 
 ### Front in Sampa
 * When: November, 03
