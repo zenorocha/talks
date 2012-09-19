@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mitos do Front-end ~ QCon SP</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides>
+
+  <slide class="fill nobackground" style="background-image: url(images/capa-2.jpg)"></slide>
+  <slide class="fill nobackground" style="background: #426CB6 url(images/quemsoueu.png);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/rg.jpg)"></slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/como-back.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/como-front.jpg);"></slide>
+
+  <!-- <slide class="fill nobackground" style="background-image: url(images/seta.jpg)">
+    <h3><a href="http://talks.zenorocha.com/2012/qconsp">talks.zenorocha.com/2012/qconsp</a></h3>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/github.jpg)">
+    <h3><a href="http://github.com/zenorocha/talks">github.com/zenorocha/talks</a></h3>
+  </slide> -->
+
+  <!-- "CSS é muito fácil" -->
+  <slide class="fill nobackground" style="background-image: url(images/meme-rindo.jpg)"></slide>
+  <slide class="intuitivo"></slide>
+  <slide class="intuitivo">
+    <textarea spellcheck="false" class="snippet" rows="22">background-color: hsl(34, 53%, 82%);
+background-image: -webkit-repeating-linear-gradient(45deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 120px, rgba(11, 36, 45, 0.5) 120px, rgba(11, 36, 45, 0.5) 140px ), -webkit-repeating-linear-gradient(135deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 140px, rgba(11, 36, 45, 0.5) 140px, rgba(11, 36, 45, 0.5) 160px );</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/meme-serio.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/css3map.jpg)">
+    <h3><a href="http://photon.attasi.com/">photon.attasi.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/beercamp.jpg)">
+    <h3><a href="http://2012.beercamp.com">2012.beercamp.com</a></h3>
+  </slide>
+
+  <!-- "CSS é muito repetivivo" -->
+  <slide class="fill nobackground" style="background-image: url(images/css-repetitivo.jpg)"></slide>
+  <slide class="fill nobackground" style="background: #1FD230">
+    <h1>De novo, de novo</h1>
+    <ul>
+        <li><strong>DRY</strong> - <strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself
+        <textarea spellcheck="false" class="snippet" rows="11">#header {
+    color: #4D926F;
+}
+
+.fundo {
+    background: #4D926F;
+}
+
+h2 {
+    color: #4D926F;
+}</textarea>
+      </li>
+    </ul>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/site-less.jpg)">
+    <h3><a href="http://lesscss.org">lesscss.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/site-sass.jpg)">
+    <h3><a href="http://sass-lang.com">sass-lang.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/site-stylus.jpg)">
+    <h3><a href="http://learnboost.github.com/stylus/">learnboost.github.com/stylus</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/css4-variables.jpg)">
+    <h3><a href="http://dev.w3.org/csswg/css-variables/">dev.w3.org/csswg/css-variables</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #4384b5">
+    <h1>Variáveis<br>no CSS 4</h1>
+    <textarea spellcheck="false" class="snippet" rows="6">body {
+    -webkit-var-text-color: #fff;
+    -webkit-var-text-bg: #000;
+    color: -webkit-var(text-color);
+    background: -webkit-var(text-bg);
+}</textarea>
+  </slide>
+
+  <!-- "CSS Sprites é muito complicado" -->
+  <slide class="fill nobackground" style="background-image: url(images/css-sprites.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/site-compass.jpg)">
+    <h3><a href="http://compass-style.org/">compass-style.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/compass-sprite.jpg)"></slide>
+
+  <!-- "Javascript == Java" -->
+  <slide class="fill nobackground" style="background-image: url(images/java.jpg);"></slide>
+  <slide class="fill nobackground" style="background: #000">
+    <q>Java is to JavaScript as ham is to hamster</q>
+    <div class="author">Jeremy Keith</div>
+  </slide>
+
+  <!-- "JS é ruim" -->
+  <slide class="fill nobackground" style="background-image: url(images/js-ruim.jpg);"></slide>
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <!-- <source src="videos/wat.mp4"  type="video/mp4"  /> -->
+      <source src="videos/wat.theora.ogv"  type="video/ogv"  />
+      <source src="videos/wat.webm" type="video/webm" />
+    </video>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/why-wat.jpg);">
+    <h3><a href="http://blog.caplin.com/2012/01/27/the-why-of-wat/">blog.caplin.com/2012/01/27/the-why-of-wat</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/mudar.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/es6.jpg);">
+    <h3><a href="https://wiki.mozilla.org/ES6_plans">wiki.mozilla.org/ES6_plans</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/ecma-6.jpg);">
+    <h3><a href="http://espadrine.github.com/New-In-A-Spec/es6/">espadrine.github.com/New-In-A-Spec/es6</a></h3>
+  </slide>
+
+  <!-- "JS não é documentado" -->
+  <slide class="fill nobackground" style="background-image: url(images/js-n-documentado.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/w3.jpg)">
+    <h3><a href="http://w3schools.com">w3schools.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/no-w3.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/w3fools.jpg)">
+    <h3><a href="http://w3fools.com/">w3fools.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/mdn.jpg)">
+    <h3><a href="https://developer.mozilla.org/">developer.mozilla.org</a></h3>
+  </slide>
+
+  <!-- "JS não é modular" -->
+  <slide class="fill nobackground" style="background-image: url(images/js-modular.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/requirejs.jpg)">
+    <h3><a href="https://requirejs.org/">requirejs.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/boxjs.jpg)">
+    <h3><a href="http://boxjs.com/">boxjs.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/headjs.jpg)">
+    <h3><a href="https://headjs.com">headjs.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #A337B7;">
+    <h1>HeadJS</h1>
+    <textarea class="snippet" spellcheck="false" rows="15">// carrega e executa um só script, sem bloquear o parser do DOM
+head.js("/path/to/file.js");
+
+// carrega script e executa função assim que terminar de carregá-lo
+head.js("/path/to/file.js", function() {
+
+});
+
+// carrega os arquivos em paralelo mas os executa em sequência
+head.js("file1.js", "file2.js", ... "fileN.js");
+
+// executa a função depois que todos os scripts forem carregados
+head.js("file1.js", "file2.js", function() {
+
+});</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/headjs-example.jpg)">
+    <h3><a href="http://headjs.com/test/script.html">headjs.com/test/script.html</a></h3>
+  </slide>
+
+  <!-- "Arquitetura -->
+  <slide class="fill nobackground" style="background-image: url(images/arquitetura.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/backbonejs.jpg)">
+    <h3><a href="http://backbonejs.org">backbonejs.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/spinejs.jpg)">
+    <h3><a href="http://spinejs.com">spinejs.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/angular.jpg)">
+    <h3><a href="http://angularjs.org/">angularjs.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/ember.jpg)">
+    <h3><a href="http://emberjs.com/">emberjs.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/knockout.jpg)">
+    <h3><a href="http://knockoutjs.com/">knockoutjs.com</a></h3>
+  </slide>
+
+  <!-- "Código não é consistente" -->
+  <slide class="fill nobackground" style="background-image: url(images/js-n-consistente.jpg)"></slide>
+  <slide class="fill nobackground" style="background: #007eef">
+    <hgroup>
+      <h1>no CSS</h1>
+    </hgroup>
+    <article>
+      <textarea spellcheck="false" class="snippet" rows="11">table.hl {
+margin: 2em 0; }
+
+  table.hl td.ln {
+  text-align: right;
+}
+
+li { font-family: serif;
+font-weight: bold;
+  font-size: 1.2em;
+}</textarea>
+    </article>
+  </slide>
+  <slide class="fill nobackground" style="background: #007eef">
+    <hgroup>
+      <h1>no JS</h1>
+    </hgroup>
+    <article>
+      <textarea spellcheck="false" class="snippet" rows="11">this.loadTheme_(settings.theme || [])
+  var a,
+  b, d;
+
+  if (settings.favIcon) { this.addFavIcon_(settings.favIcon);
+    }
+
+  // Prettyprint. Default to on.
+if (!!!('usePrettify' in settings) || settings.usePrettify) {
+prettyPrint();
+    }</textarea>
+    </article>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/idiomatic-js.jpg);">
+    <h3><a href="https://github.com/rwldrn/idiomatic.js/">github.com/rwldrn/idiomatic.js</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/idiomatic-css.jpg);">
+    <h3><a href="https://github.com/necolas/idiomatic-css">github.com/necolas/idiomatic-css</a></h3>
+  </slide>
+
+  <!-- "A Comunidade não é ativa" -->
+  <slide class="fill nobackground" style="background-image: url(images/comunidade-ativa.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/github-js.jpg)">
+    <h3><a href="http://github.com/languages">github.com/languages</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/extreme.jpg)">
+    <h3><a href="http://extremejs.com">extremejs.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/braziljs.jpg)">
+    <h3><a href="http://braziljs.com.br">braziljs.com.br</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/braziljs-foundation.jpg)">
+    <h3><a href="http://braziljs.org">braziljs.org</a></h3>
+  </slide>
+
+  <!-- "Código não é de qualidade" -->
+  <slide class="fill nobackground" style="background-image: url(images/qualidade.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/jslint.jpg);">
+    <h3><a href="http://www.jslint.com/">jslint.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/jshint.jpg);">
+    <h3><a href="http://www.jshint.com/">jshint.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/csslint.jpg);">
+    <h3><a href="http://csslint.net">csslint.net</a></h3>
+  </slide>
+
+  <!-- "Código não é testado" -->
+  <slide class="fill nobackground" style="background-image: url(images/testado.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/jasmine.jpg);">
+    <h3><a href="http://pivotal.github.com/jasmine/">pivotal.github.com/jasmine</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/qunit.jpg);">
+    <h3><a href="http://qunitjs.com/">qunitjs.com</a></h3>
+  </slide>
+
+  <!-- "Preciso do browser para testar" -->
+  <slide class="fill nobackground" style="background-image: url(images/test-browser.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/zombie.jpg);">
+    <h3><a href="http://zombie.labnotes.org/">zombie.labnotes.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/phantom.jpg);">
+    <h3><a href="http://phantomjs.org/">phantomjs.org</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #57bcc7;">
+    <h1>PhantomJS</h1>
+    <p>Como obter o título de uma página web, <strong>sem abri-lá</strong>?</p>
+    <textarea class="snippet" spellcheck="false" rows="12">var page = require('webpage').create(),
+      url = "http://localhost:8000/";
+
+page.open(url, function (status) {
+
+    var title = page.evaluate(function () {
+        return document.title;
+    });
+
+    console.log('O título da página é: ' + title);
+
+});</textarea>
+  </slide>
+
+  <!-- "Preciso aprender linguagens nativas para fazer apps" -->
+  <slide class="fill nobackground" style="background-image: url(images/apps.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/phonegap.jpg);">
+    <h3><a href="http://phonegap.com/">phonegap.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/titanium.jpg);">
+    <h3><a href="http://www.appcelerator.com/">appcelerator.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/b2g.jpg);">
+    <h3><a href="http://www.mozilla.org/en-US/b2g/">mozilla.org/en-US/b2g</a></h3>
+  </slide>
+
+  <!-- "HTML 5 é o futuro" -->
+  <slide class="fill nobackground" style="background-image: url(images/html5-future.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/futuro-verdade.jpg);"></slide>
+  <!-- <slide class="fill nobackground" style="background-image: url(images/html11.jpg);"></slide> -->
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <!-- <source src="videos/html11-the-wind-tag.mp4" type="video/mp4" /> -->
+      <source src="videos/html11-the-wind-tag.ogv" type="video/ogv" />
+      <source src="videos/html11-the-wind-tag.webm" type="video/webm" />
+    </video>
+  </slide>
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <!-- <source src="videos/html11-the-taste-tag.mp4" type="video/mp4" /> -->
+      <source src="videos/html11-the-taste-tag.ogv" type="video/ogv" />
+      <source src="videos/html11-the-taste-tag.webm" type="video/webm" />
+    </video>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/html5-hoje.jpg);"></slide>
+  <slide class="fill nobackground" style="background:#fff url(images/oque-e.png)">
+    <div class="build">
+      <img class="ico-html" src="images/html.png" alt="HTML">
+      <img class="ico-css" src="images/css.png" alt="CSS">
+      <img class="ico-js" src="images/js.png" alt="JS">
+    </div>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/oldradio.jpg);">
+    <h3><a href="http://mzl.la/OEbuQH">http://mzl.la/OEbuQH</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/wormz.jpg);">
+    <h3><a href="http://html5-pro.com/wormz">html5-pro.com/wormz</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/rally.jpg);">
+    <h3><a href="http://triggerrally.com/x/Preview/Arbusu/drive">triggerrally.com/x/Preview/Arbusu/drive</a></h3>
+  </slide>
+
+  <!-- "HTML5 não funciona no IE" -->
+  <slide class="fill nobackground" style="background-image: url(images/HTML5-ie.jpg)"></slide>
+  <slide class="fill nobackground" style="background: #A337B7;">
+    <h1>Semântica</h1>
+    <p>Para navegadores antigos uma tag <strong>&lt;header&gt;</strong> tem o mesmo valor semântico que uma tag <strong>&lt;zeno&gt;</strong>.</p>
+    <p>Portanto, precisamos dizer ao navegador que esses elementos devem ser renderizados como blocos.</p>
+    <p>No JS:</p>
+    <textarea class="snippet" spellcheck="false" rows="1">document.createElement("header");</textarea>
+    <p>No CSS:</p>
+    <textarea class="snippet" spellcheck="false" rows="1">header { display: block; }</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/html5shiv.jpg)">
+    <h3><a href="http://code.google.com/p/html5shiv/">code.google.com/p/html5shiv</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/css3pie.jpg)">
+    <h3><a href="http://css3pie.com/">css3pie.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/polyfill-list.jpg)">
+    <h3><a href="http://bit.ly/svv9BU">http://bit.ly/svv9BU</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/modernizr.jpg)">
+    <h3><a href="http://bit.ly/tPaw1E">http://bit.ly/tPaw1E</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/dowebsites.jpg)">
+    <h3 id="dowebsites-url"><a href="http://dowebsitesneedtolookexactlythesameineverybrowser.com/">dowebsitesneedtolookexactlythesameineverybrowser.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #B73751">
+    <h1>A guerra ainda não acabou</h1>
+    <ul class="build" style="margin-top: 50px">
+      <li><strong>☑</strong> Saddam Hussein</li>
+      <li><strong>☑</strong> Osama Bin Laden</li>
+      <li><strong>☑</strong> Khaddafi</li>
+      <li><strong>☐</strong> Internet Explorer</li>
+    </ul>
+  </slide>
+  <slide class="fill nobackground" style="background: url(images/salveaweb.jpg)">
+    <h3><a href="http://bit.ly/sIbvFv">http://bit.ly/sIbvFv </a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #000">
+    <q>Content precedes design. Design in the absence of content is not design, it's decoration.</q>
+    <div class="author">Jeffrey Zeldman</div>
+  </slide>
+  <slide class="fill nobackground" style="background:url(images/tv-1.jpg)"></slide>
+  <slide class="fill nobackground" style="background:url(images/tv-2.jpg)"></slide>
+  <slide class="fill nobackground" style="background:url(images/tv-3.jpg)"></slide>
+  <slide class="fill nobackground" style="background:url(images/tv-4.jpg)"></slide>
+  <slide class="fill nobackground" style="background:url(images/tv-5.jpg)"></slide>
+  <slide class="fill nobackground" style="background:url(images/tv-6.jpg)"></slide>
+
+  <!-- "HTML5 vai matar o Flash" -->
+  <slide class="fill nobackground" style="background-image: url(images/html5-matou-flash.jpg)"></slide>
+  <slide class="fill nobackground" style="background-image: url(images/occupy-flash.jpg)">
+    <h3><a href="http://www.occupyflash.org/">occupyflash.org</a></h3>
+  </slide>
+  <slide class="fill nobackground">
+    <q>Geeks love to fight</q>
+    <div class="author"> Rasmus Lerdorf</div>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/flash.jpg)"></slide>
+
+  <!-- FIM -->
+  <slide class="fill nobackground" style="background: #fff">
+    <h1 style="color: black">É contigo...</h1>
+    <img  class="center" style="margin-top: 50px;" src="images/wherethemagichappens.png" alt="" />
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(images/fim.jpg)"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4114546-32']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

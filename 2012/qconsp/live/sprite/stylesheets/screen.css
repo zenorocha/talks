@@ -1,0 +1,101 @@
+/* line 178, escudos/*.png */
+.escudos-sprite, .escudos-atletico-go, .escudos-atletico-mg, .escudos-bahia, .escudos-botafogo, .escudos-corinthians, .escudos-coritiba, .escudos-cruzeiro, .escudos-figueirense, .escudos-flamengo, .escudos-fluminense, .escudos-gremio, .escudos-internacional, .escudos-palmeiras, .escudos-portuguesa, .escudos-santos, .escudos-sao-paulo, .escudos-sport, .escudos-vasco {
+  background: url('http://localhost:8888/Talks/qconsp/live/sprite/images/escudos-sb82f7723e7.png') no-repeat;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-atletico-go {
+  background-position: 0 -602px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-atletico-mg {
+  background-position: 0 -508px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-bahia {
+  background-position: 0 -277px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-botafogo {
+  background-position: 0 -696px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-corinthians {
+  background-position: 0 -322px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-coritiba {
+  background-position: 0 -232px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-cruzeiro {
+  background-position: 0 -94px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-figueirense {
+  background-position: 0 -463px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-flamengo {
+  background-position: 0 -649px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-fluminense {
+  background-position: 0 -743px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-gremio {
+  background-position: 0 -185px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-internacional {
+  background-position: 0 -47px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-palmeiras {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-portuguesa {
+  background-position: 0 -140px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-santos {
+  background-position: 0 -369px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-sao-paulo {
+  background-position: 0 -555px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-sport {
+  background-position: 0 -788px;
+}
+
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.escudos-vasco {
+  background-position: 0 -416px;
+}
+
+/* line 4, ../sass/screen.scss */
+li {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+}
