@@ -43,7 +43,7 @@ Just an organized list of all my presentations.
 * Website: [braziljs.com.br](http://braziljs.com.br/)
 
 ### Tableless Conference
-* Presentation: [Canvas, SVG and WebGL](http://talks.zenorocha.com/2012/tablelessconf/)
+* Presentation: [Canvas, SVG e WebGL](http://talks.zenorocha.com/2012/tablelessconf/)
 * When: August, 24
 * Where: São Paulo, SP - Brazil
 * Website: [tableless.com.br/tablelessconf](http://tableless.com.br/tablelessconf/)
@@ -61,7 +61,7 @@ Just an organized list of all my presentations.
 * Website: [abradirs.com.br/frontinpoa](http://abradirs.com.br/frontinpoa/)
 
 ### QCon
-* Presentation: [CSS Sucks!](http://talks.zenorocha.com/2012/qconsp/)
+* Presentation: [CSS Sucks!](http://talks.zenorocha.com/2012/qcon/)
 * When: August, 04
 * Where: São Paulo, SP - Brazil
 * Website: [qconsp.com](http://qconsp.com/)
