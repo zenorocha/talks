@@ -4,11 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### II SouWebPel
-* When: September, 29
-* Where: Pelotas, RS - Brazil
-* Website: **Not available yet**
-
 ### RCuritiba
 * When: October, 12-15
 * Where: Curitiba, PR - Brazil
@@ -35,6 +30,12 @@ Just an organized list of all my presentations.
 * Website: **Not available yet**
 
 ## ~ 2012
+
+### II SouWebPel
+* Presentation: [Como fugir do feijão com arroz usando Canvas, SVG e WebGL](http://talks.zenorocha.com/2012/souwebpel/)
+* When: September, 29
+* Where: Pelotas, RS - Brazil
+* Website: **Not available yet**
 
 ### BrazilJS
 * Presentation: [Como não virar um Zumbi: Kit de sobrevivência](http://talks.zenorocha.com/2012/braziljs/)
