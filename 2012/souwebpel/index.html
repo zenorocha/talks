@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+
+	<title>Como fugir do feijão com arroz usando Canvas, SVG e WebGL</title>
+
+	<meta charset="utf-8">
+	<meta name="author" content="Zeno Rocha" />
+	<meta name="description" content="Palestra ministrada no evento Pernambuco.js - 21/04/12" />
+
+	<meta property="og:title" content="Como fugir do feijão com arroz usando Canvas, SVG e WebGL" />
+	<meta property="og:type" content="article"/>
+	<meta property="og:description" content="Palestra ministrada no evento Pernambuco.js - 21/04/12" />
+	<meta property="og:url" content="http://www.comofugirdofeijaocomarroz.com/"/>
+	<meta property="og:image" content="http://www.comofugirdofeijaocomarroz.com/img/fb.jpg" />
+	<meta property="og:site_name" content="Como fugir do feijão com arroz usando Canvas, SVG e WebGL"/>
+
+	<script src="slides.js"></script>
+
+  </head>
+
+  <body style="display: none">
+
+	<section class="slides layout-regular template-io2011">
+
+		<!-- <article class="nobackground" id="instrucoes">
+			<h2 id="praquem">detectar canvas, webgl e svg</h2>
+		</article> -->
+
+		<article class="nobackground" id="capa"></article>
+
+		<article class="nobackground" id="quemsoueu">
+			<div class="build">
+	      <img src="img/apresentacao-1.png" alt="Twitter" style="position: absolute; top: 180px; left: -20px;">
+	      <img src="img/apresentacao-2.png" alt="Petrobras" style="position: absolute; top: 500px; left: -40px;">
+	      <img src="img/apresentacao-3.png" alt="globoesporte.com" style="position: absolute; top: 450px; left: 390px;">
+	      <img src="img/apresentacao-4.png" alt="Liferay" style="position: absolute; top: 250px; left: 310px;">
+	      <img src="img/apresentacao-5.png" alt="Tableless" style="position: absolute; top: 70px; left: -40px;">
+	      <img src="img/apresentacao-6.png" alt="BrazilJS" style="position: absolute; top: 70px; left: 370px;">
+	    </div>
+		</article>
+
+		<article class="nobackground" id="instrucoes">
+			<h2 id="praquem">Pra quem estiver no laptop...</h2>
+			<h3><a href="http://talks.zenorocha.com/2012/souwebpel" target="blank">talks.zenorocha.com/2012/souwebpel</a></h3>
+			<h2 id="usesetas">Use as setas para navegar</h2>
+		</article>
+
+		<article class="nobackground" id="github-comousar">
+			<h3><a href="http://bit.ly/JcM7TX" target="blank">http://github.com/zenorocha/talks</a></h3>
+		</article>
+
+		<article class="nobackground" id="wow"></article>
+
+		<article class="demo">
+			<h1>Old Radio</h1>
+			<a href="http://mzl.la/OEbuQH" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+		<article class="fill" id="cade"></article>
+		<article class="fill" id="bol"></article>
+		<article class="fill" id="heman"></article>
+
+		<article class="nobackground" id="o-que-e">
+			<div class="build">
+				<img class="ico-html" src="img/html.png" alt="HTML">
+				<img class="ico-css" src="img/css.png" alt="CSS">
+				<img class="ico-js" src="img/js.png" alt="JS">
+			</div>
+		</article>
+
+		<article class="svg">
+			<h1>SVG</h1>
+			<img src="img/categorias/graficos.png" alt="Gráficos">
+		</article>
+
+		<article class="svg">
+			<h1>SVG é???</h1>
+			<ul>
+				<li>Gráfico vetorial escalável</li>
+				<li>É o oposto de um <strong>bitmap</strong>, pois não lida com <strong>pixels</strong> e sim com um conjunto de <strong>curvas</strong> e <strong>linhas</strong></li>
+				<li>Linguagem no estilo XML
+				<textarea class="snippet" spellcheck="false" rows="3">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+   &lt;circle cx="100" cy="50" r="40" fill="red" /&gt;
+&lt;/svg&gt;</textarea></li>
+			</ul>
+		</article>
+
+		<article class="svg">
+			<h1>Formas</h1>
+			<ul>
+				<li>Retângulo</li>
+				<li>Círculo</li>
+				<li>Linha</li>
+				<li>Elipse</li>
+				<li>Polígono</li>
+			</ul>
+		</article>
+
+		<article class="svg">
+			<iframe class="customFrame" id="iframe-canvas-1" src="demos/svg/ex1.html"></iframe>
+			<textarea class="snippet" spellcheck="false" rows="1">&lt;circle cx="200" cy="100" r="50" fill="white" /&gt;</textarea>
+			<iframe class="customFrame" id="iframe-canvas-2" src="demos/svg/ex2.html"></iframe>
+			<textarea class="snippet" spellcheck="false" rows="1">&lt;rect x="150" y="100" width="100" height="75" fill="white" /&gt;</textarea>
+		</article>
+
+		<article class="svg">
+			<iframe class="customFrame" id="iframe-canvas-3" src="demos/svg/ex3.html"></iframe>
+			<textarea class="snippet" spellcheck="false" rows="1">&lt;ellipse cx="180" cy="100" rx="100" ry="45" fill="white" /&gt;</textarea>
+			<iframe style="margin-top: 50px; padding-left: 70px;" class="customFrame" id="iframe-canvas-4" src="demos/svg/ex4.html"></iframe>
+			<textarea style="margin-top: -50px;" class="snippet" spellcheck="false" rows="1">&lt;polygon points="10,5 100,45 200,5 150,140" fill="white" /&gt;</textarea>
+		</article>
+
+		<article class="demo">
+			<h1>Park</h1>
+			<a href="http://www.w3.org/2010/Talks/04-schepers-www2010/themepark.svg" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+		<article class="nobackground" id="biblioteca-1"></article>
+
+		<article class="nobackground" id="raphaeljs">
+			<h3><a href="http://bit.ly/w0WHUg" target="blank">http://bit.ly/w0WHUg</a></h3>
+		</article>
+
+		<article class="demo">
+			<h1>Raphael Scape</h1>
+			<!-- <h1>http://svg-wow.org/text-effects/text-effects.xhtml</h1> -->
+			<a href="http://raphaeljs.com/scape/" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+		<article class="nobackground" id="maujorsvg">
+			<h3><a href="http://bit.ly/tSyZ4S" target="blank">http://bit.ly/tSyZ4S</a></h3>
+		</article>
+
+		<article class="canvas">
+			<h1>Canvas</h1>
+			<img src="img/categorias/graficos.png" alt="Gráficos">
+		</article>
+
+		<article class="canvas">
+			<h1>Canvas é???</h1>
+			<ul>
+				<li>Renderização de gráficos via script</li>
+				<li class="nobullet" id="grafico-pizza"><img src="imgNovas/grafico-pizza.png" alt="Gráficos"></li>
+			</ul>
+		</article>
+
+		<!-- <article class="canvas">
+			<h1>Canvas é???</h1>
+			<img id="grafico-pizza" src="imgNovas/grafico-pizza.png" alt="Gráficos">
+			<ul class="build">
+				<li class="nobullet" id="grafico-pizza"><img src="imgNovas/grafico-pizza.png" alt="Gráficos"></li>
+			</ul>
+		</article>	 -->
+
+		<article class="canvas">
+			<h1>Canvas</h1>
+			<ul>
+				<li>Definindo o elemento no <strong>HTML</strong>
+				<textarea class="snippet" spellcheck="false" rows="1">&lt;canvas id="meuDesenho" width="500" height="500"&gt;&lt;/canvas&gt;</textarea></li>
+				<li style="padding-top: 20px;">E buscando ele no <strong>JavaScript</strong>
+				<!-- <textarea class="snippet" spellcheck="false" rows="2">var canvas = document.getElementById("meuDesenho");
+var contexto = canvas.getContext("2d");</textarea></li> -->
+<textarea class="snippet" spellcheck="false" rows="1">var canvas = document.getElementById("meuDesenho");</textarea></li>
+			</ul>
+		</article>
+
+		<article class="canvas">
+			<h1>Contexto</h1>
+			<ul>
+				<li>É onde a mágica acontece</li>
+				<li>Todos os métodos de desenho são executados nele
+					<textarea class="snippet" spellcheck="false" rows="1">var contexto = canvas.getContext("2d");</textarea>
+					<!-- <img src="imgNovas/grid.png" alt=""> -->
+				</li>
+				<!-- <li>E ainda tem outro contexto (mais tarde a gente fala dele)
+				<textarea class="snippet" spellcheck="false" rows="1">var contexto = canvas.getContext("experimental-webgl");</textarea></li> -->
+			</ul>
+		</article>
+
+		<article class="canvas">
+			<h1>Formas simples</h1>
+			<ul>
+				<!-- <li>Apenas uma forma primitiva: o <strong>retângulo</strong>.</li> -->
+				<li>Desenha um retângulo preenchido
+					<textarea class="snippet" spellcheck="false" rows="1">fillRect(x, y, largura, altura);</textarea>
+				</li>
+				<li>Desenha o traçado de um retângulo
+					<textarea class="snippet" spellcheck="false" rows="1">strokeRect(x, y, largura, altura);</textarea></li>
+				</li>
+				<li>Limpa a área especificada no formato retangular
+					<textarea class="snippet" spellcheck="false" rows="1">clearRect(x, y, largura, altura);</textarea></li>
+				</li>
+			</ul>
+		</article>
+
+		<article class="canvas">
+			<iframe class="customFrame" id="iframe-fill" src="demos/rect/fill.html"></iframe>
+			<textarea class="snippet" spellcheck="false" rows="2">contexto.fillStyle = "#fff";
+contexto.fillRect(25, 25, 150, 150);</textarea>
+			<iframe class="customFrame" id="iframe-stroke" src="demos/rect/stroke.html"></iframe>
+			<textarea class="snippet" spellcheck="false" rows="2">contexto.strokeStyle = "#fff";
+contexto.strokeRect(25, 25, 150, 150);</textarea>
+		</article>
+
+		<article class="canvas">
+			<h1>Linhas e Caminhos</h1>
+			<ul>
+				<li>Cria um subcaminho a partir do ponto definido
+					<textarea class="snippet" spellcheck="false" rows="1">moveTo(x, y);</textarea>
+				</li>
+				<li>Desenha uma linha a partir do ponto anterior
+					<textarea class="snippet" spellcheck="false" rows="1">lineTo(x, y);</textarea>
+				</li>
+				<li>Adiciona um subcaminho retangular fechado
+					<textarea class="snippet" spellcheck="false" rows="1">rect(x, y, largura, altura);</textarea>
+				</li>
+				<li>Adiciona um subcaminho por volta da circunferência
+					<textarea class="snippet" spellcheck="false" rows="1">arc(x, y, raio, anguloInicial, anguloFim, sentidoAntiHorario);</textarea>
+				</li>
+			</ul>
+		</article>
+
+		<article class="canvas">
+			<h1>Linhas e Caminhos</h1>
+			<ul>
+				<li>Reinicia o caminho atual
+					<textarea class="snippet" spellcheck="false" rows="1">beginPath();</textarea>
+				</li>
+				<li>Fecha o subcaminho atual e inicia um novo
+					<textarea class="snippet" spellcheck="false" rows="1">closePath();</textarea>
+				</li>
+				<li>Preenche o subcaminho
+					<textarea class="snippet" spellcheck="false" rows="1">fill();</textarea>
+				</li>
+				<li>Preenche o traçado
+					<textarea class="snippet" spellcheck="false" rows="1">stroke();</textarea>
+				</li>
+			</ul>
+		</article>
+
+		<article class="canvas">
+			<iframe class="customFrame" id="iframe-rostoQuadrado" src="demos/rostoQuadrado/rostoQuadrado.html"></iframe>
+			<textarea class="snippet" spellcheck="false" rows="10">contexto.rect(25, 25, 200, 200); // Cabeça
+contexto.rect(90, 80, 20, 20); // Olho esquerdo
+contexto.rect(140, 80, 20, 20); // Olho direito
+
+contexto.moveTo(50, 180);
+contexto.lineTo(200, 180); // Boca
+
+contexto.lineWidth = 10;
+contexto.strokeStyle = "white";
+contexto.stroke();</textarea></li>
+		</article>
+
+		<article class="canvas">
+			<iframe class="customFrame" id="iframe-rostoRedondo" src="demos/rostoRedondo/rostoRedondo.html"></iframe>
+			<textarea style="margin-top: -20px;" class="snippet" spellcheck="false" rows="14">contexto.arc(110, 110, 100, 0, Math.PI*2, true); // Cabeça
+
+contexto.moveTo(165, 120);
+contexto.arc(110, 120, 55, 0, Math.PI, false); // Boca
+
+contexto.moveTo(90, 75);
+contexto.arc(85, 75, 5, 0, Math.PI*2, true); // Olho esquerdo
+
+contexto.moveTo(135,75);
+contexto.arc(140, 75, 5, 0, Math.PI*2, true); // Olho direito
+
+contexto.lineWidth = 10;
+contexto.strokeStyle = "white";
+contexto.stroke();</textarea></li>
+		</article>
+
+		<article class="nobackground" id="animar"></article>
+
+		<article class="demo">
+			<h1>Snake</h1>
+			<a href="demos/snake/snake.html" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+		<article class="nobackground" id="gameloop">
+			<ul style="margin-top: 150px; font-weight: bold;">
+				<li>Animar nada mais é do que redesenhar a tela com uma velocidade que o olho humano não perceba</li>
+				<textarea style="font-weight: bold;" class="snippet" spellcheck="false" rows="4">var FPS = 60;
+setInterval(function() {
+	// chama as ações
+}, 1000 / FPS);</textarea>
+<li style="margin-top: 20px;">Só que setInterval é coisa do passado...</li>
+</ul>
+		</article>
+
+		<article class="nobackground" id="gameloop">
+			<ul style="margin-top: 150px; font-weight: bold;">
+				<li>A nova API diz ao browser exatamente quando o próximo frame é desenhado</li>
+				<textarea style="font-weight: bold;" class="snippet" spellcheck="false" rows="3">window.requestAnimationFrame(function() {
+	// chama as ações
+});</textarea>
+<li style="margin-top: 20px;">Se você está rodando a animação em uma aba que não está visível, o browser simplesmente não vai rodar o loop! ou seja... performance++</li>
+</ul>
+		</article>
+
+		<article class="demo">
+			<h1>beerblogging</h1>
+			<a href="http://beerblogging.org" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+		<article class="canvas">
+			<h1>Caminhos Complexos</h1>
+			<ul>
+				<li>Adiciona uma curva de bézier com os pontos dados
+					<textarea class="snippet" spellcheck="false" rows="1">bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);</textarea>
+				</li>
+				<!-- <li>Adds a quadratic Bézier curve with the given control points.
+					<textarea class="snippet" spellcheck="false" rows="1">quadraticCurveTo(cpx, cpy, x, y);</textarea>
+				</li> -->
+				<img style="margin: 12px 0 0 0;" src="imgNovas/cubic-bezier.jpg" alt="" />
+			</ul>
+		</article>
+
+		<article class="demo">
+			<h1>Wormz</h1>
+			<a href="http://html5-pro.com/" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+		<article class="nobackground" id="biblioteca-1"></article>
+
+		<!-- http://luxahoy.com/ -->
+		<article class="nobackground" id="createjs">
+			<h3><a href="http://bit.ly/JmgcAp" target="blank">http://bit.ly/JmgcAp</a></h3>
+		</article>
+
+		<article class="nobackground" id="box2d">
+			<h3><a href="http://bit.ly/HWP3WB" target="blank">http://bit.ly/HWP3WB</a></h3>
+		</article>
+
+		<!-- angry birds -->
+
+		<article class="canvas">
+			<h1>Box 2D</h1>
+			<iframe class="customFrame" id="iframe-box2d" src="demos/box2d-web/index.html"></iframe>
+		</article>
+
+		<article class="svg">
+			<h1>SVG vs Canvas</h1>
+			<ul>
+				<li>SVG escala - em tempos em que o iPad cresce cada vez mais em termos de resolução, cresce também a importância disso</li>
+				<li>Canvas é mais performático - quando é preciso lidar com a animação/manipulação de muitos elementos</li>
+				<li>Acessibilidade e SEO - máquinas e humanos entendem SVG, mesmo que não consigam renderizar, o conteúdo de um texto, por exemplo, está no documento</li>
+				<li>Jogos? Vá de Canvas - Gráficos? Vá de SVG</li>
+			</ul>
+		</article>
+
+		<article class="nobackground" id="diveinto">
+			<h3><a href="http://bit.ly/rMxkO3" target="blank">http://bit.ly/rMxkO3</a></h3>
+		</article>
+
+		<article class="nobackground" id="github-diveinto">
+			<h3><a href="http://bit.ly/td3scm" target="blank">http://bit.ly/td3scm</a></h3>
+		</article>
+
+		<article class="webgl">
+			<h1>WebGL</h1>
+			<img src="img/categorias/graficos.png" alt="Gráficos">
+		</article>
+
+		<article class="webgl">
+			<h1>WebGL</h1>
+			<ul>
+				<li>3D + Browser = Wooow!</li>
+				<li>Processamento na GPU, direto na placa de vídeo</li>
+				<li>Utiliza a tag <strong>&lt;canvas&gt;</strong> só que com um outro contexto
+				<textarea class="snippet" spellcheck="false" rows="1">&lt;canvas id="meuDesenho" width="500" height="500"&gt;</textarea>
+				<textarea class="snippet" spellcheck="false" rows="2">var canvas = document.getElementById("meuDesenho");
+contexto = canvas.getContext("experimental-webgl");</textarea></li>
+			</ul>
+		</article>
+
+		<article class="webgl">
+			<h1>Shaders</h1>
+			<p>São pequenos programas que dizem ao WebGL:</p>
+			<ul>
+				<li>Onde desenhar e o que desenhar</li>
+			</ul>
+			<p>São escritos em GLSL (OpenGL Shading Language)</p>
+		</article>
+
+		<article class="nobackground" id="dar-trabalho"></article>
+
+		<article class="nobackground" id="threejs">
+			<h1 id="three">#ftw</h1>
+			<h3><a href="http://bit.ly/sY4hv6" target="blank">http://bit.ly/sY4hv6</a></h3>
+		</article>
+
+		<article class="demo">
+			<h1>Skin</h1>
+			<a href="http://alteredqualia.com/three/examples/webgl_materials_skin.html" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+	  <article class="webgl">
+	    <h1>Primeiros passos</h1>
+	    <p>Crie um WebGLRenderer</p>
+	    <textarea class="snippet" spellcheck="false" rows="3">var renderer = new THREE.WebGLRenderer({antialias: true});
+renderer.setSize(document.body.clientWidth,
+			  document.body.clientHeight);</textarea>
+	    <p>Coloque no DOM</p>
+	    <textarea class="snippet" spellcheck="false" rows="1">document.body.appendChild(renderer.domElement);</textarea>
+	    <p>E atribua um estilo</p>
+	    <textarea class="snippet" spellcheck="false" rows="2">renderer.setClearColorHex(0xFFFFFF, 1.0);
+renderer.clear();</textarea>
+	  </article>
+
+	  <article class="webgl">
+	    <h1>Wow! =P</h1>
+	    <iframe id="iframe-wow" src="demos/three/three_1.html"></iframe>
+	  </article>
+
+	  <article class="webgl">
+	    <h1 id="fica-melhor">Fica melhor, eu prometo!</h1>
+	    <p>Crie a Câmera</p>
+	    <textarea class="snippet" spellcheck="false" rows="3">
+var camera = new THREE.PerspectiveCamera(45, width/height, 1, 10000);
+camera.position.z = 300;</textarea>
+	    <p>Monte a Cena com um Cubo</p>
+	    <textarea class="snippet" spellcheck="false" rows="4">var scene = new THREE.Scene();
+var cube =  new THREE.Mesh(new THREE.CubeGeometry(50,50,50),
+		   new THREE.MeshBasicMaterial({color: 0x1fd230}));
+scene.add(cube);</textarea>
+	    <p>E renderize a Cena a partir da Câmera</p>
+	    <textarea class="snippet" spellcheck="false" rows="1">renderer.render(scene, camera);</textarea>
+	  </article>
+
+	  <article class="webgl">
+	    <h1 id="pelo-menos">Pelo menos não está mais vazio</h1>
+	    <iframe id="iframe-peloMenos" src="demos/three/three_2.html"></iframe>
+	  </article>
+
+	  <article class="webgl">
+	    <h1>Vamos mover isso?</h1>
+	    <textarea class="snippet" spellcheck="false" rows="13">function animate(t) {
+	// gire a câmera em um círculo
+	camera.position.x = Math.sin(t/1000)*300;
+	camera.position.y = 150;
+	camera.position.z = Math.cos(t/1000)*300;
+	// atualize a posição da câmera para cada frame
+	camera.lookAt(scene.position);
+	// o render automaticamente limpa a tela
+	renderer.render(scene, camera);
+	window.requestAnimationFrame(animate, renderer.domElement);
+};
+
+animate(new Date().getTime());
+	    </textarea>
+	  </article>
+
+	  <article class="webgl">
+	    <h1>Legal né?</h1>
+	    <iframe id="iframe-legal" src="demos/three/three_3.html"></iframe>
+	  </article>
+
+	  <!-- <article class="webgl">
+	    <h1>Legal né 4?</h1>
+	    <iframe id="iframe-three-4" src="demos/three/three_4.html"></iframe>
+	  </article> -->
+
+	  <article class="demo">
+			<h1>Cube</h1>
+			<a href="http://labs.zenorocha.com/html5/canvas/" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+		<article class="demo">
+			<h1>Trigger Rally</h1>
+			<a href="http://triggerrally.com/x/Preview/Arbusu/drive" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+		<article class="demo">
+			<h1>Car Visualizer</h1>
+			<a href="http://carvisualizer.plus360degrees.com/threejs/" target="blank" class="btn"><span>DEMO</span></a>
+		</article>
+
+		<article class="nobackground" id="learningthreejs">
+			<h3><a href="http://bit.ly/s9LghM" target="blank">http://bit.ly/s9LghM</a></h3>
+		</article>
+
+		<article class="nobackground" id="suporte"></article>
+
+		<!-- <article class="fill">
+			<h1 id="pronto">HTML5 já está pronto?</h1>
+			<iframe style="padding-top: 30px;" src="http://ishtml5readyyet.com/"></iframe>
+		</article> -->
+
+		<article class="nobackground" id="html5please">
+			<h3><a href="http://bit.ly/I1hwK9" target="blank">http://bit.ly/I1hwK9</a></h3>
+		</article>
+
+		<article class="nobackground" id="modernizr">
+			<h3><a href="http://bit.ly/tPaw1E" target="blank">http://bit.ly/tPaw1E</a></h3>
+		</article>
+
+		<article class="nobackground" id="yepnope">
+			<h3><a href="http://bit.ly/HVcWOa" target="blank">http://bit.ly/HVcWOa</a></h3>
+		</article>
+
+		<!-- <article class="canvas">
+			<h1>Canvas</h1>
+			<img src="img/categorias/graficos.png" alt="Gráficos">
+		</article> -->
+
+		<article class="nobackground" id="excanvas">
+			<h3><a href="http://bit.ly/JfmSFi" target="blank">http://bit.ly/JfmSFi</a></h3>
+		</article>
+
+		<article class="nobackground" id="flashcanvas">
+			<h3><a href="http://bit.ly/IW3wVc" target="blank">http://bit.ly/IW3wVc</a></h3>
+		</article>
+
+		<!-- <article class="svg">
+			<h1>SVG</h1>
+			<img src="img/categorias/graficos.png" alt="Gráficos">
+		</article> -->
+
+		<article class="nobackground" id="svgweb">
+			<h3><a href="http://bit.ly/IB0h22" target="blank">http://bit.ly/IB0h22</a></h3>
+		</article>
+
+		<article class="nobackground" id="fabricjs">
+			<h3><a href="http://bit.ly/J88nlj" target="blank">http://bit.ly/J88nlj</a></h3>
+		</article>
+
+		<!-- <article class="webgl">
+			<h1>WebGL</h1>
+			<img src="img/categorias/graficos.png" alt="Gráficos">
+		</article> -->
+
+		<article class="nobackground" id="jebl">
+			<h3><a href="http://bit.ly/HPHbnv" target="blank">http://bit.ly/HPHbnv</a></h3>
+		</article>
+
+		<article class="nobackground" id="cwebgl">
+			<h3><a href="http://bit.ly/I54ayG" target="blank">http://bit.ly/I54ayG</a></h3>
+		</article>
+
+		<article class="nobackground" id="polyfill-list">
+			<h3><a href="http://bit.ly/svv9BU" target="blank">http://bit.ly/svv9BU</a></h3>
+		</article>
+
+		<article class="css3">
+			<h1>A guerra ainda não acabou</h1>
+			<ul class="build">
+				<li>☑ Saddam Hussein</li>
+				<li>☑ Osama Bin Laden</li>
+				<li>☑ Khaddafi</li>
+				<li>☐ Internet Explorer</li>
+			</ul>
+		</article>
+
+		<article class="nobackground" id="salveaweb">
+			<h3><a href="http://bit.ly/sIbvFv" target="blank">http://bit.ly/sIbvFv </a></h3>
+		</article>
+
+		<article class="nobackground" id="tv-1"></article>
+		<article class="nobackground" id="tv-2"></article>
+		<article class="nobackground" id="tv-3"></article>
+		<article class="nobackground" id="tv-4"></article>
+		<article class="nobackground" id="tv-5"></article>
+		<article class="nobackground" id="tv-6"></article>
+
+		<article class="nobackground" id="flash"></article>
+
+		<!-- <article class="nobackground" style="background-color: #fff;">
+			<h1 id="conforto">é só escolher</h1>
+			<img style="margin: 50px 0 0 70px;" src="imgNovas/wherethemagichappens.jpg" alt="">
+		</article> -->
+
+		<article class="nobackground" id="fim"></article>
+
+	</section>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-4114546-31']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+  </body>
+</html>
