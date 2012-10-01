@@ -40,7 +40,7 @@ Just an organized list of all my presentations.
 * Presentation: [Como fugir do feijão com arroz usando Canvas, SVG e WebGL](http://talks.zenorocha.com/2012/souwebpel/)
 * When: September, 29
 * Where: Pelotas, RS - Brazil
-* Website: **Not available yet**
+* Website: [facebook.com/groups/souwebpel](www.facebook.com/groups/souwebpel/)
 
 ### BrazilJS
 * Presentation: [Como não virar um Zumbi: Kit de sobrevivência](http://talks.zenorocha.com/2012/braziljs/)
