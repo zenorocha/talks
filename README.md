@@ -4,6 +4,11 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
+### Front in Maringá
+* When: October, 06
+* Where: Maringá, PR - Brazil
+* Website: [frontinmaringa.com.br](http://www.frontinmaringa.com.br/)
+
 ### RCuritiba
 * When: October, 12-15
 * Where: Curitiba, PR - Brazil
