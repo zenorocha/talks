@@ -4,10 +4,10 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### II SouWebPel
-* When: September, 29
-* Where: Pelotas, RS - Brazil
-* Website: **Not available yet**
+### Front in Maringá
+* When: October, 06
+* Where: Maringá, PR - Brazil
+* Website: [frontinmaringa.com.br](http://www.frontinmaringa.com.br/)
 
 ### RCuritiba
 * When: October, 12-15
@@ -35,6 +35,12 @@ Just an organized list of all my presentations.
 * Website: **Not available yet**
 
 ## ~ 2012
+
+### II SouWebPel
+* Presentation: [Como fugir do feijão com arroz usando Canvas, SVG e WebGL](http://talks.zenorocha.com/2012/souwebpel/)
+* When: September, 29
+* Where: Pelotas, RS - Brazil
+* Website: [facebook.com/groups/souwebpel](www.facebook.com/groups/souwebpel/)
 
 ### BrazilJS
 * Presentation: [Como não virar um Zumbi: Kit de sobrevivência](http://talks.zenorocha.com/2012/braziljs/)
