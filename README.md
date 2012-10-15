@@ -4,11 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### RCuritiba
-* When: October, 12-15
-* Where: Curitiba, PR - Brazil
-* Website: [rcuritiba.com.br](http://rcuritiba.com.br/)
-
 ### W3C Conference - Web.br 2012
 * When: October, 18-20
 * Where: São Paulo, SP - Brazil
@@ -30,6 +25,11 @@ Just an organized list of all my presentations.
 * Website: **Not available yet**
 
 ## ~ 2012
+
+### RCuritiba
+* When: October, 12-15
+* Where: Curitiba, PR - Brazil
+* Website: [rcuritiba.com.br](http://rcuritiba.com.br/)
 
 ### Front in Maringá
 * Presentation: [O que eu aprendi em 3 anos como dev front-end](http://talks.zenorocha.com/2012/frontinmaringa/)
