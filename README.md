@@ -4,11 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### Front in Maringá
-* When: October, 06
-* Where: Maringá, PR - Brazil
-* Website: [frontinmaringa.com.br](http://www.frontinmaringa.com.br/)
-
 ### RCuritiba
 * When: October, 12-15
 * Where: Curitiba, PR - Brazil
@@ -35,6 +30,12 @@ Just an organized list of all my presentations.
 * Website: **Not available yet**
 
 ## ~ 2012
+
+### Front in Maringá
+* Presentation: [O que eu aprendi em 3 anos como dev front-end](http://talks.zenorocha.com/2012/frontinmaringa/)
+* When: October, 06
+* Where: Maringá, PR - Brazil
+* Website: [frontinmaringa.com.br](http://www.frontinmaringa.com.br/)
 
 ### II SouWebPel
 * Presentation: [Como fugir do feijão com arroz usando Canvas, SVG e WebGL](http://talks.zenorocha.com/2012/souwebpel/)
