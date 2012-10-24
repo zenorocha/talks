@@ -4,11 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### W3C Conference - Web.br 2012
-* When: October, 18-20
-* Where: São Paulo, SP - Brazil
-* Website: [conferenciaweb.w3c.br](http://conferenciaweb.w3c.br/)
-
 ### Front in Maceió
 * When: October, 27
 * Where: Maceió, AL - Brazil
@@ -26,7 +21,14 @@ Just an organized list of all my presentations.
 
 ## ~ 2012
 
+### W3C Conference - Web.br 2012
+* Presentation: [Realidade aumentada com JavaScript](http://talks.zenorocha.com/2012/w3c/)
+* When: October, 18-20
+* Where: São Paulo, SP - Brazil
+* Website: [conferenciaweb.w3c.br](http://conferenciaweb.w3c.br/)
+
 ### RCuritiba
+* Presentation: [Arte digital na web: onde começar?](http://talks.zenorocha.com/2012/rcuritiba/)
 * When: October, 12-15
 * Where: Curitiba, PR - Brazil
 * Website: [rcuritiba.com.br](http://rcuritiba.com.br/)
