@@ -9,6 +9,11 @@ Just an organized list of all my presentations.
 * Where: São Paulo, SP - Brazil
 * Website: [frontinsampa.com.br](http://www.frontinsampa.com.br/)
 
+### Conexão Kinghost
+* When: November, 29
+* Where: Porto Alegre, RS - Brazil
+* Website: **Not available yet**
+
 ### Front in Londrina
 * When: December, 01
 * Where: Londrina, PR - Brazil
