@@ -4,11 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### Front in Maceió
-* When: October, 27
-* Where: Maceió, AL - Brazil
-* Website: [frontinmaceio.com.br](http://frontinmaceio.com.br/)
-
 ### Front in Sampa
 * When: November, 03
 * Where: São Paulo, SP - Brazil
@@ -20,6 +15,11 @@ Just an organized list of all my presentations.
 * Website: **Not available yet**
 
 ## ~ 2012
+
+### Front in Maceió
+* When: October, 27
+* Where: Maceió, AL - Brazil
+* Website: [frontinmaceio.com.br](http://frontinmaceio.com.br/)
 
 ### W3C Conference - Web.br 2012
 * Presentation: [Realidade aumentada com JavaScript](http://talks.zenorocha.com/2012/w3c/)
