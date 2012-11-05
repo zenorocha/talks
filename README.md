@@ -4,10 +4,15 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### Front in Sampa
-* When: November, 03
-* Where: São Paulo, SP - Brazil
-* Website: [frontinsampa.com.br](http://www.frontinsampa.com.br/)
+### IV ETS - Encontro de Tecnologia Simonsen
+* When: November, 10
+* Where: Rio de Janeiro, RJ - Brazil
+* Website: [simonsen.br/ets/](http://www.simonsen.br/ets/base.php?inscricao=programacao)
+
+### Ideais Cowabunga
+* When: November, 13
+* Where: Rio de Janeiro, RJ - Brazil
+* Website: [ideais-cowabunga.eventbrite.com](http://ideais-cowabunga.eventbrite.com/)
 
 ### Conexão Kinghost
 * When: November, 29
@@ -21,7 +26,14 @@ Just an organized list of all my presentations.
 
 ## ~ 2012
 
+### Front in Sampa
+* Presentation: Surpresa
+* When: November, 03
+* Where: São Paulo, SP - Brazil
+* Website: [frontinsampa.com.br](http://www.frontinsampa.com.br/)
+
 ### Front in Maceió
+* Presentation: [O que eu aprendi em 3 anos como dev front-end](http://talks.zenorocha.com/2012/frontinmaceio/)
 * When: October, 27
 * Where: Maceió, AL - Brazil
 * Website: [frontinmaceio.com.br](http://frontinmaceio.com.br/)
