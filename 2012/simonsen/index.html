@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Realidade aumentada com JavaScript ~ Conferência W3C</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Palestra apresentada na Conferência da W3C no dia 19 de outubro em São Paulo">
+
+  <meta property="og:title" content="Realidade aumentada com JavaScript">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Palestra apresentada na Conferência da W3C no dia 19 de outubro em São Paulo">
+  <meta property="og:url" content="http://talks.zenorocha.com/2012/w3c">
+  <meta property="og:image" content="http://talks.zenorocha.com/2012/w3c/img-w3c/fb.jpg">
+  <meta property="og:site_name" content="Realidade aumentada com JavaScript">
+  <meta property="og:locale" content="pt_br">
+  <meta property="fb:app_id" content="519121164768265">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides>
+
+  <!-- Intro -->
+  <slide class="fill nobackground" style="background: url(img-w3c/capa.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/setas.jpg);">
+    <h3><a href="http://talks.zenorocha.com/2012/simonsen">talks.zenorocha.com/2012/simonsen</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/github.jpg);">
+    <h3><a href="http://github.com/zenorocha/talks/">github.com/zenorocha/talks</a></h3>
+  </slide>
+
+  <!-- Apresentação -->
+  <slide class="fill nobackground" style="background: url(img-w3c/apresentacao-unirio.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/apresentacao-caos.jpg)"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/apresentacao-petrobras.jpg)"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/apresentacao-globo.jpg)"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/apresentacao-liferay.jpg)"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/apresentacao-braziljs.jpg)"></slide>
+
+  <!-- Capítulo: Realidade aumentada -->
+  <slide class="fill nobackground" style="background: url(img-w3c/realidade-oque-1.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/realidade-oque-2.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img-w3c/remixing-reality.jpg)">
+    <h3><a href="http://mzl.la/ilyX7k">mzl.la/ilyX7k</a></h3>
+  </slide>
+
+  <!-- Capítulo: Como fazer? -->
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-comofazer.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-comofazer-1.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-comofazer-getusermedia.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/webrtc.jpg);">
+    <h3><a href="http://dev.w3.org/2011/webrtc/editor/webrtc.html">dev.w3.org/2011/webrtc/editor/webrtc.html</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: #00a9ee">
+    <h1>Passo 1</h1>
+    <p>Acessando os recursos de câmera e microfone</p>
+    <textarea spellcheck="false" class="snippet" rows="4">navigator.getUserMedia({
+    video: true,
+    audio: true
+}, onSuccess, onFail);</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/demo-bg.jpg);">
+    <h1>Webcam Toy</h1>
+    <a href="http://webcamtoy.com/app/?app=html5" target="blank" class="btn">
+      <span>DEMO</span>
+    </a>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/caniuse.jpg);">
+    <h3><a href="http://caniuse.com/#search=getUserMedia">caniuse.com</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-comofazer-2.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-comofazer-video.jpg);"></slide>
+  <slide class="fill nobackground" style="background: #00a9ee">
+    <h1>Passo 2</h1>
+    <p>Reproduzindo conteúdo da webcam em um vídeo</p>
+    <textarea spellcheck="false" class="snippet" rows="10">var video = document.querySelector('video');
+
+navigator.getUserMedia({ video: true, audio: true },
+    function(localMediaStream) {
+        video.src = window.URL.createObjectURL(localMediaStream);
+        video.onloadedmetadata = function(e) {
+            // Pronto
+        };
+    },
+onFail);</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-comofazer-3.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-comofazer-canvas.jpg);"></slide>
+
+  <!-- Capítulo: Vida Real -->
+  <!-- <slide class="fill nobackground" style="background: url(img-w3c/wesbos.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/wesbos-1.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/wesbos-2.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/wesbos-3.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/wesbos-4.jpg);"></slide> -->
+
+  <!-- Capítulo: Marcadores por cor -->
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-cor.jpg);"></slide>
+  <slide class="fill nobackground" style="background-image: url(img-w3c/trackingjs.jpg)">
+    <h3><a href="http://trackingjs.com">trackingjs.com</a></h3>
+  </slide>
+  <!-- <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <source src="videos/trackingjs.theora.ogv"  type="video/ogv"  />
+      <source src="videos/trackingjs.webm" type="video/webm" />
+    </video>
+  </slide> -->
+  <slide class="fill nobackground" style="background: url(img-w3c/eduardo-lundgren.jpg);"></slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/liferay-team.jpg);"></slide>
+
+  <!-- tracking.js - Hello World -->
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 1</span><br>Hello World</h1>
+    <p>Importando o core da biblioteca <strong>tracking.js</strong></p>
+    <textarea spellcheck="false" class="snippet" rows="1">&lt;script src="tracking.js"&gt;&lt;/script&gt;</textarea>
+    <p>Importando o módulo de rastreamento de cor</p>
+    <textarea spellcheck="false" class="snippet" rows="1">&lt;script src="tracker/color.js"&gt;&lt;/script&gt;</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 2</span><br>Hello World</h1>
+    <p>Obtém a câmera do usuário</p>
+    <textarea spellcheck="false" class="snippet" rows="1">
+var videoCamera = new tracking.VideoCamera().render();</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 3</span><br>Hello World</h1>
+    <p>Instancia o rastreamento pela cor magenta</p>
+    <textarea spellcheck="false" class="snippet" rows="6">videoCamera.track({
+    type: 'color',
+    color: 'magenta',
+    onFound: function() {},
+    onNotFound: function() {}
+});</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 4</span><br>Hello World</h1>
+    <p>Exibe no console as posições X, Y e Z da área detectada</p>
+    <textarea spellcheck="false" class="snippet" rows="3">onFound: function(track) {
+    console.log(track.x, track.y, track.z);
+}</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/demo-bg.jpg);">
+    <h1><span style="color: #213355;">tracking.js</span><br>Hello World</h1>
+    <a href="demos/tracking.js/examples/hello_world.html" target="blank" class="btn">
+      <span>DEMO</span>
+    </a>
+  </slide>
+
+  <!-- tracking.js - Single Controller -->
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <source src="videos/trackingjs-0.theora.ogv"  type="video/ogv"  />
+      <source src="videos/trackingjs-0.webm" type="video/webm" />
+    </video>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 1</span><br>
+    <span style="font-size: 60px;">Single Controller</span></h1>
+    <p>Obtém a câmera do usuário e a esconde</p>
+    <textarea spellcheck="false" class="snippet" rows="1">var videoCamera = new tracking.VideoCamera().hide();</textarea>
+    <p>Renderiza um canvas a partir da câmera</p>
+    <textarea spellcheck="false" class="snippet" rows="1">videoCamera = videoCamera.render().renderVideoCanvas();</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 2</span><br>
+    <span style="font-size: 60px;">Single Controller</span></h1>
+    <p>Instancia o rastreamento pela cor magenta</p>
+    <textarea spellcheck="false" class="snippet" rows="6">var t1 = videoCamera.track({
+    type: 'color',
+    color: 'magenta',
+    onFound: function() {},
+    onNotFound: function() {}
+});</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 3</span><br>
+    <span style="font-size: 60px;">Single Controller</span></h1>
+    <p>Pinta a nuvem de pixels detectada</p>
+    <textarea spellcheck="false" class="snippet" rows="11">onFound: function(track) {
+    var pixels = track.pixels;
+
+    for (var i = 0, len = pixels.length; i < len; i += 2) {
+        videoCamera.canvas.context.fillStyle = "rgb(255,0,255)";
+        videoCamera.canvas.context.fillRect(pixels[i], pixels[i+1], 2, 2);
+    }
+
+    videoCamera.canvas.context.fillStyle = "rgb(0,0,0)";
+    videoCamera.canvas.context.fillRect(track.x, track.y, 5, 5);
+}</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/demo-bg.jpg);">
+    <h1><span style="color: #213355;">tracking.js</span><br>
+    <span style="font-size: 60px;">Single Controller</span></h1>
+    <a href="demos/tracking.js/examples/move_controller_single_pixels.html" target="blank" class="btn">
+      <span>DEMO</span>
+    </a>
+  </slide>
+
+  <!-- tracking.js - Multiple Controllers -->
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <source src="videos/trackingjs-1.theora.ogv"  type="video/ogv"  />
+      <source src="videos/trackingjs-1.webm" type="video/webm" />
+    </video>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 1</span><br>
+    <span style="font-size: 57px;">Multiple Controllers</span></h1>
+    <p>Obtém a câmera do usuário e a esconde</p>
+    <textarea spellcheck="false" class="snippet" rows="1">var videoCamera = new tracking.VideoCamera().hide();</textarea>
+    <p>Renderiza um canvas a partir da câmera</p>
+    <textarea spellcheck="false" class="snippet" rows="1">videoCamera = videoCamera.render().renderVideoCanvas();</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 2</span><br>
+    <span style="font-size: 57px;">Multiple Controllers</span></h1>
+    <p>Instancia o rastreamento pela cor <strong>MAGENTA</strong> e desenha um quadrado em torno da área rastreada</p>
+    <textarea spellcheck="false" class="snippet" rows="11">var t1 = videoCamera.track({
+    type: 'color',
+    color: 'magenta',
+    onFound: function(track) {
+        var size = 60 - track.z;
+        var ctx = videoCamera.canvas.context;
+        ctx.strokeStyle = "rgb(255,0,255)";
+        ctx.lineWidth = 3;
+        ctx.strokeRect(track.x - size*0.5, track.y - size*0.5, size, size);
+    }
+});</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 3</span><br>
+    <span style="font-size: 57px;">Multiple Controllers</span></h1>
+    <p>Instancia o rastreamento pela cor <strong>CYAN</strong> e desenha um quadrado em torno da área rastreada</p>
+    <textarea spellcheck="false" class="snippet" rows="11">var t2 = videoCamera.track({
+    type: 'color',
+    color: 'cyan',
+    onFound: function(track) {
+        var size = 60 - track.z;
+        var ctx = videoCamera.canvas.context;
+        ctx.strokeStyle = "rgb(0,255,255)";
+        ctx.lineWidth = 3;
+        ctx.strokeRect(track.x - size*0.5, track.y - size*0.5, size, size);
+    }
+});</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/demo-bg.jpg);">
+    <h1><span style="color: #213355;">tracking.js</span><br>
+    <span style="font-size: 57px;">Multiple Controllers</span></h1>
+    <a href="demos/tracking.js/examples/move_controller_multiple.html" target="blank" class="btn">
+      <span>DEMO</span>
+    </a>
+  </slide>
+
+  <!-- tracking.js - Draw Something -->
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <source src="videos/trackingjs-2.theora.ogv"  type="video/ogv"  />
+      <source src="videos/trackingjs-2.webm" type="video/webm" />
+    </video>
+  </slide>
+  <!-- <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 1</span><br>Draw Something</h1>
+    <p>Obtém a câmera do usuário</p>
+    <textarea spellcheck="false" class="snippet" rows="2">
+var videoCamera = new tracking.VideoCamera().hide().render().renderVideoCanvas();</textarea>
+  </slide> -->
+
+  <!-- tracking.js - Minecraft -->
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <source src="videos/trackingjs-3.theora.ogv"  type="video/ogv"  />
+      <source src="videos/trackingjs-3.webm" type="video/webm" />
+    </video>
+  </slide>
+  <!-- <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 1</span><br>Minecraft</h1>
+    <p>Importando a biblioteca <strong>THREE.JS</strong></p>
+    <textarea spellcheck="false" class="snippet" rows="4">&lt;script src="js/threejs/Three.js"&gt;&lt;/script&gt;
+&lt;script src="js/threejs/ImprovedNoise.js"&gt;&lt;/script&gt;
+&lt;script src="js/threejs/Detector.js"&gt;&lt;/script&gt;
+&lt;script src="js/threejs/Stats.js"&gt;&lt;/script&gt;</textarea>
+    <p>E o cenário do <strong>Minecraft</strong></p>
+    <textarea spellcheck="false" class="snippet" rows="1">&lt;script src="js/threejs/minecraft.js"&gt;&lt;/script&gt;</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 2</span><br>Minecraft</h1>
+    <p>Obtém a câmera do usuário</p>
+    <textarea spellcheck="false" class="snippet" rows="3">
+var videoCamera = new tracking.VideoCamera().hide().render().renderVideoCanvas('#videoContainer');</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 3</span><br>Minecraft</h1>
+    <p>Mussum ipsum cacilds, vidis litro abertis.</p>
+    <textarea spellcheck="false" class="snippet" rows="1">var aim = tracking.one('#aim');</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 4</span><br>Minecraft</h1>
+    <p>Mussum ipsum cacilds, vidis litro abertis.</p>
+    <textarea spellcheck="false" class="snippet" rows="6">videoCamera.track({
+    type: 'color',
+    color: 'magenta',
+    onFound: function(track) {},
+    onNotFound: function() {}
+});</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 5</span><br>Minecraft</h1>
+    <p>Mussum ipsum cacilds, vidis litro abertis.</p>
+    <textarea spellcheck="false" class="snippet" rows="11">onFound: function(track) {
+    var x = track.x,
+          y = track.y;
+
+    if (x && y) {
+        var mouseX = ((320 - track.x)/320)*window.innerWidth - controls.viewHalfX,
+              mouseY = ((240 - track.y)/240)*window.innerHeight - controls.viewHalfY;
+
+        controls.mouseX = mouseX;
+        controls.mouseY = mouseY;
+
+        aim.style.top = window.innerHeight - (mouseY + controls.viewHalfY) + 'px';
+        aim.style.left = mouseX + controls.viewHalfX + 'px';
+    }
+}</textarea>
+  </slide>
+  <slide class="fill nobackground" style="background: #ac3ffe">
+    <h1><span style="color: #5d2488;">Passo 6</span><br>Minecraft</h1>
+    <p>Mussum ipsum cacilds, vidis litro abertis.</p>
+    <textarea spellcheck="false" class="snippet" rows="6">onNotFound: function() {
+    controls.moveLeft = false;
+    controls.moveRight = false;
+    controls.moveForward = false;
+    controls.moveBackward = false;
+}</textarea>
+  </slide> -->
+
+  <!-- Capítulo: Marcadores fiduciais -->
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-fiduciais.jpg);"></slide>
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <source src="videos/jsartoolkit.theora.ogv"  type="video/ogv"  />
+      <source src="videos/jsartoolkit.webm" type="video/webm" />
+    </video>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img-w3c/jsartoolkit.jpg)">
+    <h3><a href="https://github.com/kig/JSARToolKit">github.com/kig/JSARToolKit</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img-w3c/flartoolkit.jpg)">
+    <h3><a href="http://www.libspark.org/wiki/saqoosha/FLARToolKit/en">libspark.org/wiki/saqoosha/FLARToolKit/en</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img-w3c/artoolkit.jpg)">
+    <h3><a href="http://www.hitl.washington.edu/artoolkit/">hitl.washington.edu/artoolkit</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/demo-bg.jpg);">
+    <h1>Marcador fiducial</h1>
+    <a href="demos/JSARToolKit/demos/AR_slideshow/AR_mediaStream.html" target="blank" class="btn"><span>DEMO</span></a>
+  </slide>
+  <slide class="fill nobackground" style="padding: 0; background: #000; overflow: hidden;">
+    <iframe width="900" height="700" src="demos/JSARToolKit/demos/tests/test5.html" frameborder="0" allowfullscreen></iframe>
+  </slide>
+  <slide class="fill nobackground" style="padding: 0; background: #000; overflow: hidden;">
+    <iframe width="900" height="700" src="http://www.soundstep.com/blog/experiments/jstracking/" frameborder="0" allowfullscreen></iframe>
+  </slide>
+
+  <!-- Capítulo: Detecção de face -->
+  <slide class="fill nobackground" style="background: url(img-w3c/cap-face.jpg);"></slide>
+  <slide class="fill nobackground nopadding" style="background: 000;">
+    <video width="900" height="700" controls="controls">
+      <source src="videos/face-detection.theora.ogv"  type="video/ogv"  />
+      <source src="videos/face-detection.webm" type="video/webm" />
+    </video>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/demo-bg.jpg);">
+    <h1>Bigodénho</h1>
+    <a href="demos/face-detection" target="blank" class="btn"><span>DEMO</span></a>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img-w3c/github-neave.jpg)">
+    <h3><a href="https://github.com/neave/face-detection">github.com/neave/face-detection</a></h3>
+  </slide>
+  <slide class="fill nobackground" style="background: url(img-w3c/demo-bg.jpg);">
+    <h1>Targets</h1>
+    <a href="http://auduno.github.com/headtrackr/examples/targets.html" target="blank" class="btn"><span>DEMO</span></a>
+  </slide>
+  <slide class="fill nobackground" style="background-image: url(img-w3c/github-auduno.jpg)">
+    <h3><a href="https://github.com/auduno/headtrackr">github.com/auduno/headtrackr</a></h3>
+  </slide>
+
+  <!-- <slide class="fill nobackground" style="padding: 0; background: #000; overflow: hidden;">
+    <iframe width="900" height="700" src="demos/JSARToolKit/demos/tests/test2.html" frameborder="0" allowfullscreen></iframe>
+  </slide> -->
+
+  <!-- FIM -->
+  <slide class="fill nobackground" style="background: #fff">
+    <h1 style="color: black">É contigo...</h1>
+    <img  class="center" style="margin-top: 50px;" src="img-w3c/wherethemagichappens.png" alt="" />
+  </slide>
+
+  <slide class="fill nobackground" style="background: url(img-w3c/fim.jpg);"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4114546-32']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
