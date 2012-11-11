@@ -4,11 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### IV ETS - Encontro de Tecnologia Simonsen
-* When: November, 10
-* Where: Rio de Janeiro, RJ - Brazil
-* Website: [simonsen.br/ets/](http://www.simonsen.br/ets/base.php?inscricao=programacao)
-
 ### Ideais Cowabunga
 * When: November, 13
 * Where: Rio de Janeiro, RJ - Brazil
@@ -25,6 +20,12 @@ Just an organized list of all my presentations.
 * Website: **Not available yet**
 
 ## ~ 2012
+
+### IV ETS - Encontro de Tecnologia Simonsen
+* Presentation: [Realidade aumentada com JavaScript](http://talks.zenorocha.com/2012/simonsen/)
+* When: November, 10
+* Where: Rio de Janeiro, RJ - Brazil
+* Website: [simonsen.br/ets/](http://www.simonsen.br/ets/base.php?inscricao=programacao)
 
 ### Front in Sampa
 * Presentation: Surpresa
