@@ -14,11 +14,6 @@ Just an organized list of all my presentations.
 * Where: Porto Alegre, RS - Brazil
 * Website: **Not available yet**
 
-### Front in Londrina
-* When: December, 01
-* Where: Londrina, PR - Brazil
-* Website: **Not available yet**
-
 ## ~ 2012
 
 ### IV ETS - Encontro de Tecnologia Simonsen
