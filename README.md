@@ -14,6 +14,21 @@ Just an organized list of all my presentations.
 * Where: Porto Alegre, RS - Brazil
 * Website: **Not available yet**
 
+### Campus Party
+* When: January, 28 - 2013
+* Where: São Paulo, SP - Brazil
+* Website: [campus-party.com.br](http://www.campus-party.com.br/2013/index.html)
+
+### FEEC BR
+* When: May, 25 - 2013
+* Where: Fortaleza, CE - Brazil
+* Website: [feecbr.com.br](http://www.feecbr.com.br/pt/)
+
+### FEEC BR
+* When: August, 24 - 2013
+* Where: Salvador, BA - Brazil
+* Website: [feecbr.com.br](http://www.feecbr.com.br/pt/)
+
 ## ~ 2012
 
 ### IV ETS - Encontro de Tecnologia Simonsen
