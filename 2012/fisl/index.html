@@ -2,22 +2,22 @@
 
 <html lang="pt-BR">
   <head>
-	
+
 	<title>Como fugir do feijão com arroz usando Canvas, SVG e WebGL</title>
 
 	<meta charset="utf-8">
 	<meta name="author" content="Zeno Rocha" />
-	<meta name="description" content="Palestra ministrada no evento Pernambuco.js - 21/04/12" />
+	<meta name="description" content="Palestra ministrada no evento FISL" />
 
 	<meta property="og:title" content="Como fugir do feijão com arroz usando Canvas, SVG e WebGL" />
 	<meta property="og:type" content="article"/>
-	<meta property="og:description" content="Palestra ministrada no evento Pernambuco.js - 21/04/12" />
+	<meta property="og:description" content="Palestra ministrada no evento FISL" />
 	<meta property="og:url" content="http://www.comofugirdofeijaocomarroz.com/"/>
 	<meta property="og:image" content="http://www.comofugirdofeijaocomarroz.com/img/fb.jpg" />
 	<meta property="og:site_name" content="Como fugir do feijão com arroz usando Canvas, SVG e WebGL"/>
 
 	<script src="slides.js"></script>
-	
+
   </head>
 
   <body style="display: none">
@@ -97,14 +97,14 @@
 			<iframe style="margin-top: 50px; padding-left: 70px;" class="customFrame" id="iframe-canvas-4" src="demos/svg/ex4.html"></iframe>
 			<textarea style="margin-top: -50px;" class="snippet" spellcheck="false" rows="1">&lt;polygon points="10,5 100,45 200,5 150,140" fill="white" /&gt;</textarea>
 		</article>
-		
+
 		<article class="demo">
 			<h1>Park</h1>
-			<a href="http://www.w3.org/2010/Talks/04-schepers-www2010/themepark.svg" target="blank" class="btn"><span>DEMO</span></a>			
+			<a href="http://www.w3.org/2010/Talks/04-schepers-www2010/themepark.svg" target="blank" class="btn"><span>DEMO</span></a>
 		</article>
 
 		<article class="nobackground" id="biblioteca-1"></article>
-		
+
 		<article class="nobackground" id="raphaeljs">
 			<h3><a href="http://bit.ly/w0WHUg" target="blank">http://bit.ly/w0WHUg</a></h3>
 		</article>
@@ -130,7 +130,7 @@
 				<li>Renderização de gráficos via script</li>
 				<li class="nobullet" id="grafico-pizza"><img src="imgNovas/grafico-pizza.png" alt="Gráficos"></li>
 			</ul>
-		</article>	
+		</article>
 
 		<!-- <article class="canvas">
 			<h1>Canvas é???</h1>
@@ -222,7 +222,7 @@ contexto.strokeRect(25, 25, 150, 150);</textarea>
 				</li>
 				<li>Preenche o traçado
 					<textarea class="snippet" spellcheck="false" rows="1">stroke();</textarea>
-				</li>				
+				</li>
 			</ul>
 		</article>
 
@@ -232,7 +232,7 @@ contexto.strokeRect(25, 25, 150, 150);</textarea>
 contexto.rect(90, 80, 20, 20); // Olho esquerdo
 contexto.rect(140, 80, 20, 20); // Olho direito
 
-contexto.moveTo(50, 180); 
+contexto.moveTo(50, 180);
 contexto.lineTo(200, 180); // Boca
 
 contexto.lineWidth = 10;
@@ -243,7 +243,7 @@ contexto.stroke();</textarea></li>
 		<article class="canvas">
 			<iframe class="customFrame" id="iframe-rostoRedondo" src="demos/rostoRedondo/rostoRedondo.html"></iframe>
 			<textarea style="margin-top: -20px;" class="snippet" spellcheck="false" rows="14">contexto.arc(110, 110, 100, 0, Math.PI*2, true); // Cabeça
-	
+
 contexto.moveTo(165, 120);
 contexto.arc(110, 120, 55, 0, Math.PI, false); // Boca
 
@@ -269,7 +269,7 @@ contexto.stroke();</textarea></li>
 			<ul style="margin-top: 150px; font-weight: bold;">
 				<li>Animar nada mais é do que redesenhar a tela com uma velocidade que o olho humano não perceba</li>
 				<textarea style="font-weight: bold;" class="snippet" spellcheck="false" rows="4">var FPS = 60;
-setInterval(function() { 
+setInterval(function() {
 	// chama as ações
 }, 1000 / FPS);</textarea>
 <li style="margin-top: 20px;">Só que setInterval é coisa do passado...</li>
@@ -341,7 +341,7 @@ setInterval(function() {
 			<h3><a href="http://bit.ly/rMxkO3" target="blank">http://bit.ly/rMxkO3</a></h3>
 		</article>
 
-		<article class="nobackground" id="github-diveinto">	
+		<article class="nobackground" id="github-diveinto">
 			<h3><a href="http://bit.ly/td3scm" target="blank">http://bit.ly/td3scm</a></h3>
 		</article>
 
@@ -357,7 +357,7 @@ setInterval(function() {
 				<li>Processamento na GPU, direto na placa de vídeo</li>
 				<li>Utiliza a tag <strong>&lt;canvas&gt;</strong> só que com um outro contexto
 				<textarea class="snippet" spellcheck="false" rows="1">&lt;canvas id="meuDesenho" width="500" height="500"&gt;</textarea>
-				<textarea class="snippet" spellcheck="false" rows="2">var canvas = document.getElementById("meuDesenho"); 
+				<textarea class="snippet" spellcheck="false" rows="2">var canvas = document.getElementById("meuDesenho");
 contexto = canvas.getContext("experimental-webgl");</textarea></li>
 			</ul>
 		</article>
@@ -380,14 +380,14 @@ contexto = canvas.getContext("experimental-webgl");</textarea></li>
 
 		<article class="demo">
 			<h1>Skin</h1>
-			<a href="http://alteredqualia.com/three/examples/webgl_materials_skin.html" target="blank" class="btn"><span>DEMO</span></a>			
+			<a href="http://alteredqualia.com/three/examples/webgl_materials_skin.html" target="blank" class="btn"><span>DEMO</span></a>
 		</article>
 
 	  <article class="webgl">
 	    <h1>Primeiros passos</h1>
 	    <p>Crie um WebGLRenderer</p>
 	    <textarea class="snippet" spellcheck="false" rows="3">var renderer = new THREE.WebGLRenderer({antialias: true});
-renderer.setSize(document.body.clientWidth, 
+renderer.setSize(document.body.clientWidth,
 			  document.body.clientHeight);</textarea>
 	    <p>Coloque no DOM</p>
 	    <textarea class="snippet" spellcheck="false" rows="1">document.body.appendChild(renderer.domElement);</textarea>
@@ -456,7 +456,7 @@ animate(new Date().getTime());
 
 		<article class="demo">
 			<h1>Trigger Rally</h1>
-			<a href="http://triggerrally.com/x/Preview/Arbusu/drive" target="blank" class="btn"><span>DEMO</span></a>			
+			<a href="http://triggerrally.com/x/Preview/Arbusu/drive" target="blank" class="btn"><span>DEMO</span></a>
 		</article>
 
 		<article class="nobackground" id="learningthreejs">
@@ -474,7 +474,7 @@ animate(new Date().getTime());
 			<h3><a href="http://bit.ly/I1hwK9" target="blank">http://bit.ly/I1hwK9</a></h3>
 		</article>
 
-		<article class="nobackground" id="modernizr">	
+		<article class="nobackground" id="modernizr">
 			<h3><a href="http://bit.ly/tPaw1E" target="blank">http://bit.ly/tPaw1E</a></h3>
 		</article>
 
@@ -491,7 +491,7 @@ animate(new Date().getTime());
 			<h3><a href="http://bit.ly/JfmSFi" target="blank">http://bit.ly/JfmSFi</a></h3>
 		</article>
 
-		<article class="nobackground" id="flashcanvas">	
+		<article class="nobackground" id="flashcanvas">
 			<h3><a href="http://bit.ly/IW3wVc" target="blank">http://bit.ly/IW3wVc</a></h3>
 		</article>
 
@@ -504,7 +504,7 @@ animate(new Date().getTime());
 			<h3><a href="http://bit.ly/IB0h22" target="blank">http://bit.ly/IB0h22</a></h3>
 		</article>
 
-		<article class="nobackground" id="fabricjs">	
+		<article class="nobackground" id="fabricjs">
 			<h3><a href="http://bit.ly/J88nlj" target="blank">http://bit.ly/J88nlj</a></h3>
 		</article>
 
@@ -517,7 +517,7 @@ animate(new Date().getTime());
 			<h3><a href="http://bit.ly/HPHbnv" target="blank">http://bit.ly/HPHbnv</a></h3>
 		</article>
 
-		<article class="nobackground" id="cwebgl">	
+		<article class="nobackground" id="cwebgl">
 			<h3><a href="http://bit.ly/I54ayG" target="blank">http://bit.ly/I54ayG</a></h3>
 		</article>
 
@@ -552,7 +552,7 @@ animate(new Date().getTime());
 		</article>
 
 		<article class="nobackground" id="fim"></article>
-		
+
 	</section>
 
 	<script type="text/javascript">
