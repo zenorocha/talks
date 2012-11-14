@@ -4,15 +4,10 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### Ideais Cowabunga
-* When: November, 13
-* Where: Rio de Janeiro, RJ - Brazil
-* Website: [ideais-cowabunga.eventbrite.com](http://ideais-cowabunga.eventbrite.com/)
-
 ### Conexão Kinghost
 * When: November, 29
 * Where: Porto Alegre, RS - Brazil
-* Website: **Not available yet**
+* Website: [conexaokinghost.com.br](http://www.conexaokinghost.com.br/)
 
 ### Campus Party
 * When: January, 28 - 2013
@@ -31,6 +26,12 @@ Just an organized list of all my presentations.
 
 ## ~ 2012
 
+### Ideais Cowabunga
+* Presentation: [Como usar HTML5 sem uma máquina do tempo](http://talks.zenorocha.com/2012/ideais)
+* When: November, 13
+* Where: Rio de Janeiro, RJ - Brazil
+* Website: [ideais-cowabunga.eventbrite.com](http://ideais-cowabunga.eventbrite.com/)
+
 ### IV ETS - Encontro de Tecnologia Simonsen
 * Presentation: [Realidade aumentada com JavaScript](http://talks.zenorocha.com/2012/simonsen/)
 * When: November, 10
@@ -38,7 +39,7 @@ Just an organized list of all my presentations.
 * Website: [simonsen.br/ets/](http://www.simonsen.br/ets/base.php?inscricao=programacao)
 
 ### Front in Sampa
-* Presentation: Surpresa
+* Presentation: [Surpresa](http://www.slideshare.net/bernarddeluna/surpresa-15160517)
 * When: November, 03
 * Where: São Paulo, SP - Brazil
 * Website: [frontinsampa.com.br](http://www.frontinsampa.com.br/)
