@@ -9,6 +9,11 @@ Just an organized list of all my presentations.
 * Where: Porto Alegre, RS - Brazil
 * Website: [conexaokinghost.com.br](http://www.conexaokinghost.com.br/)
 
+### DevFest Brasil
+* When: November, 30
+* Where: São Paulo, SP - Brazil
+* Website: [devfest.com.br](http://www.devfest.com.br/)
+
 ### Campus Party
 * When: January, 28 - 2013
 * Where: São Paulo, SP - Brazil
