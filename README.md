@@ -4,16 +4,6 @@ Just an organized list of all my presentations.
 
 ## Comming next!
 
-### Conexão Kinghost
-* When: November, 29
-* Where: Porto Alegre, RS - Brazil
-* Website: [conexaokinghost.com.br](http://www.conexaokinghost.com.br/)
-
-### DevFest Brasil
-* When: November, 30
-* Where: São Paulo, SP - Brazil
-* Website: [devfest.com.br](http://www.devfest.com.br/)
-
 ### Campus Party
 * When: January, 28 - 2013
 * Where: São Paulo, SP - Brazil
@@ -30,6 +20,18 @@ Just an organized list of all my presentations.
 * Website: [feecbr.com.br](http://www.feecbr.com.br/pt/)
 
 ## ~ 2012
+
+### DevFest Brasil
+* Presentation: [Realidade aumentada com JavaScript](http://talks.zenorocha.com/2012/devfest)
+* When: November, 30
+* Where: São Paulo, SP - Brazil
+* Website: [devfest.com.br](http://www.devfest.com.br/)
+
+### Conexão Kinghost
+* Presentation: [Surpresa](http://www.slideshare.net/bernarddeluna/surpresa-15160517)
+* When: November, 29
+* Where: Porto Alegre, RS - Brazil
+* Website: [conexaokinghost.com.br](http://www.conexaokinghost.com.br/)
 
 ### Ideais Cowabunga
 * Presentation: [Como usar HTML5 sem uma máquina do tempo](http://talks.zenorocha.com/2012/ideais)
