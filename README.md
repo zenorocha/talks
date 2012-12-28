@@ -9,6 +9,11 @@ Just an organized list of all my presentations.
 * Where: São Paulo, SP - Brazil
 * Website: [campus-party.com.br](http://www.campus-party.com.br/2013/index.html)
 
+### BeagaJS
+* When: March, 02 - 2013
+* Where: Belo Horizonte, MG - Brazil
+* Website: *Not available yet*
+
 ### FEEC BR
 * When: May, 25 - 2013
 * Where: Fortaleza, CE - Brazil
